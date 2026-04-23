@@ -32,52 +32,67 @@
     document.dispatchEvent(new CustomEvent("partials:loaded"));
   }
 
-  /* ---------- Navbar: toggle + active link --------------------------- */
+  /* ---------- Navbar: mobile menu + active link ---------------------- */
   function initNavbar() {
-    const toggle = document.querySelector("[data-nav-toggle]");
-    const menu = document.querySelector("[data-nav-menu]");
-    if (!toggle || !menu) return;
+    const root = document.getElementById("westman-navbar");
+    if (!root) return;
 
-    const closeMenu = () => {
-      menu.classList.add("hidden");
-      toggle.setAttribute("aria-expanded", "false");
-    };
+    const openButton = root.querySelector("[data-menu-open]");
+    const closeButton = root.querySelector("[data-menu-close]");
+    const mobileMenu = root.querySelector("[data-mobile-menu]");
+    if (!openButton || !closeButton || !mobileMenu) return;
 
     const openMenu = () => {
-      menu.classList.remove("hidden");
-      toggle.setAttribute("aria-expanded", "true");
+      mobileMenu.classList.remove("hidden");
+      document.body.classList.add("overflow-hidden");
+      openButton.setAttribute("aria-expanded", "true");
     };
 
-    toggle.addEventListener("click", () => {
-      const open = toggle.getAttribute("aria-expanded") === "true";
-      if (open) closeMenu();
-      else openMenu();
-    });
+    const closeMenu = () => {
+      mobileMenu.classList.add("hidden");
+      document.body.classList.remove("overflow-hidden");
+      openButton.setAttribute("aria-expanded", "false");
+    };
 
-    menu.querySelectorAll("a").forEach((link) => {
+    openButton.addEventListener("click", openMenu);
+    closeButton.addEventListener("click", closeMenu);
+
+    root.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", closeMenu);
     });
 
-    const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-    menu.querySelectorAll("a[href]").forEach((a) => {
-      const href = (a.getAttribute("href") || "").toLowerCase();
-      if (href === path || (path === "" && href === "index.html")) {
+    const normalizePath = (value) => {
+      if (!value) return "/";
+      let cleaned = value.toLowerCase().replace(/\/+$/, "");
+      if (cleaned.endsWith("/index.html")) cleaned = cleaned.slice(0, -"/index.html".length) || "/";
+      if (cleaned.endsWith(".html") && !cleaned.includes("/")) cleaned = "/";
+      return cleaned === "" ? "/" : cleaned;
+    };
+
+    const currentPath = normalizePath(window.location.pathname);
+    root.querySelectorAll("[data-desktop-link]").forEach((a) => {
+      const href = a.getAttribute("href") || "/";
+      const hrefPath = normalizePath(new URL(href, window.location.origin).pathname);
+      const isActive = hrefPath === currentPath;
+      if (isActive) {
         a.setAttribute("aria-current", "page");
+      } else {
+        a.removeAttribute("aria-current");
+      }
+
+      const line = a.querySelector("[data-active-line]");
+      if (line) {
+        line.classList.toggle("hidden", !isActive);
       }
     });
 
-    const mq = window.matchMedia("(min-width: 768px)");
-    const syncMenuByViewport = () => {
-      if (mq.matches) {
-        menu.classList.remove("hidden");
-        toggle.setAttribute("aria-expanded", "false");
-      } else {
-        menu.classList.add("hidden");
-      }
-    };
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024) closeMenu();
+    });
 
-    syncMenuByViewport();
-    mq.addEventListener("change", syncMenuByViewport);
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeMenu();
+    });
   }
 
   /* ---------- Footer year ------------------------------------------- */

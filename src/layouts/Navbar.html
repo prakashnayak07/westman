@@ -1,34 +1,139 @@
-<header class="sticky top-0 z-40 border-b border-slate-200/80 bg-white/85 backdrop-blur-md">
-  <div class="mx-auto flex min-h-[72px] w-full max-w-6xl items-center justify-between px-5">
-    <a href="index.html" class="inline-flex items-center gap-3 text-lg font-bold tracking-tight text-slate-900" aria-label="Westman Printing home">
-      <span class="grid h-9 w-9 place-items-center rounded-md bg-slate-900 text-xs font-extrabold text-white">W</span>
-      <span>Westman<span class="text-orange-600">.</span>Printing</span>
-    </a>
+<!-- /* ===== Navbar Start ===== */ -->
+<nav id="westman-navbar" class="relative z-50 w-full" aria-label="Primary Navigation">
+  <!-- /* ===== Desktop Navigation Start ===== */ -->
+  <div class="hidden lg:block">
+    <div class="mx-auto w-full max-w-[1920px] px-6 pt-3 md:px-8 lg:px-10 xl:px-12 2xl:px-12">
+      <div class="mx-auto w-full max-w-[1399px]">
+        <div class="relative flex w-full items-center gap-2">
+          <img src="public/assets/navbar/desktop-nav-union.svg" alt="" aria-hidden="true"
+            class="pointer-events-none absolute left-0 top-0 h-[72px] w-full select-none" />
 
-    <button
-      class="inline-flex h-11 w-11 items-center justify-center rounded-md text-slate-900 transition hover:bg-slate-100 md:hidden"
-      type="button"
-      aria-label="Toggle menu"
-      aria-expanded="false"
-      aria-controls="primary-menu"
-      data-nav-toggle
-    >
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <line x1="4" y1="7"  x2="20" y2="7"/>
-        <line x1="4" y1="12" x2="20" y2="12"/>
-        <line x1="4" y1="17" x2="20" y2="17"/>
-      </svg>
-    </button>
+          <div class="relative flex min-w-0 flex-1 items-center justify-between rounded-full p-3">
+            <a href="/" aria-label="Westman Printing Home" class="block h-12 w-[180px] shrink-0">
+              <img src="public/assets/navbar/westman-logo.png" alt="Westman Printing"
+                class="h-full w-full object-contain" />
+            </a>
 
-    <nav
-      id="primary-menu"
-      class="fixed inset-x-0 top-[72px] hidden flex-col border-b border-slate-200 bg-white px-5 py-5 shadow-lg md:static md:flex md:flex-row md:items-center md:gap-7 md:border-0 md:bg-transparent md:p-0 md:shadow-none"
-      data-nav-menu
-      aria-label="Primary"
-    >
-      <a class="text-sm font-medium text-slate-700 transition hover:text-slate-900 aria-[current=page]:text-orange-600" href="index.html">Home</a>
-      <a class="text-sm font-medium text-slate-700 transition hover:text-slate-900 aria-[current=page]:text-orange-600" href="about.html">About</a>
-      <a class="text-sm font-medium text-slate-700 transition hover:text-slate-900 aria-[current=page]:text-orange-600" href="contact.html">Contact</a>
-    </nav>
+            <ul class="mx-auto flex min-w-0 items-center justify-center gap-1 xl:gap-2">
+              <li>
+                <a href="/" aria-current="page" data-desktop-link
+                  class="relative inline-flex items-center justify-center px-4 py-2 text-[16px] font-normal leading-[22px] tracking-[-0.18px] text-[#111827]">
+                  <span>Home</span>
+                  <span data-active-line aria-hidden="true"
+                    class="absolute bottom-[6px] left-4 right-4 h-px bg-[#2B8AC6]"></span>
+                </a>
+              </li>
+              <li><a href="/about" data-desktop-link
+                  class="relative inline-flex items-center justify-center px-4 py-2 text-[16px] font-normal leading-[22px] tracking-[-0.18px] text-[#111827]">About
+                  <span data-active-line aria-hidden="true"
+                    class="absolute bottom-[6px] left-4 right-4 hidden h-px bg-[#2B8AC6]"></span>
+                  Us</a></li>
+              <li><a href="/services" data-desktop-link
+                  class="relative inline-flex items-center justify-center px-4 py-2 text-[16px] font-normal leading-[22px] tracking-[-0.18px] text-[#111827]">Services<span
+                    data-active-line aria-hidden="true"
+                    class="absolute bottom-[6px] left-4 right-4 hidden h-px bg-[#2B8AC6]"></span></a>
+              </li>
+              <li><a href="/blogs" data-desktop-link
+                  class="relative inline-flex items-center justify-center px-4 py-2 text-[16px] font-normal leading-[22px] tracking-[-0.18px] text-[#111827]">Blogs<span
+                    data-active-line aria-hidden="true"
+                    class="absolute bottom-[6px] left-4 right-4 hidden h-px bg-[#2B8AC6]"></span></a>
+              </li>
+              <li><a href="/faq" data-desktop-link
+                  class="relative inline-flex items-center justify-center px-4 py-2 text-[16px] font-normal leading-[22px] tracking-[-0.18px] text-[#111827]">FAQ<span
+                    data-active-line aria-hidden="true"
+                    class="absolute bottom-[6px] left-4 right-4 hidden h-px bg-[#2B8AC6]"></span></a>
+              </li>
+              <li><a href="/contact" data-desktop-link
+                  class="relative inline-flex items-center justify-center px-4 py-2 text-[16px] font-normal leading-[22px] tracking-[-0.18px] text-[#111827]">Contact
+                  <span data-active-line aria-hidden="true"
+                    class="absolute bottom-[6px] left-4 right-4 hidden h-px bg-[#2B8AC6]"></span>
+                  Us</a></li>
+            </ul>
+          </div>
+
+          <div class="relative rounded-full p-2">
+            <a href="/request-quote"
+              class="inline-flex items-center justify-center gap-[10px] rounded-full bg-[#00669E] py-1 pl-4 pr-1 text-white"
+              aria-label="Request a Quotes">
+              <span
+                class="whitespace-nowrap text-[14px] font-medium leading-[22px] md:text-[15px] xl:text-[16px] xl:leading-[22.72px]">Request
+                a Quotes</span>
+              <span
+                class="relative block h-[42px] w-[42px] shrink-0 overflow-hidden rounded-[1234.059px] bg-[rgba(255,255,255,0.24)]">
+                <img src="public/assets/navbar/arrow-icon.svg" alt="" aria-hidden="true"
+                  class="absolute -left-2 top-[14.82px] h-[33.529px] w-[35.177px] max-w-none" />
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</header>
+  <!-- /* ===== Desktop Navigation End ===== */ -->
+
+  <!-- /* ===== Mobile Navigation Start ===== */ -->
+  <div class="lg:hidden">
+    <div class="mx-auto flex w-full max-w-[640px] items-center justify-between px-4 py-4">
+      <a href="/" aria-label="Westman Printing Home" class="block h-12 w-[180px]">
+        <img src="public/assets/navbar/westman-logo.png" alt="Westman Printing" class="h-full w-full object-contain" />
+      </a>
+      <button type="button" data-menu-open class="inline-flex h-10 w-10 items-center justify-center text-[#516278]"
+        aria-label="Open menu" aria-controls="westman-mobile-menu" aria-expanded="false">
+        <span class="sr-only">Open Menu</span>
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+          <path d="M4 12H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+          <path d="M4 17H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div id="westman-mobile-menu" data-mobile-menu class="fixed inset-0 z-[80] hidden overflow-y-auto bg-[#FFFFFF]">
+      <div class="mx-auto w-full max-w-[640px] px-4 pb-6 pt-3 sm:px-5 md:px-6">
+
+
+        <div class="flex items-center justify-between">
+          <a href="/" aria-label="Westman Printing Home" class="block h-12 w-[180px]">
+            <img src="public/assets/navbar/westman-logo.png" alt="Westman Printing"
+              class="h-full w-full object-contain" />
+          </a>
+
+          <button type="button" data-menu-close class="inline-flex h-10 w-10 items-center justify-center text-[#516278]"
+            aria-label="Close menu">
+            <img src="public/assets/navbar/mobile-close.svg" alt="" aria-hidden="true" class="h-4 w-4" />
+          </button>
+        </div>
+
+        <ul class="mt-3 flex flex-col gap-4">
+          <li class="border-b border-[#D5DBE2] py-3"><a href="/"
+              class="block text-[16px] font-normal leading-[22px] tracking-[-0.18px] text-[#516278]">Home</a></li>
+          <li class="border-b border-[#D5DBE2] py-3"><a href="/about"
+              class="block text-[16px] font-normal leading-[22px] tracking-[-0.18px] text-[#516278]">About Us</a></li>
+          <li class="border-b border-[#D5DBE2] py-3"><a href="/services"
+              class="block text-[16px] font-normal leading-[22px] tracking-[-0.18px] text-[#516278]">Services</a></li>
+          <li class="border-b border-[#D5DBE2] py-3"><a href="/blogs"
+              class="block text-[16px] font-normal leading-[22px] tracking-[-0.18px] text-[#516278]">Blogs</a></li>
+          <li class="border-b border-[#D5DBE2] py-3"><a href="/faq"
+              class="block text-[16px] font-normal leading-[22px] tracking-[-0.18px] text-[#516278]">FAQ</a></li>
+          <li class="border-b border-[#D5DBE2] py-3"><a href="/contact"
+              class="block text-[16px] font-normal leading-[22px] tracking-[-0.18px] text-[#516278]">Contact us</a></li>
+        </ul>
+
+        <div class="mt-8 rounded-full p-2">
+          <a href="/request-quote"
+            class="inline-flex w-full items-center justify-between rounded-full bg-[#00669E] py-1 pl-4 pr-1 text-white"
+            aria-label="Request a Quotes">
+            <span class="whitespace-nowrap text-[16px] font-medium leading-[22.72px]">Request a Quotes</span>
+            <span
+              class="relative block h-[42px] w-[42px] shrink-0 overflow-hidden rounded-[1234.059px] bg-[rgba(255,255,255,0.24)]">
+              <img src="public/assets/navbar/arrow-icon.svg" alt="" aria-hidden="true"
+                class="absolute -left-2 top-[14.82px] h-[33.529px] w-[35.177px] max-w-none" />
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /* ===== Mobile Navigation End ===== */ -->
+</nav>
+<!-- /* ===== Navbar End ===== */ -->
