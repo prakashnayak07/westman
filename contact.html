@@ -15,6 +15,37 @@
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" />
   <link rel="stylesheet" href="src/css/global.css" />
   <link rel="stylesheet" href="src/css/custom.css" />
+  <style>
+    .contact-send-btn .contact-send-arrow-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-send-btn .contact-send-arrow {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      height: 20px;
+      width: 20px;
+      transition: transform 320ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .contact-send-btn .contact-send-arrow--current {
+      transform: translate(-3px, 3px);
+    }
+
+    .contact-send-btn .contact-send-arrow--next {
+      transform: translate(-12px, 12px);
+    }
+
+    .contact-send-btn:hover .contact-send-arrow--current {
+      transform: translate(12px, -12px);
+    }
+
+    .contact-send-btn:hover .contact-send-arrow--next {
+      transform: translate(-3px, 3px);
+    }
+  </style>
 </head>
 
 <body class="font-[Inter]">
@@ -22,17 +53,172 @@
 
   <div data-include="src/layouts/Navbar.html"></div>
 
-  <main id="main" class="mx-auto w-full max-w-6xl px-5 py-20">
-    <section class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm sm:p-12">
-      <div class="mx-auto max-w-2xl text-center">
-        <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">Contact</h1>
-        <p class="mt-5 text-base text-slate-600 sm:text-lg">Add your contact details here.</p>
+  <main id="main" class="w-full">
+    <!-- /* ===== Contact Hero Section Start ===== */ -->
+    <section
+      class="w-full rounded-b-[32px] pt-4 md:pt-24 bg-[linear-gradient(171.668deg,#00669E_13.971%,#00375C_162.88%)] lg:rounded-b-[42px]">
+      <div class="mx-auto w-full max-w-[1400px]  px-5 py-10 sm:px-8 md:px-10 lg:px-12 lg:py-[42px] xl:px-12 2xl:px-12">
+        <nav aria-label="Breadcrumb"
+          class="flex items-center gap-2 text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-white sm:text-[16px] sm:leading-[22px] sm:tracking-[-0.18px]">
+          <a href="index.html" class="transition hover:opacity-80">Home</a>
+          <span>/</span>
+          <span class="font-medium">Contact Us</span>
+        </nav>
+        <h1
+          class="mt-3 font-heading text-[36px] font-bold leading-[46px] tracking-[-0.4px] text-white sm:text-[42px] sm:leading-[54px] lg:text-[48px] lg:leading-[58px]">
+          Contact Us
+        </h1>
+        <p
+          class="mt-3 max-w-[1288px] text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-white sm:text-[16px] sm:leading-[22px] sm:tracking-[-0.18px]">
+          Your trusted partner for reliable, high-quality printing, packaging, and promotional solutions.
+        </p>
       </div>
     </section>
+    <!-- /* ===== Contact Hero Section End ===== */ -->
+
+    <!-- /* ===== Contact Content Section Start ===== */ -->
+    <section class="w-full bg-[#F8FAFC] px-5 py-10 sm:px-8 md:px-10 lg:px-12 lg:py-12 xl:px-12 2xl:px-12">
+      <div class="mx-auto flex w-full max-w-[1400px] flex-col gap-8 lg:flex-row lg:items-start lg:gap-6">
+        <div class="w-full lg:max-w-[720px]">
+          <div class="flex flex-col gap-3">
+            <h2
+              class="font-heading text-[28px] font-bold leading-[36px] tracking-[-0.2px] text-[#111827] sm:text-[32px] sm:leading-[38px]">
+              Connect With Our Team
+            </h2>
+            <p
+              class="max-w-[635px] text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151] sm:text-[16px] sm:leading-[22px] sm:tracking-[-0.18px]">
+              We usually respond in 12-24 hours. For urgent queries, call us 0296032588 or email us at
+              Sales@cupsgalore.com.au
+            </p>
+          </div>
+
+          <form class="mt-8 flex flex-col gap-6" action="#" method="post">
+            <label class="flex flex-col gap-[11px]">
+              <span class="text-[14px] font-medium leading-[20px] tracking-[-0.16px] text-[#374151]">Full Name</span>
+              <input type="text" name="fullName" placeholder="Enter your full name"
+                class="h-9 border-0 border-b border-[#E2E8F0] bg-transparent px-2 text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#111827] placeholder:text-[#9CA3AF] focus:border-[#00669E] focus:outline-none focus:ring-0" />
+            </label>
+
+            <label class="flex flex-col gap-[11px]">
+              <span class="text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151]">Company name</span>
+              <input type="text" name="companyName" placeholder="Enter your company name"
+                class="h-9 border-0 border-b border-[#F3F4F6] bg-transparent px-2 text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#111827] placeholder:text-[#9CA3AF] focus:border-[#00669E] focus:outline-none focus:ring-0" />
+            </label>
+
+            <label class="flex flex-col gap-[11px]">
+              <span class="text-[14px] font-medium leading-4 text-[#374151]">Email</span>
+              <input type="email" name="email" placeholder="Enter your email address"
+                class="h-9 border-0 border-b border-[#E2E8F0] bg-transparent px-2 text-[14px] font-normal leading-4 text-[#111827] placeholder:text-[#9CA3AF] focus:border-[#00669E] focus:outline-none focus:ring-0" />
+            </label>
+
+            <label class="flex flex-col gap-[11px]">
+              <span class="text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151]">Contact
+                Number</span>
+              <input type="tel" name="contactNumber" placeholder="Contact Number"
+                class="h-9 border-0 border-b border-[#E2E8F0] bg-transparent px-2 text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#111827] placeholder:text-[#9CA3AF] focus:border-[#00669E] focus:outline-none focus:ring-0" />
+            </label>
+
+            <label class="flex flex-col gap-[11px]">
+              <span class="text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151]">Message</span>
+              <textarea name="message" rows="4" placeholder="Enter Message here..."
+                class="min-h-[94px] resize-y border-0 border-b border-[#F3F4F6] bg-transparent px-2 py-2 text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#111827] placeholder:text-[#9CA3AF] focus:border-[#00669E] focus:outline-none focus:ring-0"></textarea>
+            </label>
+
+            <fieldset class="flex flex-col gap-[11px]">
+              <legend class="text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151]">
+                Do you consent to receiving our marketing emails from time to time?
+              </legend>
+              <div class="flex items-center gap-6">
+                <label
+                  class="inline-flex cursor-pointer items-center gap-1 text-[14px] leading-[20px] tracking-[-0.16px] text-[#111827]">
+                  <input type="radio" name="consent" value="no" checked class="h-4 w-4 accent-[#004D80]" />
+                  <span>No</span>
+                </label>
+                <label
+                  class="inline-flex cursor-pointer items-center gap-1 text-[14px] leading-[20px] tracking-[-0.16px] text-[#D1D5DB]">
+                  <input type="radio" name="consent" value="yes" class="h-4 w-4 accent-[#004D80]" />
+                  <span>Yes</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <button type="submit"
+              class="contact-send-btn inline-flex w-fit items-center gap-[10px] rounded-[999px] bg-[#00669E] py-1 pl-4 pr-1 text-white transition hover:bg-[#005385]">
+              <span class="text-[16px] font-medium leading-[22.72px]">Send Now</span>
+              <span
+                class="contact-send-arrow-wrap grid h-[42px] w-[42px] place-items-center rounded-full bg-[rgba(255,255,255,0.24)]">
+                <img src="public/arrow-up-right.svg" alt="" class="contact-send-arrow contact-send-arrow--current" />
+                <img src="public/arrow-up-right.svg" alt="" class="contact-send-arrow contact-send-arrow--next" />
+              </span>
+            </button>
+          </form>
+        </div>
+
+        <aside class="w-full lg:max-w-[720px]">
+          <figure class="overflow-hidden rounded-[12px]">
+            <iframe title="Westman Printing location map"
+              src="https://maps.google.com/maps?q=6%2F8%20Priddle%20Street%2C%20Warwick%20Farm%20NSW%202170&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              class="h-[320px] w-full border-0 sm:h-[420px] lg:h-[502px]" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+            </iframe>
+          </figure>
+          <div class="mt-6 flex flex-col gap-3 px-0 sm:px-4 lg:px-6">
+            <div class="flex flex-col gap-1">
+              <div class="flex items-start gap-1">
+                <img src="public/icon-visit.svg" alt="" class="mt-0.5 h-5 w-5" />
+                <h3 class="text-[16px] font-medium leading-[22px] tracking-[-0.18px] text-[#111827]">Visit Us</h3>
+              </div>
+              <p class="text-[14px] font-medium leading-[20px] tracking-[-0.16px] text-[#374151]">
+                Between 8 am to 4 pm&nbsp;&nbsp;|&nbsp;&nbsp;From Monday to Friday
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <div class="flex items-start gap-1">
+                <span class="relative mt-0.5 block h-5 w-5">
+                  <img src="public/icon-location-pin.svg" alt="" class="absolute inset-0 h-5 w-5" />
+                  <img src="public/icon-location-dot.svg" alt=""
+                    class="absolute left-[9px] top-[16px] h-[4px] w-[3px]" />
+                </span>
+                <h3 class="text-[16px] font-medium leading-[22px] tracking-[-0.18px] text-[#111827]">Location</h3>
+              </div>
+              <p class="max-w-[395px] text-[14px] font-medium leading-[20px] tracking-[-0.16px] text-[#374151]">
+                6/8 Priddle Street, Warwick Farm NSW 2170 (02) 9603 2599
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <div class="flex items-start gap-1">
+                <img src="public/icon-mail.svg" alt="" class="mt-0.5 h-5 w-5" />
+                <h3 class="text-[16px] font-medium leading-[22px] tracking-[-0.18px] text-[#111827]">Email</h3>
+              </div>
+              <a href="mailto:quotes@westmanprinting.com.au"
+                class="max-w-[253px] text-[16px] font-medium leading-[22px] tracking-[-0.18px] text-[#374151]">
+                quotes@westmanprinting.com.au
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <!-- /* ===== Contact Content Section End ===== */ -->
   </main>
 
   <div data-include="src/layouts/Footer.html"></div>
 
+  <script>
+    const consentRadios = document.querySelectorAll('input[name="consent"]');
+    const consentLabels = document.querySelectorAll('input[name="consent"] + span');
+    const syncConsentLabelColor = () => {
+      consentLabels.forEach((label) => {
+        const input = label.previousElementSibling;
+        label.parentElement.classList.toggle('text-[#111827]', input.checked && input.value === 'no');
+        label.parentElement.classList.toggle('text-[#D1D5DB]', !(input.checked && input.value === 'no'));
+      });
+    };
+    consentRadios.forEach((radio) => radio.addEventListener('change', syncConsentLabelColor));
+    syncConsentLabelColor();
+  </script>
   <script src="src/scripts/main.js"></script>
 </body>
 

@@ -102,10 +102,86 @@
     });
   }
 
+  /* ---------- Blog pagination --------------------------------------- */
+  function initBlogPagination() {
+    const cards = Array.from(document.querySelectorAll("[data-blog-card]"));
+    const prevButton = document.getElementById("blogPrevPage");
+    const nextButton = document.getElementById("blogNextPage");
+    const pageButtons = Array.from(document.querySelectorAll(".blog-page-btn"));
+    const sliderPrev = document.getElementById("blogSliderPrev");
+    const sliderNext = document.getElementById("blogSliderNext");
+    if (!cards.length || !prevButton || !nextButton || !pageButtons.length) return;
+
+    let currentPage = 1;
+    const getPerPage = () => 9;
+
+    const render = () => {
+      const perPage = getPerPage();
+      const totalPages = Math.max(1, Math.ceil(cards.length / perPage));
+      if (currentPage > totalPages) currentPage = totalPages;
+
+      const start = (currentPage - 1) * perPage;
+      const end = start + perPage;
+      cards.forEach((card, index) => {
+        card.classList.toggle("hidden", index < start || index >= end);
+      });
+
+      pageButtons.forEach((button, index) => {
+        const page = index + 1;
+        if (page <= totalPages) {
+          button.classList.remove("hidden");
+          button.textContent = String(page);
+          button.dataset.page = String(page);
+          const isActive = page === currentPage;
+          button.classList.toggle("bg-[#00669E]", isActive);
+          button.classList.toggle("text-white", isActive);
+          button.classList.toggle("text-[#111827]", !isActive);
+        } else {
+          button.classList.add("hidden");
+        }
+      });
+
+      prevButton.disabled = currentPage === 1;
+      nextButton.disabled = currentPage === totalPages;
+      prevButton.classList.toggle("opacity-50", prevButton.disabled);
+      nextButton.classList.toggle("opacity-50", nextButton.disabled);
+      if (sliderPrev && sliderNext) {
+        sliderPrev.disabled = prevButton.disabled;
+        sliderNext.disabled = nextButton.disabled;
+        sliderPrev.classList.toggle("opacity-50", sliderPrev.disabled);
+        sliderNext.classList.toggle("opacity-50", sliderNext.disabled);
+      }
+    };
+
+    prevButton.addEventListener("click", () => {
+      currentPage = Math.max(1, currentPage - 1);
+      render();
+    });
+    nextButton.addEventListener("click", () => {
+      const maxPage = Math.max(1, Math.ceil(cards.length / getPerPage()));
+      currentPage = Math.min(maxPage, currentPage + 1);
+      render();
+    });
+    pageButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        currentPage = Number(button.dataset.page || "1");
+        render();
+      });
+    });
+    if (sliderPrev && sliderNext) {
+      sliderPrev.addEventListener("click", () => prevButton.click());
+      sliderNext.addEventListener("click", () => nextButton.click());
+    }
+
+    window.addEventListener("resize", render);
+    render();
+  }
+
   /* ---------- Boot -------------------------------------------------- */
   document.addEventListener("DOMContentLoaded", async () => {
     await loadPartials();
     initNavbar();
     setYear();
+    initBlogPagination();
   });
 })();
