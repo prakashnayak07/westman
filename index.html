@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0f172a" />
-  <meta name="description" content="Westman Printing Tailwind CSS HTML starter." />
+  <meta name="description"
+    content="Westman Printing - Commercial printing, packaging, and promotional production services." />
   <title>Westman Printing</title>
 
   <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
@@ -15,27 +16,900 @@
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" />
   <link rel="stylesheet" href="src/css/global.css" />
   <link rel="stylesheet" href="src/css/custom.css" />
+  <style>
+    /* ===== FAQ icon toggle ===== */
+    details[open]>summary .faq-icon-closed {
+      display: none;
+    }
+
+    details[open]>summary .faq-icon-open {
+      display: block;
+    }
+
+    details[open]>summary .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-icon {
+      transition: transform .2s ease;
+    }
+
+    /* ===== Marquee ===== */
+    @keyframes marquee-scroll {
+      from {
+        transform: translate3d(0, 0, 0);
+      }
+
+      to {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+
+    .marquee-viewport {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      will-change: transform;
+      animation: marquee-scroll 32s linear infinite;
+    }
+
+    .marquee-group {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      gap: 48px;
+      padding-right: 48px;
+    }
+
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .marquee-item img {
+      height: 32px;
+      width: auto;
+      object-fit: contain;
+      opacity: .55;
+      filter: grayscale(1);
+      transition: opacity .2s, filter .2s;
+    }
+
+    .marquee-item:hover img {
+      opacity: 1;
+      filter: grayscale(0);
+    }
+
+    @media (max-width: 768px) {
+      .marquee-group {
+        gap: 32px;
+        padding-right: 32px;
+      }
+
+      .marquee-item img {
+        height: 26px;
+      }
+
+      .marquee-track {
+        animation-duration: 24s;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track {
+        animation: none;
+      }
+    }
+
+    /* ===== Reviews track ===== */
+    .reviews-track {
+      transition: transform .4s ease;
+    }
+  </style>
 </head>
 
-<body class="font-[Inter]">
+<body class="font-[Inter] bg-[#F8FAFC] text-[#111827]">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div data-include="src/layouts/Navbar.html"></div>
 
-  <main id="main" class="mx-auto w-full max-w-6xl px-5 py-20">
-    <section class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm sm:p-12">
-      <div class="mx-auto max-w-2xl text-center">
-        <p class="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-orange-600">Tailwind Starter</p>
-        <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">Westman Printing</h1>
-        <p class="mt-5 text-base text-slate-600 sm:text-lg">
-          This is a development-ready Tailwind CSS HTML boilerplate. Start editing sections and utilities directly.
-        </p>
+  <main id="main" class="w-full overflow-x-hidden">
+    <!-- ===== Hero Start ===== -->
+    <section class="relative flex min-h-[682px] flex-col overflow-hidden pb-[216px] lg:min-h-[912px] lg:pb-[567px]">
+      <video class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover" autoplay muted loop playsinline
+        preload="auto" aria-hidden="true">
+        <source src="public/assets/hero/hero-bg.mp4" type="video/mp4" />
+      </video>
+      <div class="pointer-events-none absolute inset-0 z-[1] bg-[#00669E]" style="opacity:0.55;"></div>
+      <div class="pointer-events-none absolute inset-0 z-[2] overflow-hidden">
+        <span class="absolute left-[42%] top-[-420px] h-[1200px] w-[1200px] rounded-full border border-white/15"></span>
+        <span class="absolute left-[37%] top-[-370px] h-[1100px] w-[1100px] rounded-full border border-white/10"></span>
+        <span
+          class="absolute left-[35%] top-[-310px] h-[980px] w-[980px] rounded-full bg-[radial-gradient(circle_at_top,rgba(255,255,255,.12),transparent_55%)]"></span>
+      </div>
+
+      <div
+        class="relative z-[3] mx-auto flex w-full max-w-[1400px] flex-1 flex-col px-4 pt-[120px] lg:px-6 lg:pt-[120px]">
+        <div class="max-w-[1009px] text-white">
+          <h1
+            class="w-full font-['Satoshi'] text-[40px] font-bold leading-[48px] tracking-[-0.3px] lg:w-[1009px] lg:text-[72px] lg:leading-[88px] lg:tracking-[-0.8px]">
+            Your Trusted Commercial Printing Partner
+          </h1>
+          <p
+            class="mt-6 w-full text-[16px] leading-[22px] tracking-[-0.18px] lg:w-[802.598px] lg:text-[20px] lg:leading-[26.4px]">
+            High-quality digital, offset, packaging, and promotional printing — delivered fast and done right.
+          </p>
+          <a href="#contact"
+            class="relative z-20 mt-6 inline-flex cursor-pointer items-center justify-center gap-[10px] rounded-[999px] bg-[#00669E] py-[4px] pl-[16px] pr-[4px] text-[16px] font-medium leading-[22.72px] text-white"
+            style="background-color:#00669E;">
+            Request a Quote
+            <span
+              class="relative block h-[42px] w-[42px] overflow-hidden rounded-[1234.059px] bg-[rgba(255,255,255,0.24)]"
+              style="background-color:rgba(255,255,255,0.24);">
+              <img src="public/assets/hero/button-arrow.svg" alt="" aria-hidden="true"
+                class="absolute -left-2 top-[14.82px] h-[33.529px] w-[35.177px] max-w-none" />
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="pointer-events-none absolute bottom-0 left-0 z-[4] flex w-full items-end gap-[33px] px-4 lg:left-1/2 lg:w-[1919px] lg:-translate-x-1/2 lg:px-0">
+        <div class="h-[180px] flex-1 overflow-hidden rounded-[24px] lg:h-[388px] lg:w-[321px] lg:flex-none">
+          <img src="public/assets/hero/hero-card-1-mobile.webp" alt="Book cover print sample"
+            class="h-full w-full object-cover lg:hidden" />
+          <img src="public/assets/hero/hero-card-1.webp" alt="Book cover print sample"
+            class="hidden h-full w-full object-cover lg:block" />
+        </div>
+        <div class="h-[240px] flex-1 overflow-hidden rounded-[24px] lg:h-[255px] lg:flex-[1_0_0]">
+          <img src="public/assets/hero/hero-bottle-mobile.webp" alt="Premium bottle packaging sample"
+            class="h-full w-full object-cover lg:hidden" />
+          <img src="public/assets/hero/hero-card-2.webp" alt="Promotional package sample"
+            class="hidden h-full w-full object-cover lg:block" />
+        </div>
+        <div class="hidden h-[347px] flex-[1_0_0] overflow-hidden rounded-[24px] lg:block">
+          <img src="public/assets/hero/hero-card-3.webp" alt="Gift card print sample"
+            class="h-full w-full object-cover" />
+        </div>
+        <div class="hidden h-[255px] flex-[1_0_0] overflow-hidden rounded-[24px] lg:block">
+          <img src="public/assets/hero/hero-card-4.webp" alt="Box packaging sample"
+            class="h-full w-full object-cover" />
+        </div>
+        <div class="hidden h-[690px] flex-[1_0_0] overflow-hidden rounded-[24px] lg:block">
+          <img src="public/assets/hero/hero-bottle.webp" alt="Bottle mockup print sample"
+            class="h-full w-full object-cover" />
+        </div>
+      </div>
+
+    </section>
+    <!-- ===== Hero End ===== -->
+
+    <!-- ===== Marquee Start ===== -->
+    <section aria-label="Our clients" class="overflow-hidden border-y border-[#e5e7eb] bg-white py-7">
+      <div class="marquee-viewport">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <div class="marquee-item"><img src="public/assets/home/logo-baltra.webp" alt="Baltra" /></div>
+            <div class="marquee-item"><img src="public/assets/home/logo-folliderm.webp" alt="Folliderm" /></div>
+            <div class="marquee-item"><img src="public/assets/home/logo-dynamic.webp" alt="Dynamic" /></div>
+            <div class="marquee-item"><img src="public/assets/home/logo-maxmedia.webp" alt="Max Media" /></div>
+            <div class="marquee-item"><img src="public/assets/home/logo-blanxer.webp" alt="Blanxer" /></div>
+            <div class="marquee-item"><img src="public/assets/home/logo-petmama.webp" alt="Pet Mama" /></div>
+            <div class="marquee-item"><img src="public/assets/home/logo-uptrendly.webp" alt="Uptrendly" /></div>
+          </div>
+          <div class="marquee-group" aria-hidden="true">
+            <div class="marquee-item"><img src="public/assets/home/logo-baltra.webp" alt="" /></div>
+            <div class="marquee-item"><img src="public/assets/home/logo-folliderm.webp" alt="" /></div>
+            <div class="marquee-item"><img src="public/assets/home/logo-dynamic.webp" alt="" /></div>
+            <div class="marquee-item"><img src="public/assets/home/logo-maxmedia.webp" alt="" /></div>
+            <div class="marquee-item"><img src="public/assets/home/logo-blanxer.webp" alt="" /></div>
+            <div class="marquee-item"><img src="public/assets/home/logo-petmama.webp" alt="" /></div>
+            <div class="marquee-item"><img src="public/assets/home/logo-uptrendly.webp" alt="" /></div>
+          </div>
+        </div>
       </div>
     </section>
+    <!-- ===== Marquee End ===== -->
+
+    <!-- ===== Certifications Start ===== -->
+    <section id="certifications" class="bg-white py-[60px] lg:py-[80px]">
+      <div class="mx-auto w-full max-w-7xl px-5">
+        <div class="flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-center lg:gap-16">
+          <div class="max-w-[775px]">
+            <h2
+              class="font-['Satoshi'] text-[28px] font-bold leading-[36px] tracking-[-0.2px] text-[#00669E] sm:text-[32px] sm:leading-[42px] lg:text-[36px] lg:leading-[48px]">
+              ISO 9001 and HACCP certified.<br />Your guarantee of world-class products.
+            </h2>
+            <p
+              class="mt-3 max-w-[540px] font-['Satoshi'] text-[16px] leading-[24px] text-[#374151] sm:text-[18px] sm:leading-[26px] lg:text-[20px] lg:leading-[28px]">
+              Internationally certified production processes that uphold precision, consistency, and safety across every
+              stage of print manufacturing.
+            </p>
+          </div>
+          <div class="flex shrink-0 gap-4 sm:gap-8">
+            <div
+              class="grid h-[140px] w-[140px] place-items-center rounded-[17px] border-[1.5px] border-[#6b7280] p-[14px]">
+              <img src="public/assets/home/cert-haccp.webp" alt="HACCP certification badge"
+                class="h-full w-full object-contain" />
+            </div>
+            <div
+              class="grid h-[140px] w-[140px] place-items-center rounded-[17px] border-[1.5px] border-[#6b7280] p-[14px]">
+              <img src="public/assets/home/cert-iso.webp" alt="ISO 9001 certification badge"
+                class="h-full w-full object-contain" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Certifications End ===== -->
+
+    <!-- ===== Services Start ===== -->
+    <section id="services" class="bg-white py-[60px] lg:py-[120px]">
+      <div class="mx-auto w-full max-w-7xl px-5">
+        <div class="mb-12">
+          <h2
+            class="font-['Satoshi'] text-[28px] font-bold leading-[36px] tracking-[-0.2px] text-[#111827] sm:text-[36px] sm:leading-[46px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+            Our Full Range of Production Services</h2>
+          <p class="mt-3 max-w-[710px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#374151] sm:text-[16px]">
+            From everyday business printing to premium packaging and speciality finishes, our in-house production gives
+            you better control, faster turnaround, and consistent results across every job.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article
+            class="group flex h-[420px] flex-col overflow-hidden rounded-[24px] border border-[#f1f5f9] bg-[#e2e8f0] transition hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.10)]">
+            <div class="relative flex-1 overflow-hidden">
+              <img src="public/assets/home/service-digital.webp" alt="High-quality digital printing service sample"
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]" />
+            </div>
+            <div class="bg-white px-4 pb-4 pt-3">
+              <h3 class="font-['Satoshi'] text-[20px] font-bold leading-[24px] text-[#00669E]">High-Quality Digital
+                Printing</h3>
+              <p class="mt-1.5 text-[14px] leading-[20px] text-[#374151]">• Min. 500 units &nbsp;•&nbsp; Delivery: 2–3
+                weeks</p>
+            </div>
+          </article>
+          <article
+            class="group flex h-[420px] flex-col overflow-hidden rounded-[24px] border border-[#f1f5f9] bg-[#e2e8f0] transition hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.10)]">
+            <div class="relative flex-1 overflow-hidden">
+              <img src="public/assets/home/service-packaging.webp" alt="Packaging solution sample"
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]" />
+            </div>
+            <div class="bg-white px-4 pb-4 pt-3">
+              <h3 class="font-['Satoshi'] text-[20px] font-bold leading-[24px] text-[#00669E]">Packaging Solution</h3>
+              <p class="mt-1.5 text-[14px] leading-[20px] text-[#374151]">• Min. 500 units &nbsp;•&nbsp; Delivery: 2–3
+                weeks</p>
+            </div>
+          </article>
+          <article
+            class="group flex h-[420px] flex-col overflow-hidden rounded-[24px] border border-[#f1f5f9] bg-[#e2e8f0] transition hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.10)]">
+            <div class="relative flex-1 overflow-hidden">
+              <img src="public/assets/home/service-offset.webp" alt="Offset printing machinery"
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]" />
+            </div>
+            <div class="bg-white px-4 pb-4 pt-3">
+              <h3 class="font-['Satoshi'] text-[20px] font-bold leading-[24px] text-[#00669E]">Offset Printing</h3>
+              <p class="mt-1.5 text-[14px] leading-[20px] text-[#374151]">• Min. 50 units &nbsp;•&nbsp; Delivery: 2–3
+                Weeks</p>
+            </div>
+          </article>
+          <article
+            class="group flex h-[420px] flex-col overflow-hidden rounded-[24px] border border-[#f1f5f9] bg-[#e2e8f0] transition hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.10)]">
+            <div class="relative flex-1 overflow-hidden">
+              <img src="public/assets/home/service-promo.webp" alt="Promotional item bottle print sample"
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]" />
+            </div>
+            <div class="bg-white px-4 pb-4 pt-3">
+              <h3 class="font-['Satoshi'] text-[20px] font-bold leading-[24px] text-[#00669E]">Promotional Items
+                Printing</h3>
+              <p class="mt-1.5 text-[14px] leading-[20px] text-[#374151]">• Min. 100 units &nbsp;•&nbsp; Delivery: 1–2
+                weeks</p>
+            </div>
+          </article>
+          <article
+            class="group flex h-[420px] flex-col overflow-hidden rounded-[24px] border border-[#f1f5f9] bg-[#e2e8f0] transition hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.10)]">
+            <div class="relative flex-1 overflow-hidden">
+              <img src="public/assets/home/service-mail.webp" alt="Mail fulfillment printed materials sample"
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]" />
+            </div>
+            <div class="bg-white px-4 pb-4 pt-3">
+              <h3 class="font-['Satoshi'] text-[20px] font-bold leading-[24px] text-[#00669E]">Mail Fulfillment</h3>
+              <p class="mt-1.5 text-[14px] leading-[20px] text-[#374151]">• Min. 1,000 units &nbsp;•&nbsp; Delivery: 3–5
+                days</p>
+            </div>
+          </article>
+          <article class="relative flex h-[420px] flex-col justify-between overflow-hidden rounded-[24px]  p-8">
+            <img src="public/assets/home/service-enquiry-bg.webp" alt="" aria-hidden="true"
+              class="absolute inset-0 h-full w-full object-cover " />
+            <h3
+              class="relative z-10 max-w-[280px] font-['Satoshi'] text-[24px] font-bold leading-[32px] text-black sm:text-[28px] sm:leading-[36px]">
+              Tell us about your print requirements</h3>
+            <a href="#connect"
+              class="relative z-10 inline-flex w-fit items-center gap-[10px] rounded-full bg-[#00669E] py-1 pl-4 pr-1 font-['Satoshi'] text-[16px] font-medium leading-[22.72px] text-white transition hover:opacity-90">
+              Get a Quote
+              <span class="grid h-[42px] w-[42px] place-items-center rounded-full bg-white/25">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Services End ===== -->
+
+    <!-- ===== Works Start ===== -->
+    <section id="works"
+      class="relative overflow-hidden bg-[linear-gradient(105deg,#00669e_22%,#004d80_50%,#091a39_100%)]">
+      <!-- Decorative product images (desktop only) -->
+      <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 right-0 hidden w-[55%] lg:block">
+        <div class="absolute right-[620px] top-[230px] h-[160px] w-[200px] overflow-hidden rounded-[20px] bg-white/10">
+          <img src="public/assets/home/works-1.webp" alt="" class="h-full w-full object-cover" />
+        </div>
+        <div class="absolute right-[570px] top-[60px] h-[290px] w-[280px] overflow-hidden rounded-[20px] bg-white/10">
+          <img src="public/assets/home/works-2.webp" alt="" class="h-full w-full object-cover" />
+        </div>
+        <div class="absolute right-[200px] top-[55px] h-[250px] w-[250px] overflow-hidden rounded-[20px] bg-white/10">
+          <img src="public/assets/home/works-3.webp" alt="" class="h-full w-full object-cover" />
+        </div>
+        <div class="absolute right-[160px] top-[100px] h-[500px] w-[380px] overflow-hidden rounded-[20px] bg-white/10">
+          <img src="public/assets/home/hero-bottle.webp" alt="" class="h-full w-full object-cover" />
+        </div>
+        <div class="absolute right-5 top-[270px] h-[350px] w-[260px] overflow-hidden rounded-[20px] bg-white/10">
+          <img src="public/assets/home/hero-card-2.webp" alt="" class="h-full w-full object-cover" />
+        </div>
+      </div>
+
+      <div
+        class="relative z-10 mx-auto flex min-h-[480px] w-full max-w-7xl flex-col gap-8 px-5 py-[60px] lg:min-h-[652px] lg:max-w-[560px] lg:items-start lg:py-[100px]"
+        style="margin-left: max(20px, calc((100vw - 1280px) / 2 + 20px));">
+        <h2
+          class="font-['Satoshi'] text-[32px] font-bold leading-[40px] tracking-[-0.3px] text-white sm:text-[42px] sm:leading-[52px] lg:text-[56px] lg:leading-[66px] lg:tracking-[-0.6px]">
+          More than a printer.<br />A production partner.
+        </h2>
+        <p
+          class="max-w-[480px] text-[15px] leading-[24px] text-white/80 sm:text-[16px] lg:text-[18px] lg:leading-[26px]">
+          We work with businesses that value consistency, scale, and accountability — delivering print solutions that
+          support long-term growth.
+        </p>
+        <a href="#connect"
+          class="inline-flex w-fit items-center gap-[10px] rounded-full bg-white/15 py-1 pl-4 pr-1 font-['Satoshi'] text-[16px] font-medium leading-[22.72px] text-white backdrop-blur-md transition hover:bg-white/25">
+          Learn More
+          <span class="grid h-[42px] w-[42px] place-items-center rounded-full bg-white/25">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <!-- Mobile/tablet inline image strip -->
+      <div class="relative z-10 grid grid-cols-2 gap-3 px-5 pb-[60px] sm:grid-cols-3 lg:hidden">
+        <div class="overflow-hidden rounded-[20px] bg-white/10"><img src="public/assets/home/works-1.webp"
+            alt="Printed packaging" class="h-[160px] w-full object-cover sm:h-[200px]" /></div>
+        <div class="overflow-hidden rounded-[20px] bg-white/10"><img src="public/assets/home/works-2.webp"
+            alt="Printed card" class="h-[160px] w-full object-cover sm:h-[200px]" /></div>
+        <div class="hidden overflow-hidden rounded-[20px] bg-white/10 sm:block"><img
+            src="public/assets/home/works-3.webp" alt="Beauty print"
+            class="h-[160px] w-full object-cover sm:h-[200px]" /></div>
+      </div>
+    </section>
+    <!-- ===== Works End ===== -->
+
+    <!-- ===== Process Start ===== -->
+    <section id="process" class="bg-white py-[60px] lg:py-[120px]">
+      <div class="mx-auto w-full max-w-7xl px-5">
+        <div class="mx-auto max-w-[710px] text-center">
+          <h2
+            class="font-['Satoshi'] text-[28px] font-bold leading-[36px] tracking-[-0.2px] sm:text-[36px] sm:leading-[46px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+            Our Simple Printing Process</h2>
+          <p class="mx-auto mt-3 text-[15px] leading-[22px] text-[#374151] sm:text-[16px]">
+            You don't need to be a print expert. Our structured process simplifies decisions, avoids errors, and
+            delivers professional results — every time.
+          </p>
+        </div>
+        <div class="mt-12 flex flex-col items-stretch gap-10 lg:mt-[60px] lg:flex-row lg:gap-[60px]">
+          <div
+            class="min-h-[320px] flex-1 overflow-hidden rounded-[24px] bg-[#e2e8f0] lg:min-h-[560px] lg:max-w-[560px]">
+            <img src="public/assets/home/process-main.webp" alt="Printing process package sample"
+              class="h-full w-full object-cover" />
+          </div>
+          <div class="flex flex-1 flex-col gap-2">
+            <article class="flex items-start gap-4 rounded-[16px] border border-[#e5e7eb] p-5 lg:p-6">
+              <span class="grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[8px] bg-[#fb923c]">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="white" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                  <polyline points="10 9 9 9 8 9" />
+                </svg>
+              </span>
+              <div>
+                <h3
+                  class="font-['Satoshi'] text-[20px] font-medium leading-[28px] tracking-[-0.15px] sm:text-[22px] sm:leading-[30px]">
+                  Share Your Requirements</h3>
+                <p class="mt-1 text-[15px] leading-[22px] text-[#374151]">Tell us what you need, or let our team guide
+                  you.</p>
+              </div>
+            </article>
+            <article class="flex items-start gap-4 rounded-[16px] border border-[#e5e7eb] p-5 lg:p-6">
+              <span class="grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[8px] bg-[#00669e]">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="white" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              <div>
+                <h3
+                  class="font-['Satoshi'] text-[20px] font-medium leading-[28px] tracking-[-0.15px] sm:text-[22px] sm:leading-[30px]">
+                  Review &amp; Proof</h3>
+                <p class="mt-1 text-[15px] leading-[22px] text-[#374151]">We confirm specifications &amp; provide proofs
+                  before production.</p>
+              </div>
+            </article>
+            <article class="flex items-start gap-4 rounded-[16px] border border-[#e5e7eb] p-5 lg:p-6">
+              <span class="grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[8px] bg-[#10b981]">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="white" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 6 2 18 2 18 9" />
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                  <rect x="6" y="14" width="12" height="8" />
+                </svg>
+              </span>
+              <div>
+                <h3
+                  class="font-['Satoshi'] text-[20px] font-medium leading-[28px] tracking-[-0.15px] sm:text-[22px] sm:leading-[30px]">
+                  Print &amp; Quality Check</h3>
+                <p class="mt-1 text-[15px] leading-[22px] text-[#374151]">Your job is produced using certified quality
+                  control processes.</p>
+              </div>
+            </article>
+            <article class="flex items-start gap-4 rounded-[16px] border border-[#e5e7eb] p-5 lg:p-6">
+              <span class="grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[8px] bg-[#8b5cf6]">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="white" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="1" y="3" width="15" height="13" />
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                  <circle cx="5.5" cy="18.5" r="2.5" />
+                  <circle cx="18.5" cy="18.5" r="2.5" />
+                </svg>
+              </span>
+              <div>
+                <h3
+                  class="font-['Satoshi'] text-[20px] font-medium leading-[28px] tracking-[-0.15px] sm:text-[22px] sm:leading-[30px]">
+                  Finish &amp; Deliver</h3>
+                <p class="mt-1 text-[15px] leading-[22px] text-[#374151]">We finish, pack, and deliver your order on
+                  time.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Process End ===== -->
+
+    <!-- ===== Reviews Start ===== -->
+    <section id="reviews" class="overflow-hidden bg-[#f1f5f9] py-[60px] lg:py-[120px]">
+      <div class="mx-auto w-full max-w-7xl px-5">
+        <div class="mb-12 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+          <div>
+            <h2
+              class="font-['Satoshi'] text-[28px] font-bold leading-[36px] tracking-[-0.2px] sm:text-[36px] sm:leading-[46px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+              What Our Clients Say</h2>
+            <p class="mt-2 max-w-[710px] text-[15px] leading-[22px] text-[#374151] sm:text-[16px]">Trusted by hundreds
+              of businesses across Australia.</p>
+          </div>
+          <div class="flex shrink-0 gap-2.5">
+            <button id="reviewPrev" type="button" aria-label="Previous review"
+              class="grid h-[42px] w-[42px] place-items-center rounded-full border border-[#e5e7eb] bg-[#f1f5f9] text-[#374151] transition hover:bg-[#e2e8f0]">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button id="reviewNext" type="button" aria-label="Next review"
+              class="grid h-[42px] w-[42px] place-items-center rounded-full border border-[#e5e7eb] bg-[#f1f5f9] text-[#374151] transition hover:bg-[#e2e8f0]">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="overflow-hidden">
+          <div id="reviewsTrack" class="reviews-track flex gap-6">
+            <article
+              class="flex h-[260px] w-[400px] shrink-0 flex-col justify-between rounded-[24px] border border-[#e5e5e5] bg-white p-6">
+              <p class="text-[15px] leading-[22px] text-[#111827]">Westman Printing has been a reliable partner,
+                delivering high-quality prints with exceptional attention to detail and fast turnaround. Professional,
+                responsive, and consistently reliable.</p>
+              <div class="mt-4 flex items-center gap-4">
+                <div class="flex-1">
+                  <p class="text-[15px] font-bold leading-[22px] text-[#00669e]">John Smith</p>
+                  <p class="text-[14px] leading-[20px] text-[#374151]">Marketing Director, Tech Innovations Inc.</p>
+                </div>
+                <img src="public/assets/home/testimonial-avatar.webp" alt="John Smith"
+                  class="h-12 w-12 shrink-0 rounded-full bg-[#e2e8f0] object-cover" />
+              </div>
+            </article>
+            <article
+              class="flex h-[260px] w-[400px] shrink-0 flex-col justify-between rounded-[24px] border border-[#e5e5e5] bg-white p-6">
+              <p class="text-[15px] leading-[22px] text-[#111827]">Outstanding quality and communication throughout the
+                entire process. They handled our large-scale packaging order flawlessly and on schedule. Will definitely
+                continue working with them.</p>
+              <div class="mt-4 flex items-center gap-4">
+                <div class="flex-1">
+                  <p class="text-[15px] font-bold leading-[22px] text-[#00669e]">Sarah Chen</p>
+                  <p class="text-[14px] leading-[20px] text-[#374151]">Operations Manager, Pacific Foods Group</p>
+                </div>
+                <span class="block h-12 w-12 shrink-0 rounded-full bg-[#e2e8f0]" aria-hidden="true"></span>
+              </div>
+            </article>
+            <article
+              class="flex h-[260px] w-[400px] shrink-0 flex-col justify-between rounded-[24px] border border-[#e5e5e5] bg-white p-6">
+              <p class="text-[15px] leading-[22px] text-[#111827]">We've used many print companies over the years, but
+                Westman Printing stands out for their ISO-certified quality and ability to handle complex orders with
+                ease. Highly recommend!</p>
+              <div class="mt-4 flex items-center gap-4">
+                <div class="flex-1">
+                  <p class="text-[15px] font-bold leading-[22px] text-[#00669e]">Michael Tran</p>
+                  <p class="text-[14px] leading-[20px] text-[#374151]">CEO, Brand Studio Melbourne</p>
+                </div>
+                <span class="block h-12 w-12 shrink-0 rounded-full bg-[#e2e8f0]" aria-hidden="true"></span>
+              </div>
+            </article>
+            <article
+              class="flex h-[260px] w-[400px] shrink-0 flex-col justify-between rounded-[24px] border border-[#e5e5e5] bg-white p-6">
+              <p class="text-[15px] leading-[22px] text-[#111827]">The team at Westman goes above and beyond. Fast
+                proofs, clear communication, and the finished product always exceeds expectations. A genuinely excellent
+                printing partner.</p>
+              <div class="mt-4 flex items-center gap-4">
+                <div class="flex-1">
+                  <p class="text-[15px] font-bold leading-[22px] text-[#00669e]">Priya Sharma</p>
+                  <p class="text-[14px] leading-[20px] text-[#374151]">Creative Director, Luminary Agency</p>
+                </div>
+                <span class="block h-12 w-12 shrink-0 rounded-full bg-[#e2e8f0]" aria-hidden="true"></span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Reviews End ===== -->
+
+    <!-- ===== Connect Start ===== -->
+    <section id="connect" class="bg-white py-[60px] lg:py-[120px]">
+      <div class="mx-auto w-full max-w-7xl px-5">
+        <div class="flex flex-col items-stretch gap-10 lg:flex-row lg:gap-[60px]">
+          <div
+            class="min-h-[320px] flex-1 overflow-hidden rounded-[24px] bg-[#e2e8f0] lg:min-h-[560px] lg:max-w-[560px]">
+            <img src="public/assets/home/contact-side.webp" alt="Connect with our team"
+              class="h-full w-full object-cover" />
+          </div>
+          <div class="flex flex-1 flex-col gap-8">
+            <div>
+              <h2
+                class="font-['Satoshi'] text-[28px] font-bold leading-[36px] tracking-[-0.2px] sm:text-[36px] sm:leading-[46px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+                Connect With Our Team</h2>
+              <p class="mt-2 max-w-[710px] text-[15px] leading-[22px] text-[#374151] sm:text-[16px]">
+                Big idea or small batch, we print with precision and purpose. Share your concept, upload your artwork,
+                and we'll help you get it production-ready — stress-free.
+              </p>
+            </div>
+
+            <form id="contactForm" class="flex flex-col gap-5" onsubmit="handleContactForm(event)">
+              <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
+                <label class="flex flex-col gap-2">
+                  <span class="text-[14px] font-medium text-[#374151]">Email</span>
+                  <input type="email" required placeholder="Enter your email address"
+                    class="border-0 border-b border-[#e2e8f0] bg-transparent px-2 py-2 text-[14px] text-[#111827] placeholder:text-[#9ca3af] outline-none transition focus:border-[#00669e] focus:ring-0" />
+                </label>
+                <label class="flex flex-col gap-2">
+                  <span class="text-[14px] font-medium text-[#374151]">Phone</span>
+                  <input type="tel" placeholder="Enter your phone number"
+                    class="border-0 border-b border-[#e2e8f0] bg-transparent px-2 py-2 text-[14px] text-[#111827] placeholder:text-[#9ca3af] outline-none transition focus:border-[#00669e] focus:ring-0" />
+                </label>
+              </div>
+              <label class="flex flex-col gap-2">
+                <span class="text-[14px] font-medium text-[#374151]">Service Required</span>
+                <select
+                  class="border-0 border-b border-[#e2e8f0] bg-transparent px-2 py-2 text-[14px] text-[#111827] outline-none transition focus:border-[#00669e] focus:ring-0">
+                  <option value="">Select a service</option>
+                  <option>High-Quality Digital Printing</option>
+                  <option>Packaging Solution</option>
+                  <option>Offset Printing</option>
+                  <option>Promotional Items Printing</option>
+                  <option>Mail Fulfillment</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label class="flex flex-col gap-2">
+                <span class="text-[14px] font-medium text-[#374151]">Tell us about your requirements</span>
+                <textarea rows="4" placeholder="Describe your print requirements, quantity, deadline..."
+                  class="resize-y border-0 border-b border-[#e2e8f0] bg-transparent px-2 py-2 text-[14px] text-[#111827] placeholder:text-[#9ca3af] outline-none transition focus:border-[#00669e] focus:ring-0"></textarea>
+              </label>
+              <button type="submit"
+                class="inline-flex w-fit items-center gap-[10px] rounded-full bg-[#00669E] py-1 pl-4 pr-1 font-['Satoshi'] text-[16px] font-medium leading-[22.72px] text-white transition hover:opacity-90">
+                Send Enquiry
+                <span class="grid h-[42px] w-[42px] place-items-center rounded-full bg-white/25">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Connect End ===== -->
+
+    <!-- ===== Blog Start ===== -->
+    <section id="blog" class="bg-white py-[60px] lg:py-[120px]">
+      <div class="mx-auto w-full max-w-7xl px-5">
+        <div class="mb-12 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+          <div>
+            <h2
+              class="font-['Satoshi'] text-[28px] font-bold leading-[36px] tracking-[-0.2px] sm:text-[36px] sm:leading-[46px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+              Insights &amp; Inspiration</h2>
+            <p class="mt-2 max-w-[710px] text-[15px] leading-[22px] text-[#374151] sm:text-[16px]">
+              Practical tips, creative ideas, and sustainability insights from Australia's favourite packaging partner.
+            </p>
+          </div>
+          <div class="flex shrink-0 gap-2.5">
+            <button id="blogPrev" type="button" aria-label="Previous article"
+              class="grid h-[42px] w-[42px] place-items-center rounded-full border border-[#e5e7eb] bg-[#f1f5f9] text-[#374151] transition hover:bg-[#e2e8f0]">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button id="blogNext" type="button" aria-label="Next article"
+              class="grid h-[42px] w-[42px] place-items-center rounded-full border border-[#e5e7eb] bg-[#f1f5f9] text-[#374151] transition hover:bg-[#e2e8f0]">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="overflow-hidden">
+          <div id="blogTrack" class="reviews-track grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <article
+              class="group overflow-hidden rounded-[20px] border border-[#e5e7eb] transition hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+              <div class="h-[200px] overflow-hidden bg-[#e2e8f0] lg:h-[260px]">
+                <img src="public/assets/home/blog-1.webp" alt="Packaging trends 2026"
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.05]" />
+              </div>
+              <div class="p-5">
+                <p class="text-[12px] font-semibold uppercase tracking-[0.06em] text-[#00669e]">Packaging</p>
+                <h3 class="mt-2 font-['Satoshi'] text-[17px] font-semibold leading-[24px] text-[#111827]">5 Packaging
+                  Trends That Will Define Brands in 2026</h3>
+                <p class="mt-2 text-[13px] text-[#6b7280]">March 12, 2026 · 4 min read</p>
+              </div>
+            </article>
+            <article
+              class="group overflow-hidden rounded-[20px] border border-[#e5e7eb] transition hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+              <div class="h-[200px] overflow-hidden bg-[#e2e8f0] lg:h-[260px]">
+                <img src="public/assets/home/blog-2.webp" alt="Eco-friendly print materials"
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.05]" />
+              </div>
+              <div class="p-5">
+                <p class="text-[12px] font-semibold uppercase tracking-[0.06em] text-[#00669e]">Sustainability</p>
+                <h3 class="mt-2 font-['Satoshi'] text-[17px] font-semibold leading-[24px] text-[#111827]">How
+                  Eco-Friendly Print Materials Are Reshaping the Industry</h3>
+                <p class="mt-2 text-[13px] text-[#6b7280]">February 28, 2026 · 5 min read</p>
+              </div>
+            </article>
+            <article
+              class="group overflow-hidden rounded-[20px] border border-[#e5e7eb] transition hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+              <div class="h-[200px] overflow-hidden bg-[#e2e8f0] lg:h-[260px]">
+                <img src="public/assets/home/blog-3.webp" alt="Preparing artwork for print"
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.05]" />
+              </div>
+              <div class="p-5">
+                <p class="text-[12px] font-semibold uppercase tracking-[0.06em] text-[#00669e]">Tips</p>
+                <h3 class="mt-2 font-['Satoshi'] text-[17px] font-semibold leading-[24px] text-[#111827]">Preparing Your
+                  Artwork for Print: A Complete Guide</h3>
+                <p class="mt-2 text-[13px] text-[#6b7280]">January 15, 2026 · 6 min read</p>
+              </div>
+            </article>
+            <article
+              class="group overflow-hidden rounded-[20px] border border-[#e5e7eb] transition hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
+              <div class="h-[200px] overflow-hidden bg-[#e2e8f0] lg:h-[260px]">
+                <img src="public/assets/home/blog-4.webp" alt="Digital vs offset"
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.05]" />
+              </div>
+              <div class="p-5">
+                <p class="text-[12px] font-semibold uppercase tracking-[0.06em] text-[#00669e]">Insights</p>
+                <h3 class="mt-2 font-['Satoshi'] text-[17px] font-semibold leading-[24px] text-[#111827]">Digital vs
+                  Offset: Choosing the Right Process for Your Job</h3>
+                <p class="mt-2 text-[13px] text-[#6b7280]">December 3, 2025 · 3 min read</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Blog End ===== -->
+
+    <!-- ===== FAQ Start ===== -->
+    <section id="faq" class="bg-[#f1f5f9] py-[60px] lg:py-[120px]">
+      <div class="mx-auto w-full max-w-7xl px-5">
+        <div class="mb-12">
+          <h2
+            class="font-['Satoshi'] text-[28px] font-bold leading-[36px] tracking-[-0.2px] sm:text-[36px] sm:leading-[46px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+            Frequently Asked Questions</h2>
+          <p class="mt-2 text-[15px] leading-[22px] text-[#374151] sm:text-[16px]">Everything you need to know about
+            working with Westman Printing.</p>
+        </div>
+        <div class="flex flex-col gap-3">
+          <details open class="faq-item group overflow-hidden rounded-[16px] border border-[#e2e8f0] bg-white">
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between gap-6 px-5 py-4 text-left text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] transition hover:bg-[#f1f5f9] lg:px-6">
+              <span>How do I place an order?</span>
+              <span class="faq-icon grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#f1f5f9]"
+                aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </span>
+            </summary>
+            <p class="px-5 pb-5 text-[15px] font-medium leading-[22px] text-[#374151] lg:px-6">Simply fill out our
+              enquiry form with your requirements, or email us at quotes@westmanprinting.com.au. Our team will review
+              your brief and get back to you within 24 hours with a personalised quote and timeline.</p>
+          </details>
+          <details class="faq-item group overflow-hidden rounded-[16px] border border-[#e2e8f0] bg-white">
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between gap-6 px-5 py-4 text-left text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] transition hover:bg-[#f1f5f9] lg:px-6">
+              <span>What file formats do you accept?</span>
+              <span class="faq-icon grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#f1f5f9]"
+                aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </span>
+            </summary>
+            <p class="px-5 pb-5 text-[15px] font-medium leading-[22px] text-[#374151] lg:px-6">We accept PDF, AI (Adobe
+              Illustrator), PSD, EPS, and TIFF formats. For best results, please supply print-ready PDFs with 3mm bleed,
+              crop marks, and fonts embedded or outlined. Our team is happy to guide you through file preparation.</p>
+          </details>
+          <details class="faq-item group overflow-hidden rounded-[16px] border border-[#e2e8f0] bg-white">
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between gap-6 px-5 py-4 text-left text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] transition hover:bg-[#f1f5f9] lg:px-6">
+              <span>What are your minimum order quantities?</span>
+              <span class="faq-icon grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#f1f5f9]"
+                aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </span>
+            </summary>
+            <p class="px-5 pb-5 text-[15px] font-medium leading-[22px] text-[#374151] lg:px-6">Minimum quantities vary
+              by product: Digital printing from 50 units, offset printing from 500 units, packaging from 500 units, and
+              promotional items from 100 units. Contact us for specific requirements on specialty products.</p>
+          </details>
+          <details class="faq-item group overflow-hidden rounded-[16px] border border-[#e2e8f0] bg-white">
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between gap-6 px-5 py-4 text-left text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] transition hover:bg-[#f1f5f9] lg:px-6">
+              <span>Do you offer design services?</span>
+              <span class="faq-icon grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#f1f5f9]"
+                aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </span>
+            </summary>
+            <p class="px-5 pb-5 text-[15px] font-medium leading-[22px] text-[#374151] lg:px-6">Yes, we offer a full
+              design and pre-press service. Our in-house designers can create artwork from scratch or adapt your
+              existing files for print. Design fees are quoted separately based on project scope.</p>
+          </details>
+          <details class="faq-item group overflow-hidden rounded-[16px] border border-[#e2e8f0] bg-white">
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between gap-6 px-5 py-4 text-left text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] transition hover:bg-[#f1f5f9] lg:px-6">
+              <span>What is your turnaround time?</span>
+              <span class="faq-icon grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#f1f5f9]"
+                aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </span>
+            </summary>
+            <p class="px-5 pb-5 text-[15px] font-medium leading-[22px] text-[#374151] lg:px-6">Standard turnaround is
+              5–10 business days from artwork approval. Rush options are available for urgent jobs. Delivery timelines
+              depend on quantity and product type — we'll confirm the exact schedule in your quote.</p>
+          </details>
+          <details class="faq-item group overflow-hidden rounded-[16px] border border-[#e2e8f0] bg-white">
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between gap-6 px-5 py-4 text-left text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] transition hover:bg-[#f1f5f9] lg:px-6">
+              <span>Are you ISO certified?</span>
+              <span class="faq-icon grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#f1f5f9]"
+                aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </span>
+            </summary>
+            <p class="px-5 pb-5 text-[15px] font-medium leading-[22px] text-[#374151] lg:px-6">Yes. Westman Printing
+              holds ISO 9001 and HACCP certifications, ensuring every product meets the highest quality and safety
+              standards. Our quality management system covers every stage from pre-press to dispatch.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <!-- ===== FAQ End ===== -->
   </main>
 
   <div data-include="src/layouts/Footer.html"></div>
 
+  <script>
+    /* ===== Reviews carousel ===== */
+    (function () {
+      const track = document.getElementById('reviewsTrack');
+      const prev = document.getElementById('reviewPrev');
+      const next = document.getElementById('reviewNext');
+      if (!track || !prev || !next) return;
+      let index = 0;
+      const cardWidth = 424; // 400 + 24 gap
+      const update = () => {
+        const visible = Math.max(1, Math.floor(track.parentElement.clientWidth / cardWidth));
+        const max = Math.max(0, track.children.length - visible);
+        index = Math.min(Math.max(index, 0), max);
+        track.style.transform = `translateX(-${index * cardWidth}px)`;
+      };
+      next.addEventListener('click', () => { index++; update(); });
+      prev.addEventListener('click', () => { index--; update(); });
+      window.addEventListener('resize', update);
+      update();
+    })();
+
+    /* ===== Contact form (visual feedback) ===== */
+    function handleContactForm(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('[type=submit]');
+      const original = btn.innerHTML;
+      btn.innerHTML = 'Sent! <span class="grid h-[42px] w-[42px] place-items-center rounded-full bg-white/25"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>';
+      btn.style.background = '#10b981';
+      setTimeout(() => {
+        btn.innerHTML = original;
+        btn.style.background = '';
+        e.target.reset();
+      }, 2500);
+    }
+
+    /* ===== FAQ accordion (single-open) ===== */
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('toggle', () => {
+        if (item.open) {
+          document.querySelectorAll('.faq-item').forEach(o => { if (o !== item) o.open = false; });
+        }
+      });
+    });
+  </script>
   <script src="src/scripts/main.js"></script>
 </body>
 
