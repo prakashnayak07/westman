@@ -8,12 +8,21 @@
   }
 
   body {
-    @apply min-h-screen bg-slate-50 text-slate-900 antialiased;
+    @apply min-h-screen overflow-x-hidden bg-slate-50 text-slate-900 antialiased;
   }
 }
 
 @layer components {
   .skip-link {
     @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-slate-900 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white;
+  }
+
+  /* Pill button used in CTA + footer "Stay Connected" */
+  .pill-btn {
+    @apply inline-flex items-center gap-2 rounded-full pl-5 pr-1 py-1 text-sm font-medium transition;
+  }
+
+  .pill-btn__icon {
+    @apply grid h-9 w-9 place-items-center rounded-full;
   }
 }
