@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0f172a" />
-  <meta name="description" content="About Westman Printing Tailwind starter page." />
+  <meta name="description"
+    content="Learn more about Westman Printing, our services, client trust, insights, and support." />
   <title>About · Westman Printing</title>
 
   <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
@@ -13,26 +14,817 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="src/css/global.css" />
   <link rel="stylesheet" href="src/css/custom.css" />
+  <style>
+    .about-slider-button.swiper-button-disabled {
+      opacity: 0.45;
+      pointer-events: none;
+    }
+
+      .about-services-swiper {
+        overflow: visible;
+      }
+
+      .about-services-swiper .swiper-slide,
+      .about-insights-swiper .swiper-slide {
+        height: auto;
+      }
+
+      .about-services-card {
+        overflow: hidden;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        background: #ffffff;
+      }
+
+      .about-services-card__media {
+        position: relative;
+        height: 240px;
+        overflow: hidden;
+        background: #f8fafc;
+      }
+
+      .about-services-card__body {
+        display: flex;
+        min-height: 82px;
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px;
+      }
+
+      @media (min-width: 640px) {
+        .about-services-card__media {
+          height: 240px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .about-services-swiper .swiper-slide {
+          width: 314px !important;
+        }
+
+        .about-services-card__media {
+          height: 240px;
+        }
+      }
+
+    .about-insights-swiper {
+      overflow: hidden;
+    }
+
+    .about-insights-swiper .swiper-wrapper {
+      align-items: stretch;
+    }
+
+    @media (min-width: 1024px) {
+      .about-insights-swiper {
+        overflow: visible;
+      }
+
+      .about-insights-swiper .swiper-wrapper {
+        display: grid !important;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 42px;
+        transform: none !important;
+      }
+
+      .about-insights-swiper .swiper-slide {
+        width: auto !important;
+        margin-right: 0 !important;
+      }
+
+      .about-insights-prev,
+      .about-insights-next {
+        display: none !important;
+      }
+    }
+
+    .about-testimonials-swiper .swiper-wrapper {
+      transition-timing-function: linear;
+    }
+
+    .about-testimonials-glow {
+      background:
+        radial-gradient(circle at center, rgba(255, 225, 223, 0.95) 0%, rgba(255, 255, 255, 0.92) 58%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    .about-faq-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .about-faq[open] .about-faq-icon {
+      transform: rotate(180deg);
+    }
+  </style>
 </head>
 
-<body class="font-[Inter]">
+<body class="font-[Inter] bg-white text-[#111827]">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div data-include="src/layouts/Navbar.html"></div>
 
-  <main id="main" class="mx-auto w-full max-w-6xl px-5 py-20">
-    <section class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm sm:p-12">
-      <div class="mx-auto max-w-2xl text-center">
-        <h1 class="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">About</h1>
-        <p class="mt-5 text-base text-slate-600 sm:text-lg">Add your story here.</p>
+  <main id="main" class="w-full overflow-x-hidden">
+    <!-- /* ===== About Hero Section Start ===== */ -->
+    <section
+      class="w-full rounded-b-[32px] bg-[linear-gradient(171.668deg,#00669E_13.971%,#00375C_162.88%)] pt-4 md:pt-24 lg:rounded-b-[42px]">
+      <div class="mx-auto w-full max-w-7xl px-5 py-10 sm:px-8 md:px-10 lg:px-12 lg:py-[42px]">
+        <nav aria-label="Breadcrumb"
+          class="flex items-center gap-2 text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-white sm:text-[16px] sm:leading-[22px] sm:tracking-[-0.18px]">
+          <a href="index.html" class="transition hover:opacity-80">Home</a>
+          <span>/</span>
+          <span class="font-medium">About Us</span>
+        </nav>
+        <h1
+          class="mt-3 font-['Satoshi'] text-[36px] font-bold leading-[46px] tracking-[-0.4px] text-white sm:text-[42px] sm:leading-[54px] lg:text-[48px] lg:leading-[58px]">
+          About Us
+        </h1>
+        <p
+          class="mt-3 max-w-[1288px] text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-white sm:text-[16px] sm:leading-[22px] sm:tracking-[-0.18px]">
+          Your trusted partner for reliable, high-quality printing, packaging, and promotional solutions.
+        </p>
       </div>
     </section>
+    <!-- /* ===== About Hero Section End ===== */ -->
+
+    <!-- /* ===== Why Choose Us Section Start ===== */ -->
+    <section class="bg-white py-16 lg:py-[120px]">
+      <div class="mx-auto grid w-full  grid-cols-1 items-center gap-10  lg:grid-cols-2 lg:gap-12 ">
+        <div class="overflow-hidden rounded-[24px] lg:rounded-none">
+          <img src="public/assets/about/why-choose-us.webp" alt="Colorful custom packaging products by Westman Printing"
+            class="h-full w-full object-cover" />
+        </div>
+        <div class="flex flex-col gap-8">
+          <div class="flex flex-col gap-6">
+            <div>
+              <h2
+                class="font-['Satoshi'] text-[32px] font-bold leading-[40px] tracking-[-0.3px] text-[#111827] sm:text-[40px] sm:leading-[50px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+                Why Choose Us
+              </h2>
+              <p
+                class="mt-6 max-w-[715px] text-[15px] font-normal leading-[22px] tracking-[-0.18px] text-[#374151] sm:text-[16px] sm:leading-[22px]">
+                With over 25 years of experience, Westman Printing delivers fast, reliable, and high-quality printing
+                solutions you can trust. Westman Printing provides end-to-end print production with precision and
+                consistency, covering digital, offset, packaging, and promotional solutions.
+              </p>
+            </div>
+            <ul class="flex max-w-[422px] flex-col gap-3">
+              <li
+                class="flex items-center gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                <img src="public/assets/about/tick.svg" alt="" aria-hidden="true" class="h-5 w-5 shrink-0" />
+                <span>25+ years of proven printing expertise</span>
+              </li>
+              <li
+                class="flex items-center gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                <img src="public/assets/about/tick.svg" alt="" aria-hidden="true" class="h-5 w-5 shrink-0" />
+                <span>End-to-end in-house production control</span>
+              </li>
+              <li
+                class="flex items-center gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                <img src="public/assets/about/tick.svg" alt="" aria-hidden="true" class="h-5 w-5 shrink-0" />
+                <span>Scalable solutions for any print volume</span>
+              </li>
+              <li
+                class="flex items-center gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                <img src="public/assets/about/tick.svg" alt="" aria-hidden="true" class="h-5 w-5 shrink-0" />
+                <span>Responsive and experienced print specialists</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <p class="text-[15px] font-medium leading-[24px] text-[#374151] sm:text-[16px]">
+              ISO 9001 and HACCP certified. Your guarantee of world-class products.
+            </p>
+            <div class="flex flex-wrap gap-6 sm:gap-12">
+              <div class="flex w-[150px] flex-col items-center gap-3 text-center sm:w-[176px]">
+                <div class="flex h-[120px] w-full items-center justify-center overflow-hidden px-5 py-3">
+                  <img src="public/assets/about/certifications-sprite.webp" alt="ISO 9001 certification badge"
+                    class="h-[76px] w-[78px] object-none sm:h-[78px] sm:w-[80px]" style="object-position:0 0;" />
+                </div>
+                <p class="text-[16px] font-bold leading-[22px] text-[#666666]">ISO 9001 Certified.</p>
+              </div>
+              <div class="flex w-[150px] flex-col items-center gap-3 text-center sm:w-[176px]">
+                <div class="flex h-[120px] w-full items-center justify-center overflow-hidden px-5 py-3">
+                  <img src="public/assets/about/certifications-sprite.webp" alt="HACCP certification badge"
+                    class="h-[82px] w-[84px] object-none sm:h-[84px] sm:w-[86px]" style="object-position:-83px 0;" />
+                </div>
+                <p class="text-[16px] font-bold leading-[24px] text-[#666666]">HACCP Certified.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /* ===== Why Choose Us Section End ===== */ -->
+
+    <!-- /* ===== Services Section Start ===== */ -->
+    <section class="bg-white pb-[72px] pt-10 lg:pb-[120px] lg:pt-[56px]">
+      <div class="mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12">
+        <div class="flex items-end justify-between gap-6">
+          <div class="max-w-[948px]">
+            <h2
+              class="font-['Satoshi'] text-[32px] font-bold leading-[40px] tracking-[-0.3px] text-[#111827] sm:text-[40px] sm:leading-[50px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+              Services We Provide
+            </h2>
+            <p class="mt-3 max-w-[947px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#374151] sm:text-[16px]">
+              At Westman Printing, we offer a comprehensive range of services designed to meet all your printing,
+              packaging, and promotional needs. Whether you're looking for high-quality printing, custom packaging, or
+              promotional items, we've got you covered.
+            </p>
+          </div>
+          <div class="hidden items-center gap-3 lg:flex">
+            <button type="button"
+              class="about-slider-button about-services-prev grid h-[42px] w-[42px] place-items-center rounded-full border border-[#E2E8F0] bg-[#F3F4F6]">
+              <img src="public/assets/about/slider-arrow.svg" alt="" aria-hidden="true" class="h-6 w-6 rotate-180" />
+            </button>
+            <button type="button"
+              class="about-slider-button about-services-next grid h-[42px] w-[42px] place-items-center rounded-full border border-[#E2E8F0] bg-[#F3F4F6]">
+              <img src="public/assets/about/slider-arrow.svg" alt="" aria-hidden="true" class="h-6 w-6" />
+            </button>
+          </div>
+        </div>
+
+        <div class="about-services-swiper swiper mt-8 lg:mt-[42px]">
+          <div class="swiper-wrapper">
+            <article class="about-services-card swiper-slide">
+              <div class="about-services-card__media">
+                <img src="public/assets/about/service-1-base.webp" alt="High-quality digital printing"
+                  class="absolute inset-0 h-full w-full object-cover" />
+                <img src="public/assets/about/service-1-overlay.webp" alt="" aria-hidden="true"
+                  class="absolute inset-0 h-full w-full object-cover" />
+              </div>
+              <div class="about-services-card__body">
+                <h3 class="font-['Satoshi'] text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#00669E]">High-Quality Digital Printing
+                </h3>
+                <p class="text-[14px] leading-[20px] tracking-[-0.16px] text-[#111827]">• Min. 500 units • Delivery: 2-3 weeks</p>
+              </div>
+            </article>
+
+            <article class="about-services-card swiper-slide">
+              <div class="about-services-card__media">
+                <img src="public/assets/about/service-2-base.webp" alt="Packaging solutions"
+                  class="absolute inset-0 h-full w-full object-cover" />
+                <img src="public/assets/about/service-2-overlay.webp" alt="" aria-hidden="true"
+                  class="absolute inset-0 h-full w-full object-cover" />
+              </div>
+              <div class="about-services-card__body">
+                <h3 class="font-['Satoshi'] text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#00669E]">Packaging Solution</h3>
+                <p class="text-[14px] leading-[20px] tracking-[-0.16px] text-[#111827]">• Min 500 units • Delivery: 2-3 weeks</p>
+              </div>
+            </article>
+
+            <article class="about-services-card swiper-slide">
+              <div class="about-services-card__media">
+                <img src="public/assets/about/service-3-overlay.webp" alt="Offset printing facility"
+                  class="h-full w-full object-cover" />
+              </div>
+              <div class="about-services-card__body">
+                <h3 class="font-['Satoshi'] text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#00669E]">Offset Printing</h3>
+                <p class="text-[14px] leading-[20px] tracking-[-0.16px] text-[#111827]">• Min 50 units • Delivery: 2-3 Weeks</p>
+              </div>
+            </article>
+
+            <article class="about-services-card swiper-slide">
+              <div class="about-services-card__media">
+                <img src="public/assets/about/service-4-overlay.webp" alt="Promotional items printing"
+                  class="h-full w-full object-cover" />
+              </div>
+              <div class="about-services-card__body">
+                <h3 class="font-['Satoshi'] text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#00669E]">Promotional Items
+                  Printing</h3>
+                <p class="text-[14px] leading-[20px] tracking-[-0.16px] text-[#111827]">• Min 100 units • Delivery: 1-2 weeks</p>
+              </div>
+            </article>
+
+            <article class="about-services-card swiper-slide">
+              <div class="about-services-card__media">
+                <img src="public/assets/about/service-5-overlay.webp" alt="Mail fulfillment packaging"
+                  class="h-full w-full object-cover" />
+              </div>
+              <div class="about-services-card__body">
+                <h3 class="font-['Satoshi'] text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#00669E]">Mail Fulfillment</h3>
+                <p class="text-[14px] leading-[20px] tracking-[-0.16px] text-[#111827]">• Min 200 packs • Delivery: 3-7 days</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /* ===== Services Section End ===== */ -->
+
+    <!-- /* ===== Testimonials Section Start ===== */ -->
+    <section class="about-testimonials-glow overflow-hidden py-16 lg:py-[120px]">
+      <div class="mx-auto flex w-full flex-col items-center gap-[42px] px-5 sm:px-8 lg:px-12">
+        <div class="text-center">
+          <h2
+            class="font-['Satoshi'] text-[32px] font-bold leading-[40px] tracking-[-0.3px] text-[#111827] sm:text-[40px] sm:leading-[50px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+            Trusted by Businesses That Rely on Print
+          </h2>
+          <p
+            class="mx-auto mt-3 max-w-[868px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#374151] sm:text-[16px]">
+            We work closely with businesses that value print accuracy, consistency, and dependable delivery. Here’s
+            what our clients say about their experience with our team and services.
+          </p>
+        </div>
+
+        <div class="flex w-full flex-col gap-8 lg:gap-[32px]">
+          <div class="about-testimonials-swiper swiper w-full">
+            <div class="swiper-wrapper">
+              <article
+                class="swiper-slide flex h-[260px] flex-col justify-between rounded-[24px] border border-[#E5E5E5] bg-white p-6">
+                <p class="text-[16px] leading-[22px] tracking-[-0.18px] text-[#111827]">Westman Printing has been a
+                  reliable partner, delivering high-quality prints with exceptional attention to detail and fast
+                  turnaround. Professional, responsive, and consistently reliable.</p>
+                <div class="mt-6 flex items-start gap-6">
+                  <div class="min-w-0 flex-1">
+                    <p class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#00669E]">John Smith</p>
+                    <p class="text-[16px] leading-[22px] tracking-[-0.18px] text-[#374151]">Marketing Director, Tech
+                      Innovations Inc.</p>
+                  </div>
+                  <img src="public/assets/about/testimonial-avatar.webp" alt="John Smith"
+                    class="h-[52px] w-[52px] rounded-full object-cover" />
+                </div>
+              </article>
+              <article
+                class="swiper-slide flex h-[260px] flex-col justify-between rounded-[24px] border border-[#E5E5E5] bg-white p-6">
+                <p class="text-[16px] leading-[22px] tracking-[-0.18px] text-[#111827]">Westman Printing has been a
+                  reliable partner, delivering high-quality prints with exceptional attention to detail and fast
+                  turnaround. Professional, responsive, and consistently reliable.</p>
+                <div class="mt-6 flex items-start gap-6">
+                  <div class="min-w-0 flex-1">
+                    <p class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#00669E]">John Smith</p>
+                    <p class="text-[16px] leading-[22px] tracking-[-0.18px] text-[#374151]">Marketing Director, Tech
+                      Innovations Inc.</p>
+                  </div>
+                  <img src="public/assets/about/testimonial-avatar.webp" alt="John Smith"
+                    class="h-[52px] w-[52px] rounded-full object-cover" />
+                </div>
+              </article>
+              <article
+                class="swiper-slide flex h-[260px] flex-col justify-between rounded-[24px] border border-[#E5E5E5] bg-white p-6">
+                <p class="text-[16px] leading-[22px] tracking-[-0.18px] text-[#111827]">Westman Printing has been a
+                  reliable partner, delivering high-quality prints with exceptional attention to detail and fast
+                  turnaround. Professional, responsive, and consistently reliable.</p>
+                <div class="mt-6 flex items-start gap-6">
+                  <div class="min-w-0 flex-1">
+                    <p class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#00669E]">John Smith</p>
+                    <p class="text-[16px] leading-[22px] tracking-[-0.18px] text-[#374151]">Marketing Director, Tech
+                      Innovations Inc.</p>
+                  </div>
+                  <img src="public/assets/about/testimonial-avatar.webp" alt="John Smith"
+                    class="h-[52px] w-[52px] rounded-full object-cover" />
+                </div>
+              </article>
+              <article
+                class="swiper-slide flex h-[260px] flex-col justify-between rounded-[24px] border border-[#E5E5E5] bg-white p-6">
+                <p class="text-[16px] leading-[22px] tracking-[-0.18px] text-[#111827]">Westman Printing has been a
+                  reliable partner, delivering high-quality prints with exceptional attention to detail and fast
+                  turnaround. Professional, responsive, and consistently reliable.</p>
+                <div class="mt-6 flex items-start gap-6">
+                  <div class="min-w-0 flex-1">
+                    <p class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#00669E]">John Smith</p>
+                    <p class="text-[16px] leading-[22px] tracking-[-0.18px] text-[#374151]">Marketing Director, Tech
+                      Innovations Inc.</p>
+                  </div>
+                  <img src="public/assets/about/testimonial-avatar.webp" alt="John Smith"
+                    class="h-[52px] w-[52px] rounded-full object-cover" />
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="about-testimonials-swiper about-testimonials-swiper--reverse swiper w-full">
+            <div class="swiper-wrapper">
+              <article
+                class="swiper-slide flex h-[260px] flex-col justify-between rounded-[24px] border border-[#E5E5E5] bg-white p-6">
+                <p class="text-[16px] leading-[22px] tracking-[-0.18px] text-[#111827]">Westman Printing has been a
+                  reliable partner, delivering high-quality prints with exceptional attention to detail and fast
+                  turnaround. Professional, responsive, and consistently reliable.</p>
+                <div class="mt-6 flex items-start gap-6">
+                  <div class="min-w-0 flex-1">
+                    <p class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#00669E]">John Smith</p>
+                    <p class="text-[16px] leading-[22px] tracking-[-0.18px] text-[#374151]">Marketing Director, Tech
+                      Innovations Inc.</p>
+                  </div>
+                  <img src="public/assets/about/testimonial-avatar.webp" alt="John Smith"
+                    class="h-[52px] w-[52px] rounded-full object-cover" />
+                </div>
+              </article>
+              <article
+                class="swiper-slide flex h-[260px] flex-col justify-between rounded-[24px] border border-[#E5E5E5] bg-white p-6">
+                <p class="text-[16px] leading-[22px] tracking-[-0.18px] text-[#111827]">Westman Printing has been a
+                  reliable partner, delivering high-quality prints with exceptional attention to detail and fast
+                  turnaround. Professional, responsive, and consistently reliable.</p>
+                <div class="mt-6 flex items-start gap-6">
+                  <div class="min-w-0 flex-1">
+                    <p class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#00669E]">John Smith</p>
+                    <p class="text-[16px] leading-[22px] tracking-[-0.18px] text-[#374151]">Marketing Director, Tech
+                      Innovations Inc.</p>
+                  </div>
+                  <img src="public/assets/about/testimonial-avatar.webp" alt="John Smith"
+                    class="h-[52px] w-[52px] rounded-full object-cover" />
+                </div>
+              </article>
+              <article
+                class="swiper-slide flex h-[260px] flex-col justify-between rounded-[24px] border border-[#E5E5E5] bg-white p-6">
+                <p class="text-[16px] leading-[22px] tracking-[-0.18px] text-[#111827]">Westman Printing has been a
+                  reliable partner, delivering high-quality prints with exceptional attention to detail and fast
+                  turnaround. Professional, responsive, and consistently reliable.</p>
+                <div class="mt-6 flex items-start gap-6">
+                  <div class="min-w-0 flex-1">
+                    <p class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#00669E]">John Smith</p>
+                    <p class="text-[16px] leading-[22px] tracking-[-0.18px] text-[#374151]">Marketing Director, Tech
+                      Innovations Inc.</p>
+                  </div>
+                  <img src="public/assets/about/testimonial-avatar.webp" alt="John Smith"
+                    class="h-[52px] w-[52px] rounded-full object-cover" />
+                </div>
+              </article>
+              <article
+                class="swiper-slide flex h-[260px] flex-col justify-between rounded-[24px] border border-[#E5E5E5] bg-white p-6">
+                <p class="text-[16px] leading-[22px] tracking-[-0.18px] text-[#111827]">Westman Printing has been a
+                  reliable partner, delivering high-quality prints with exceptional attention to detail and fast
+                  turnaround. Professional, responsive, and consistently reliable.</p>
+                <div class="mt-6 flex items-start gap-6">
+                  <div class="min-w-0 flex-1">
+                    <p class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#00669E]">John Smith</p>
+                    <p class="text-[16px] leading-[22px] tracking-[-0.18px] text-[#374151]">Marketing Director, Tech
+                      Innovations Inc.</p>
+                  </div>
+                  <img src="public/assets/about/testimonial-avatar.webp" alt="John Smith"
+                    class="h-[52px] w-[52px] rounded-full object-cover" />
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /* ===== Testimonials Section End ===== */ -->
+
+    <!-- /* ===== Connect Section Start ===== */ -->
+    <section class="bg-white py-16 lg:py-[120px]">
+      <div class="mx-auto grid w-full max-w-7xl grid-cols-1 gap-[42px] px-5 sm:px-8 lg:grid-cols-2 lg:px-12">
+        <div class="flex flex-col gap-[42px]">
+          <div>
+            <h2
+              class="font-['Satoshi'] text-[32px] font-bold leading-[40px] tracking-[-0.3px] text-[#111827] sm:text-[40px] sm:leading-[50px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+              Connect With Our Team
+            </h2>
+            <p class="mt-3 max-w-[680px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#374151] sm:text-[16px]">
+              Big idea or small batch, we print with precision and purpose. Share your concept, upload your artwork,
+              and we'll help you get it production-ready — stress-free.
+            </p>
+          </div>
+
+          <form class="flex flex-col gap-6">
+            <label class="flex flex-col gap-[11px]">
+              <span class="text-[14px] font-medium leading-4 text-[#374151]">Email</span>
+              <input type="email" placeholder="Enter your email address"
+                class="h-9 border-0 border-b border-[#E2E8F0] bg-transparent px-2 text-[14px] leading-4 text-[#111827] placeholder:text-[#9CA3AF] focus:border-[#00669E] focus:outline-none focus:ring-0" />
+            </label>
+            <label class="flex flex-col gap-[11px]">
+              <span class="text-[14px] font-medium leading-4 text-[#374151]">Contact Number</span>
+              <input type="tel" placeholder="Contact Number"
+                class="h-9 border-0 border-b border-[#E2E8F0] bg-transparent px-2 text-[14px] leading-4 text-[#111827] placeholder:text-[#9CA3AF] focus:border-[#00669E] focus:outline-none focus:ring-0" />
+            </label>
+            <label class="flex flex-col gap-[11px]">
+              <span class="text-[14px] font-medium leading-4 text-[#374151]">Company name</span>
+              <input type="text" placeholder="Enter your company name"
+                class="h-9 border-0 border-b border-[#F3F4F6] bg-transparent px-2 text-[14px] leading-4 text-[#111827] placeholder:text-[#9CA3AF] focus:border-[#00669E] focus:outline-none focus:ring-0" />
+            </label>
+            <label class="flex flex-col gap-[11px]">
+              <span class="text-[14px] font-medium leading-4 text-[#374151]">Message</span>
+              <textarea rows="4" placeholder="Enter Message here..."
+                class="min-h-[105px] resize-none border-0 border-b border-[#F3F4F6] bg-transparent px-2 py-2 text-[14px] leading-4 text-[#111827] placeholder:text-[#9CA3AF] focus:border-[#00669E] focus:outline-none focus:ring-0"></textarea>
+            </label>
+            <button type="button"
+              class="inline-flex w-fit items-center gap-[10px] rounded-[999px] bg-[#00669E] py-1 pl-4 pr-1 text-white transition hover:bg-[#005385]">
+              <span class="text-[16px] font-medium leading-[22.72px]">Send Now</span>
+              <span
+                class="relative grid h-[42px] w-[42px] place-items-center overflow-hidden rounded-full bg-[rgba(255,255,255,0.24)]">
+                <img src="public/assets/about/cta-arrow.svg" alt="" aria-hidden="true"
+                  class="absolute -left-2 top-[14.82px] h-[33.529px] w-[35.177px] max-w-none" />
+              </span>
+            </button>
+          </form>
+        </div>
+
+        <div class="overflow-hidden rounded-[24px]">
+          <img src="public/assets/about/connect-image.webp" alt="Printed packaging and shopping bag products"
+            class="h-full w-full object-cover" />
+        </div>
+      </div>
+    </section>
+    <!-- /* ===== Connect Section End ===== */ -->
+
+    <!-- /* ===== Insights Section Start ===== */ -->
+    <section class="bg-white py-16 lg:py-[120px]">
+      <div class="mx-auto flex w-full max-w-7xl flex-col gap-[42px] px-5 sm:px-8 lg:px-12">
+        <div class="flex items-end justify-between gap-6">
+          <div class="max-w-[762px]">
+            <h2
+              class="font-['Satoshi'] text-[32px] font-bold leading-[40px] tracking-[-0.3px] text-[#111827] sm:text-[40px] sm:leading-[50px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+              Insights &amp; Inspiration
+            </h2>
+            <p class="mt-3 text-[15px] leading-[22px] tracking-[-0.18px] text-[#374151] sm:text-[16px]">
+              Practical tips, creative ideas, and sustainability insights from Australia's favorite packaging partner.
+            </p>
+          </div>
+          <div class="hidden items-center gap-3 lg:flex">
+            <button type="button"
+              class="about-slider-button about-insights-prev grid h-[42px] w-[42px] place-items-center rounded-full border border-[#E2E8F0] bg-[#F3F4F6]">
+              <img src="public/assets/about/card-arrow.svg" alt="" aria-hidden="true" class="h-6 w-6 rotate-180" />
+            </button>
+            <button type="button"
+              class="about-slider-button about-insights-next grid h-[42px] w-[42px] place-items-center rounded-full border border-[#E2E8F0] bg-[#F3F4F6]">
+              <img src="public/assets/about/card-arrow.svg" alt="" aria-hidden="true" class="h-6 w-6" />
+            </button>
+          </div>
+        </div>
+
+        <div class="about-insights-swiper swiper">
+          <div class="swiper-wrapper">
+            <article class="swiper-slide overflow-hidden rounded-[8px] border border-[#E5E7EB] bg-white">
+              <img src="public/assets/about/insight-1.webp" alt="How to design a cover customers remember"
+                class="h-[220px] w-full object-cover sm:h-[240px]" />
+              <div class="flex flex-col gap-2 p-[10px]">
+                <p class="text-[14px] leading-[20px] tracking-[-0.16px] text-[#6B7280]">19 Oct 2025</p>
+                <h3 class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">How to Design a Cover
+                  Customers Remember</h3>
+                <p class="overflow-hidden text-[14px] leading-[20px] tracking-[-0.16px] text-[#374151]"
+                  style="display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;">Learn how to use color,
+                  hierarchy, and print finishes to create brand recall with every sip. Learn how to use color,
+                  hierarchy...</p>
+                <a href="blog-details.html"
+                  class="mt-1 inline-flex items-center justify-end gap-1 text-[14px] font-medium leading-[20px] tracking-[-0.16px] text-[#111827]">
+                  <span>Read More</span>
+                  <img src="public/assets/about/readmore-arrow.svg" alt="" aria-hidden="true" class="h-4 w-4" />
+                </a>
+              </div>
+            </article>
+
+            <article class="swiper-slide overflow-hidden rounded-[8px] border border-[#E5E7EB] bg-white">
+              <img src="public/assets/about/insight-2.webp" alt="Creating a sustainable packaging strategy"
+                class="h-[220px] w-full object-cover sm:h-[240px]" />
+              <div class="flex flex-col gap-2 p-[10px]">
+                <p class="text-[14px] leading-[20px] tracking-[-0.16px] text-[#6B7280]">22 Nov 2025</p>
+                <h3 class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">Creating a
+                  Sustainable Packaging Strategy</h3>
+                <p class="overflow-hidden text-[14px] leading-[20px] tracking-[-0.16px] text-[#374151]"
+                  style="display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;">Explore innovative
+                  materials and designs that minimize environmental impact while enhancing brand identity.</p>
+                <a href="blog-details.html"
+                  class="mt-1 inline-flex items-center justify-end gap-1 text-[14px] font-medium leading-[20px] tracking-[-0.16px] text-[#111827]">
+                  <span>Discover More</span>
+                  <img src="public/assets/about/readmore-arrow.svg" alt="" aria-hidden="true" class="h-4 w-4" />
+                </a>
+              </div>
+            </article>
+
+            <article class="swiper-slide overflow-hidden rounded-[8px] border border-[#E5E7EB] bg-white">
+              <img src="public/assets/about/insight-3.webp" alt="The psychology of color in branding"
+                class="h-[220px] w-full object-cover sm:h-[240px]" />
+              <div class="flex flex-col gap-2 p-[10px]">
+                <p class="text-[14px] leading-[20px] tracking-[-0.16px] text-[#6B7280]">15 Dec 2025</p>
+                <h3 class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">The Psychology of
+                  Color in Branding</h3>
+                <p class="overflow-hidden text-[14px] leading-[20px] tracking-[-0.16px] text-[#374151]"
+                  style="display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;">Understand how color
+                  influences customer emotions and decisions in product design and branding.</p>
+                <a href="blog-details.html"
+                  class="mt-1 inline-flex items-center justify-end gap-1 text-[14px] font-medium leading-[20px] tracking-[-0.16px] text-[#111827]">
+                  <span>Learn More</span>
+                  <img src="public/assets/about/readmore-arrow.svg" alt="" aria-hidden="true" class="h-4 w-4" />
+                </a>
+              </div>
+            </article>
+
+            <article class="swiper-slide overflow-hidden rounded-[8px] border border-[#E5E7EB] bg-white">
+              <img src="public/assets/about/insight-4.webp" alt="Maximizing user experience in product design"
+                class="h-[220px] w-full object-cover sm:h-[240px]" />
+              <div class="flex flex-col gap-2 p-[10px]">
+                <p class="text-[14px] leading-[20px] tracking-[-0.16px] text-[#6B7280]">10 Jan 2026</p>
+                <h3 class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">Maximizing User
+                  Experience in Product Design</h3>
+                <p class="overflow-hidden text-[14px] leading-[20px] tracking-[-0.16px] text-[#374151]"
+                  style="display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;">Identify key elements
+                  that enhance usability and learn best practices for user-centered design.</p>
+                <a href="blog-details.html"
+                  class="mt-1 inline-flex items-center justify-end gap-1 text-[14px] font-medium leading-[20px] tracking-[-0.16px] text-[#111827]">
+                  <span>Find Out More</span>
+                  <img src="public/assets/about/readmore-arrow.svg" alt="" aria-hidden="true" class="h-4 w-4" />
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /* ===== Insights Section End ===== */ -->
+
+    <!-- /* ===== FAQ Section Start ===== */ -->
+    <section class="bg-white py-16 lg:py-[120px]">
+      <div class="mx-auto flex w-full max-w-7xl flex-col gap-[42px] px-5 sm:px-8 lg:px-12">
+        <div>
+          <h2
+            class="font-['Satoshi'] text-[32px] font-bold leading-[40px] tracking-[-0.3px] text-[#111827] sm:text-[40px] sm:leading-[50px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+            Frequently Asked Questions
+          </h2>
+          <p class="mt-3 max-w-[915px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#374151] sm:text-[16px]">
+            Reassure new customers about order process, custom design, and delivery timelines.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-6">
+          <details class="about-faq overflow-hidden rounded-[16px] border border-[#E2E8F0] bg-white" open>
+            <summary
+              class="about-faq-summary flex cursor-pointer items-center justify-between gap-8 px-4 py-4 text-left lg:px-6">
+              <span class="flex-1 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">How do I place
+                an order?</span>
+              <span
+                class="about-faq-icon grid h-6 w-6 place-items-center rounded-full bg-[#F1F5F9] transition-transform duration-200">
+                <img src="public/assets/about/faq-chevron-down.svg" alt="" aria-hidden="true"
+                  class="h-[15px] w-[15px]" />
+              </span>
+            </summary>
+            <p class="px-4 pb-6 text-[15px] font-medium leading-[22px] tracking-[-0.18px] text-[#374151] lg:px-6">
+              Webflow is a powerful visual development platform that allows designers to build fully responsive websites
+              without writing a single line of code. It combines the flexibility of code with the simplicity of a visual
+              editor, empowering creators to bring their ideas to life faster and more efficiently than ever before.
+            </p>
+          </details>
+
+          <details class="about-faq overflow-hidden rounded-[16px] border border-[#E2E8F0] bg-white">
+            <summary
+              class="about-faq-summary flex cursor-pointer items-center justify-between gap-8 px-4 py-4 text-left lg:px-6">
+              <span class="flex-1 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">How can I
+                track my order?</span>
+              <span
+                class="about-faq-icon grid h-6 w-6 place-items-center rounded-full bg-[#F1F5F9] transition-transform duration-200">
+                <img src="public/assets/about/faq-chevron-down.svg" alt="" aria-hidden="true"
+                  class="h-[15px] w-[15px]" />
+              </span>
+            </summary>
+            <p class="px-4 pb-6 text-[15px] font-medium leading-[22px] tracking-[-0.18px] text-[#374151] lg:px-6">
+              Once production begins, our team shares status updates and delivery timing so you always know where your
+              print job stands.
+            </p>
+          </details>
+
+          <details class="about-faq overflow-hidden rounded-[16px] border border-[#E2E8F0] bg-white">
+            <summary
+              class="about-faq-summary flex cursor-pointer items-center justify-between gap-8 px-4 py-4 text-left lg:px-6">
+              <span class="flex-1 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">What payment
+                methods are accepted?</span>
+              <span
+                class="about-faq-icon grid h-6 w-6 place-items-center rounded-full bg-[#F1F5F9] transition-transform duration-200">
+                <img src="public/assets/about/faq-chevron-down.svg" alt="" aria-hidden="true"
+                  class="h-[15px] w-[15px]" />
+              </span>
+            </summary>
+            <p class="px-4 pb-6 text-[15px] font-medium leading-[22px] tracking-[-0.18px] text-[#374151] lg:px-6">
+              We accept standard business payment methods and confirm all billing details during quoting and approval.
+            </p>
+          </details>
+
+          <details class="about-faq overflow-hidden rounded-[16px] border border-[#E2E8F0] bg-white">
+            <summary
+              class="about-faq-summary flex cursor-pointer items-center justify-between gap-8 px-4 py-4 text-left lg:px-6">
+              <span class="flex-1 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">What is the
+                estimated delivery time?</span>
+              <span
+                class="about-faq-icon grid h-6 w-6 place-items-center rounded-full bg-[#F1F5F9] transition-transform duration-200">
+                <img src="public/assets/about/faq-chevron-down.svg" alt="" aria-hidden="true"
+                  class="h-[15px] w-[15px]" />
+              </span>
+            </summary>
+            <p class="px-4 pb-6 text-[15px] font-medium leading-[22px] tracking-[-0.18px] text-[#374151] lg:px-6">
+              Delivery varies by service, but we share realistic timelines upfront and work closely with you to meet key
+              deadlines.
+            </p>
+          </details>
+
+          <details class="about-faq overflow-hidden rounded-[16px] border border-[#E2E8F0] bg-white">
+            <summary
+              class="about-faq-summary flex cursor-pointer items-center justify-between gap-8 px-4 py-4 text-left lg:px-6">
+              <span class="flex-1 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">What is your
+                return policy?</span>
+              <span
+                class="about-faq-icon grid h-6 w-6 place-items-center rounded-full bg-[#F1F5F9] transition-transform duration-200">
+                <img src="public/assets/about/faq-chevron-down.svg" alt="" aria-hidden="true"
+                  class="h-[15px] w-[15px]" />
+              </span>
+            </summary>
+            <p class="px-4 pb-6 text-[15px] font-medium leading-[22px] tracking-[-0.18px] text-[#374151] lg:px-6">
+              If there is an issue with quality or production, our team reviews it promptly and works with you on the
+              right resolution.
+            </p>
+          </details>
+
+          <details class="about-faq overflow-hidden rounded-[16px] border border-[#E2E8F0] bg-white">
+            <summary
+              class="about-faq-summary flex cursor-pointer items-center justify-between gap-8 px-4 py-4 text-left lg:px-6">
+              <span class="flex-1 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">Can I modify
+                my order after it's placed?</span>
+              <span
+                class="about-faq-icon grid h-6 w-6 place-items-center rounded-full bg-[#F1F5F9] transition-transform duration-200">
+                <img src="public/assets/about/faq-chevron-down.svg" alt="" aria-hidden="true"
+                  class="h-[15px] w-[15px]" />
+              </span>
+            </summary>
+            <p class="px-4 pb-6 text-[15px] font-medium leading-[22px] tracking-[-0.18px] text-[#374151] lg:px-6">
+              Changes are possible before final approval and production lock-in. After that, we will advise what can
+              still be updated.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <!-- /* ===== FAQ Section End ===== */ -->
   </main>
 
   <div data-include="src/layouts/Footer.html"></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    (function () {
+      if (typeof Swiper !== 'function') return;
+
+      new Swiper('.about-insights-swiper', {
+        slidesPerView: 1.08,
+        spaceBetween: 20,
+        watchOverflow: true,
+        observer: true,
+        observeParents: true,
+        navigation: {
+          nextEl: '.about-insights-next',
+          prevEl: '.about-insights-prev'
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1.45,
+            spaceBetween: 24
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 42
+          },
+          1440: {
+            slidesPerView: 4,
+            spaceBetween: 42
+          }
+        }
+      });
+
+      new Swiper('.about-testimonials-swiper:not(.about-testimonials-swiper--reverse)', {
+        slidesPerView: 1.05,
+        spaceBetween: 20,
+        loop: true,
+        speed: 5000,
+        allowTouchMove: false,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2.1,
+            spaceBetween: 24
+          },
+          1280: {
+            slidesPerView: 3.5,
+            spaceBetween: 32
+          }
+        }
+      });
+
+      new Swiper('.about-testimonials-swiper--reverse', {
+        slidesPerView: 1.05,
+        spaceBetween: 20,
+        loop: true,
+        speed: 5000,
+        allowTouchMove: false,
+        autoplay: {
+          delay: 0,
+          reverseDirection: true,
+          disableOnInteraction: false
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2.1,
+            spaceBetween: 24
+          },
+          1280: {
+            slidesPerView: 3.5,
+            spaceBetween: 32
+          }
+        }
+      });
+    })();
+  </script>
   <script src="src/scripts/main.js"></script>
 </body>
 

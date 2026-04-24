@@ -177,11 +177,54 @@
     render();
   }
 
+  /* ---------- About services swiper ---------------------------------
+     Mirrors the Figma services strip on the About page.
+     Mobile/tablet stay swipeable; desktop reveals four cards with a peek
+     of the next card, matching the design rhythm more closely.
+     ------------------------------------------------------------------ */
+  function initAboutServicesSwiper() {
+    if (typeof window.Swiper !== "function") return;
+
+    const container = document.querySelector(".about-services-swiper");
+    if (!container) return;
+
+    const prevEl = document.querySelector(".about-services-prev");
+    const nextEl = document.querySelector(".about-services-next");
+
+    if (container.swiper) {
+      container.swiper.destroy(true, true);
+    }
+
+    new window.Swiper(container, {
+      slidesPerView: 1.08,
+      spaceBetween: 20,
+      watchOverflow: true,
+      observer: true,
+      observeParents: true,
+      navigation: prevEl && nextEl ? { nextEl, prevEl } : undefined,
+      breakpoints: {
+        640: {
+          slidesPerView: 1.45,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: "auto",
+          spaceBetween: 24,
+        },
+        1280: {
+          slidesPerView: "auto",
+          spaceBetween: 24,
+        },
+      },
+    });
+  }
+
   /* ---------- Boot -------------------------------------------------- */
   document.addEventListener("DOMContentLoaded", async () => {
     await loadPartials();
     initNavbar();
     setYear();
     initBlogPagination();
+    initAboutServicesSwiper();
   });
 })();

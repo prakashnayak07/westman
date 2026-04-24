@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="description"
+    content="Explore Westman Printing's digital printing, packaging, offset, promotional, and mail fulfillment services." />
+  <title>Services · Westman Printing</title>
+
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" />
+  <link rel="stylesheet" href="src/css/global.css" />
+  <link rel="stylesheet" href="src/css/custom.css" />
+  <style>
+    .services-image-stack>img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    .services-send-btn .services-send-arrow-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .services-send-btn .services-send-arrow {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      height: 20px;
+      width: 20px;
+      transition: transform 320ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .services-send-btn .services-send-arrow--current {
+      transform: translate(-3px, 3px);
+    }
+
+    .services-send-btn .services-send-arrow--next {
+      transform: translate(-12px, 12px);
+    }
+
+    .services-send-btn:hover .services-send-arrow--current {
+      transform: translate(12px, -12px);
+    }
+
+    .services-send-btn:hover .services-send-arrow--next {
+      transform: translate(-3px, 3px);
+    }
+
+    .services-faq-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .services-faq[open] .services-faq-icon {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+
+<body class="font-[Inter] bg-white text-[#111827]">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div data-include="src/layouts/Navbar.html"></div>
+
+  <main id="main" class="w-full overflow-x-hidden">
+    <!-- /* ===== Services Hero Start ===== */ -->
+    <section
+      class="w-full rounded-b-[32px] bg-[linear-gradient(171.668deg,#00669E_13.971%,#00375C_162.88%)] pt-4 md:pt-24 lg:rounded-b-[42px]">
+      <div class="mx-auto w-full max-w-[1400px] px-5 py-10 sm:px-8 md:px-10 lg:px-12 lg:py-[42px]">
+        <nav aria-label="Breadcrumb"
+          class="flex items-center gap-2 text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-white sm:text-[16px] sm:leading-[22px] sm:tracking-[-0.18px]">
+          <a href="index.html" class="transition hover:opacity-80">Home</a>
+          <span>/</span>
+          <span class="font-medium">Services</span>
+        </nav>
+        <h1
+          class="mt-3 font-['Satoshi'] text-[36px] font-bold leading-[46px] tracking-[-0.4px] text-white sm:text-[42px] sm:leading-[54px] lg:text-[48px] lg:leading-[58px]">
+          Services
+        </h1>
+        <p
+          class="mt-3 max-w-[1288px] text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-white sm:text-[16px] sm:leading-[22px] sm:tracking-[-0.18px]">
+          End-to-end commercial printing solutions tailored to your brand and production goals.
+        </p>
+      </div>
+    </section>
+    <!-- /* ===== Services Hero End ===== */ -->
+
+    <!-- /* ===== Services Detail Start ===== */ -->
+    <section class="bg-white py-[60px] lg:py-[80px]">
+      <div class="mx-auto flex w-full max-w-[1400px] flex-col gap-[60px] px-5 sm:px-8 lg:gap-[80px] lg:px-12">
+        <article class="rounded-[24px] border border-[#E5E7EB] bg-white p-[10px] lg:pl-[24px] lg:pr-[10px]">
+          <div
+            class="flex flex-col-reverse gap-8 lg:grid lg:grid-cols-[minmax(0,1fr)_528px] lg:items-center lg:gap-[44px]">
+            <div class="flex flex-col justify-center gap-5 lg:gap-6">
+              <p class="text-[16px] font-bold leading-[24px] text-[#111827]">• Min. 500 units • Delivery: 2-3 weeks</p>
+              <div class="flex flex-col gap-3 lg:gap-4">
+                <h2
+                  class="font-['Satoshi'] text-[34px] font-bold leading-[42px] tracking-[-0.3px] text-[#00669E] sm:text-[40px] sm:leading-[50px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+                  High-Quality Digital Printing</h2>
+                <p class="max-w-[678px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  Digital printing is a fast and cost-effective method of printing materials directly from a digital
+                  file. It is ideal for smaller print runs that require a quick turnaround time.</p>
+              </div>
+              <ul class="flex flex-col gap-3">
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Printing of business cards, brochures, flyers, posters,
+                    and marketing materials.</span></li>
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Ability to print on a variety of paper stocks and
+                    finishes.</span></li>
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Options for custom sizes and short-run printing.</span>
+                </li>
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Responsive and experienced print specialists</span></li>
+              </ul>
+            </div>
+            <div class="relative h-[320px] overflow-hidden rounded-[16px] sm:h-[420px] lg:h-[550px]">
+              <div class="services-image-stack absolute inset-0">
+                <img src="public/assets/services/service-digital-1.webp"
+                  alt="High-quality digital printing service sample" />
+                <img src="public/assets/services/service-digital-2.webp" alt="" aria-hidden="true" />
+                <img src="public/assets/services/service-digital-3.webp" alt="" aria-hidden="true" />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-[24px] border border-[#E5E7EB] bg-white p-[10px]">
+          <div class="flex flex-col gap-8 lg:grid lg:grid-cols-[528px_minmax(0,1fr)] lg:items-center lg:gap-[44px]">
+            <div class="relative h-[320px] overflow-hidden rounded-[16px] sm:h-[420px] lg:h-[550px]">
+              <div class="services-image-stack absolute inset-0">
+                <img src="public/assets/services/service-packaging-1.webp" alt="Packaging solution service sample" />
+                <img src="public/assets/services/service-packaging-2.webp" alt="" aria-hidden="true" />
+                <img src="public/assets/services/service-packaging-3.webp" alt="" aria-hidden="true" />
+              </div>
+            </div>
+            <div class="flex flex-col justify-center gap-5 lg:gap-6">
+              <p class="text-[16px] font-bold leading-[24px] text-[#111827]">• Min 500 units • Delivery: 2-3 weeks</p>
+              <div class="flex flex-col gap-3 lg:gap-4">
+                <h2
+                  class="font-['Satoshi'] text-[34px] font-bold leading-[42px] tracking-[-0.3px] text-[#00669E] sm:text-[40px] sm:leading-[50px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+                  Packing Solution</h2>
+                <p class="max-w-[678px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  Packaging is a service that involves designing and printing custom packaging solutions that protect
+                  and showcase products. It enhances the visual appeal of your products and increases brand recognition.
+                </p>
+              </div>
+              <ul class="flex flex-col gap-3">
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Custom packaging designs including boxes, labels, and
+                    wrapping.</span></li>
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Eco-friendly options and various material choices like
+                    cardboard, paper, and plastic.</span></li>
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Packaging solutions for different industries, including
+                    food, cosmetics, and retail products.</span></li>
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Responsive and experienced print specialists</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-[24px] border border-[#E5E7EB] bg-white p-[10px] lg:pl-[24px] lg:pr-[10px]">
+          <div
+            class="flex flex-col-reverse gap-8 lg:grid lg:grid-cols-[minmax(0,1fr)_528px] lg:items-center lg:gap-[44px]">
+            <div class="flex flex-col justify-center gap-5 lg:gap-6">
+              <p class="text-[16px] font-bold leading-[24px] text-[#111827]">• Min 50 units • Delivery: 2-3 Weeks</p>
+              <div class="flex flex-col gap-3 lg:gap-4">
+                <h2
+                  class="font-['Satoshi'] text-[34px] font-bold leading-[42px] tracking-[-0.3px] text-[#00669E] sm:text-[40px] sm:leading-[50px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+                  Offset Printing</h2>
+                <p class="max-w-[678px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  Offset printing is a traditional printing method used for high-volume printing. It provides
+                  exceptional color accuracy and consistency, making it perfect for larger print runs.</p>
+              </div>
+              <ul class="flex flex-col gap-3">
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Printing of magazines, catalogs, brochures, flyers, and
+                    large-format prints.</span></li>
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>CMYK color printing for sharp and vibrant images.</span>
+                </li>
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Suitable for bulk orders with consistent quality.</span>
+                </li>
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Responsive and experienced print specialists</span></li>
+              </ul>
+            </div>
+            <div class="relative h-[320px] overflow-hidden rounded-[16px] sm:h-[420px] lg:h-[550px]">
+              <div class="services-image-stack absolute inset-0">
+                <img src="public/assets/services/service-offset-1.webp" alt="Offset printing facility" />
+                <img src="public/assets/services/service-offset-2.webp" alt="" aria-hidden="true" />
+                <img src="public/assets/services/service-offset-3.webp" alt="" aria-hidden="true" />
+                <img src="public/assets/services/service-offset-4.webp" alt="" aria-hidden="true" />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-[24px] border border-[#E5E7EB] bg-white p-[10px]">
+          <div class="flex flex-col gap-8 lg:grid lg:grid-cols-[528px_minmax(0,1fr)] lg:items-center lg:gap-[44px]">
+            <div class="relative h-[320px] overflow-hidden rounded-[16px] sm:h-[420px] lg:h-[550px]">
+              <div class="services-image-stack absolute inset-0">
+                <img src="public/assets/services/service-promo-1.webp"
+                  alt="Promotional items printing service sample" />
+                <img src="public/assets/services/service-promo-2.webp" alt="" aria-hidden="true" />
+              </div>
+            </div>
+            <div class="flex flex-col justify-center gap-5 lg:gap-6">
+              <p class="text-[16px] font-bold leading-[24px] text-[#111827]">• Min 100 units • Delivery: 1-2 weeks</p>
+              <div class="flex flex-col gap-3 lg:gap-4">
+                <h2
+                  class="font-['Satoshi'] text-[34px] font-bold leading-[42px] tracking-[-0.3px] text-[#00669E] sm:text-[40px] sm:leading-[50px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+                  Promotional Items Printing</h2>
+                <p class="max-w-[678px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  Promotional items are branded products used to promote your business, engage customers, and increase
+                  brand visibility. These items are perfect for giveaways at events, trade shows, or as corporate gifts.
+                </p>
+              </div>
+              <ul class="flex flex-col gap-3">
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>A wide range of promotional products, including pens,
+                    mugs, t-shirts, bags, and customized items.</span></li>
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Branding options such as logos, slogans, and taglines
+                    printed on the items.</span></li>
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Bulk orders for events, corporate gifts, or promotional
+                    campaigns.</span></li>
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Responsive and experienced print specialists</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-[24px] border border-[#E5E7EB] bg-white p-[10px]">
+          <div class="flex flex-col gap-8 lg:grid lg:grid-cols-[528px_minmax(0,1fr)] lg:items-center lg:gap-[44px]">
+            <div class="relative h-[320px] overflow-hidden rounded-[16px] sm:h-[420px] lg:h-[550px]">
+              <div class="services-image-stack absolute inset-0">
+                <img src="public/assets/services/service-mail-1.webp" alt="Mail fulfillment service sample" />
+                <img src="public/assets/services/service-mail-2.webp" alt="" aria-hidden="true" />
+                <img src="public/assets/services/service-mail-3.webp" alt="" aria-hidden="true" />
+                <img src="public/assets/services/service-mail-4.webp" alt="" aria-hidden="true" />
+              </div>
+            </div>
+            <div class="flex flex-col justify-center gap-5 lg:gap-6">
+              <p class="text-[16px] font-bold leading-[24px] text-[#111827]">• Min 500 units • Delivery: 2-3 weeks</p>
+              <div class="flex flex-col gap-3 lg:gap-4">
+                <h2
+                  class="font-['Satoshi'] text-[34px] font-bold leading-[42px] tracking-[-0.3px] text-[#00669E] sm:text-[40px] sm:leading-[50px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+                  Mail Fulfillment</h2>
+                <p class="max-w-[678px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  Mail fulfillment is a service that manages the process of preparing and sending direct mail to
+                  specific locations or target audiences. It's a great way to reach customers with marketing materials
+                  like catalogs, brochures, or promotional offers.</p>
+              </div>
+              <ul class="flex flex-col gap-3">
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Packing and sorting of marketing materials.</span></li>
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Direct mail campaigns targeting specific locations or
+                    customer demographics.</span></li>
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Mailing list management, ensuring accurate delivery to the
+                    right recipients.</span></li>
+                <li
+                  class="flex items-start gap-[6px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#111827] sm:text-[16px]">
+                  <img src="public/assets/services/tick.svg" alt="" aria-hidden="true"
+                    class="mt-[1px] h-5 w-5 shrink-0" /><span>Responsive and experienced specialists</span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- /* ===== Services Detail End ===== */ -->
+
+    <!-- /* ===== Connect Section Start ===== */ -->
+    <section class="bg-white py-[60px] lg:py-[120px]">
+      <div
+        class="mx-auto flex w-full max-w-[1400px] flex-col gap-10 px-5 sm:px-8 lg:flex-row lg:items-start lg:gap-[42px] lg:px-12">
+        <div class="w-full lg:max-w-[680px] lg:flex-1">
+          <div class="flex flex-col gap-3">
+            <h2
+              class="font-['Satoshi'] text-[32px] font-bold leading-[40px] tracking-[-0.3px] text-[#111827] sm:text-[40px] sm:leading-[50px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+              Connect With Our Team</h2>
+            <p class="max-w-[680px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#374151] sm:text-[16px]">Big
+              idea or small batch, we print with precision and purpose. Share your concept, upload your artwork, and
+              we'll help you get it production-ready - stress-free.</p>
+          </div>
+          <form class="mt-8 flex flex-col gap-6" action="#" method="post">
+            <label class="flex flex-col gap-[11px]"><span
+                class="text-[14px] font-medium leading-4 text-[#374151]">Email</span><input type="email" name="email"
+                placeholder="Enter your email address"
+                class="h-9 border-0 border-b border-[#E2E8F0] bg-transparent px-2 text-[14px] font-normal leading-4 text-[#111827] placeholder:text-[#9CA3AF] focus:border-[#00669E] focus:outline-none focus:ring-0" /></label>
+            <label class="flex flex-col gap-[11px]"><span
+                class="text-[14px] font-medium leading-4 text-[#374151]">Contact Number</span><input type="tel"
+                name="contactNumber" placeholder="Contact Number"
+                class="h-9 border-0 border-b border-[#E2E8F0] bg-transparent px-2 text-[14px] font-normal leading-4 text-[#111827] placeholder:text-[#9CA3AF] focus:border-[#00669E] focus:outline-none focus:ring-0" /></label>
+            <label class="flex flex-col gap-[11px]"><span
+                class="text-[14px] font-medium leading-4 text-[#374151]">Company name</span><input type="text"
+                name="companyName" placeholder="Enter your company name"
+                class="h-9 border-0 border-b border-[#F3F4F6] bg-transparent px-2 text-[14px] font-normal leading-4 text-[#111827] placeholder:text-[#9CA3AF] focus:border-[#00669E] focus:outline-none focus:ring-0" /></label>
+            <label class="flex flex-col gap-[11px]"><span
+                class="text-[14px] font-medium leading-4 text-[#374151]">Message</span><textarea name="message" rows="4"
+                placeholder="Enter Message here..."
+                class="min-h-[94px] resize-y border-0 border-b border-[#F3F4F6] bg-transparent px-2 py-2 text-[14px] font-normal leading-4 text-[#111827] placeholder:text-[#9CA3AF] focus:border-[#00669E] focus:outline-none focus:ring-0"></textarea></label>
+            <button type="submit"
+              class="services-send-btn inline-flex w-fit items-center gap-[10px] rounded-[999px] bg-[#00669E] py-1 pl-4 pr-1 text-white transition hover:bg-[#005385]">
+              <span class="text-[16px] font-medium leading-[22.72px]">Send Now</span>
+              <span
+                class="services-send-arrow-wrap grid h-[42px] w-[42px] place-items-center rounded-full bg-[rgba(255,255,255,0.24)]">
+                <img src="public/assets/services/button-arrow.svg" alt="" aria-hidden="true"
+                  class="services-send-arrow services-send-arrow--current" />
+                <img src="public/assets/services/button-arrow.svg" alt="" aria-hidden="true"
+                  class="services-send-arrow services-send-arrow--next" />
+              </span>
+            </button>
+          </form>
+        </div>
+        <div class="w-full lg:max-w-[528px] lg:flex-1">
+          <div class="relative h-[320px] overflow-hidden rounded-[24px] sm:h-[420px] lg:h-[550px]">
+            <img src="public/assets/services/connect-image.webp" alt="Packaging and branded print samples"
+              class="h-full w-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /* ===== Connect Section End ===== */ -->
+
+    <!-- /* ===== FAQ Section Start ===== */ -->
+    <section class="bg-white py-[60px] lg:py-[120px]">
+      <div class="mx-auto flex w-full max-w-[1400px] flex-col gap-[42px] px-5 sm:px-8 lg:px-12">
+        <div class="flex flex-col gap-3">
+          <h2
+            class="font-['Satoshi'] text-[32px] font-bold leading-[40px] tracking-[-0.3px] text-[#111827] sm:text-[40px] sm:leading-[50px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+            Frequently Asked Questions</h2>
+          <p class="max-w-[915px] text-[15px] leading-[22px] tracking-[-0.18px] text-[#374151] sm:text-[16px]">Reassure
+            new customers about order process, custom design, and delivery timelines.</p>
+        </div>
+
+        <div class="flex flex-col gap-4 lg:gap-8">
+          <details open
+            class="services-faq overflow-hidden rounded-[16px] border border-[#E2E8F0] bg-white px-6 pb-6 pt-4">
+            <summary
+              class="services-faq-summary flex cursor-pointer list-none items-center justify-between gap-6 text-left">
+              <span class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">How do I place an
+                order?</span>
+              <span
+                class="services-faq-icon flex h-6 w-6 items-center justify-center rounded-full bg-[#F1F5F9] transition-transform"><img
+                  src="public/assets/services/faq-chevron-down.svg" alt="" aria-hidden="true"
+                  class="h-[15px] w-[15px]" /></span>
+            </summary>
+            <p class="mt-4 text-[15px] font-medium leading-[22px] tracking-[-0.18px] text-[#374151] sm:text-[16px]">
+              Webflow is a powerful visual development platform that allows designers to build fully responsive websites
+              without writing a single line of code. It combines the flexibility of code with the simplicity of a visual
+              editor, empowering creators to bring their ideas to life faster and more efficiently than ever before.</p>
+          </details>
+
+          <details class="services-faq overflow-hidden rounded-[16px] border border-[#E2E8F0] bg-white px-6 py-4">
+            <summary
+              class="services-faq-summary flex cursor-pointer list-none items-center justify-between gap-6 text-left">
+              <span class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">How can I track my
+                order?</span>
+              <span
+                class="services-faq-icon flex h-6 w-6 items-center justify-center rounded-full bg-[#F1F5F9] transition-transform"><img
+                  src="public/assets/services/faq-chevron-down.svg" alt="" aria-hidden="true"
+                  class="h-[15px] w-[15px]" /></span>
+            </summary>
+          </details>
+
+          <details class="services-faq overflow-hidden rounded-[16px] border border-[#E2E8F0] bg-white px-6 py-4">
+            <summary
+              class="services-faq-summary flex cursor-pointer list-none items-center justify-between gap-6 text-left">
+              <span class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">What payment methods
+                are accepted?</span>
+              <span
+                class="services-faq-icon flex h-6 w-6 items-center justify-center rounded-full bg-[#F1F5F9] transition-transform"><img
+                  src="public/assets/services/faq-chevron-down.svg" alt="" aria-hidden="true"
+                  class="h-[15px] w-[15px]" /></span>
+            </summary>
+          </details>
+
+          <details class="services-faq overflow-hidden rounded-[16px] border border-[#E2E8F0] bg-white px-6 py-4">
+            <summary
+              class="services-faq-summary flex cursor-pointer list-none items-center justify-between gap-6 text-left">
+              <span class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">What is the estimated
+                delivery time?</span>
+              <span
+                class="services-faq-icon flex h-6 w-6 items-center justify-center rounded-full bg-[#F1F5F9] transition-transform"><img
+                  src="public/assets/services/faq-chevron-down.svg" alt="" aria-hidden="true"
+                  class="h-[15px] w-[15px]" /></span>
+            </summary>
+          </details>
+
+          <details class="services-faq overflow-hidden rounded-[16px] border border-[#E2E8F0] bg-white px-6 py-4">
+            <summary
+              class="services-faq-summary flex cursor-pointer list-none items-center justify-between gap-6 text-left">
+              <span class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">What is your return
+                policy?</span>
+              <span
+                class="services-faq-icon flex h-6 w-6 items-center justify-center rounded-full bg-[#F1F5F9] transition-transform"><img
+                  src="public/assets/services/faq-chevron-down.svg" alt="" aria-hidden="true"
+                  class="h-[15px] w-[15px]" /></span>
+            </summary>
+          </details>
+
+          <details class="services-faq overflow-hidden rounded-[16px] border border-[#E2E8F0] bg-white px-6 py-4">
+            <summary
+              class="services-faq-summary flex cursor-pointer list-none items-center justify-between gap-6 text-left">
+              <span class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">Can I modify my order
+                after it's placed?</span>
+              <span
+                class="services-faq-icon flex h-6 w-6 items-center justify-center rounded-full bg-[#F1F5F9] transition-transform"><img
+                  src="public/assets/services/faq-chevron-down.svg" alt="" aria-hidden="true"
+                  class="h-[15px] w-[15px]" /></span>
+            </summary>
+          </details>
+        </div>
+      </div>
+    </section>
+    <!-- /* ===== FAQ Section End ===== */ -->
+  </main>
+
+  <div data-include="src/layouts/Footer.html"></div>
+
+  <script>
+    document.querySelectorAll('.services-faq').forEach((item) => {
+      item.addEventListener('toggle', () => {
+        if (item.open) {
+          document.querySelectorAll('.services-faq').forEach((other) => {
+            if (other !== item) other.open = false;
+          });
+        }
+      });
+    });
+  </script>
+  <script src="src/scripts/main.js"></script>
+</body>
+
+</html>
