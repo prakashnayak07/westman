@@ -53,8 +53,12 @@
 
           <div class="relative rounded-full p-2">
             <a href="/request-quote"
-              class="group inline-flex items-center gap-3 rounded-full bg-[#00669E] px-4 py-2 text-sm font-medium text-white transition">
-              <span>Request a Quotes</span>
+              class="group inline-flex items-center justify-center gap-[10px] rounded-full bg-[#00669E] py-1 pl-4 pr-1 text-white"
+              style="background-color:#00669E;" aria-label="Request a Quotes">
+              <span
+                class="whitespace-nowrap text-[12px] font-medium leading-[18px] md:text-[12px] lg:text-[12px] xl:text-[12px] 2xl:text-[16px]">
+                Request a Quotes
+              </span>
 
               <span aria-hidden="true"
                 class="relative flex h-[42px] w-[42px] items-center justify-center overflow-hidden rounded-full bg-white/30">
@@ -130,14 +134,24 @@
 
         <div class="mt-8 rounded-full p-2">
           <a href="/request-quote"
-            class="inline-flex w-full items-center justify-between rounded-full bg-[#00669E] py-1 pl-4 pr-1 text-white"
+            class="group inline-flex w-full items-center justify-between rounded-full bg-[#00669E] py-1 pl-4 pr-1 text-white"
             style="background-color:#00669E;" aria-label="Request a Quotes">
             <span class="whitespace-nowrap text-[16px] font-medium leading-[22.72px]">Request a Quotes</span>
-            <span
-              class="relative block h-[42px] w-[42px] shrink-0 overflow-hidden rounded-[1234.059px] bg-[rgba(255,255,255,0.24)]"
-              style="background-color:rgba(255,255,255,0.24);">
-              <img src="public/assets/navbar/arrow-icon.svg" alt="" aria-hidden="true"
-                class="absolute -left-2 top-[14.82px] h-[33.529px] w-[35.177px] max-w-none" />
+            <span aria-hidden="true"
+              class="relative flex h-[42px] w-[42px] items-center justify-center overflow-hidden rounded-full bg-white/30">
+              <svg
+                class="absolute h-[14px] w-[14px] transition-all duration-300 group-hover:translate-x-3 group-hover:-translate-y-3 group-hover:opacity-0"
+                viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.16699 12.8333L12.8337 1.16666M12.8337 1.16666H3.49965M12.8337 1.16666V10.5" stroke="white"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              <svg
+                class="absolute h-[14px] w-[14px] translate-x-[-12px] translate-y-[12px] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100"
+                viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.16699 12.8333L12.8337 1.16666M12.8337 1.16666H3.49965M12.8337 1.16666V10.5" stroke="white"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
             </span>
           </a>
         </div>

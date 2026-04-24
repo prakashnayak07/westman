@@ -125,71 +125,130 @@
 
   <main id="main" class="w-full overflow-x-hidden">
     <!-- ===== Hero Start ===== -->
-    <section class="relative flex min-h-[682px] flex-col overflow-hidden pb-[216px] lg:min-h-[912px] lg:pb-[567px]">
+    <section class="relative flex flex-col overflow-hidden 
+      min-h-[682px] pb-[216px] 
+      lg:min-h-[486px] lg:pb-[302px] 
+      xl:min-h-[608px] xl:pb-[378px] 
+      min-[1440px]:min-h-[684px] min-[1440px]:pb-[425px] 
+      min-[1920px]:min-h-[912px] min-[1920px]:pb-[567px]">
+
       <video class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover" autoplay muted loop playsinline
         preload="auto" aria-hidden="true">
         <source src="public/assets/hero/hero-bg.mp4" type="video/mp4" />
       </video>
+
       <div class="pointer-events-none absolute inset-0 z-[1]"
         style="background: linear-gradient(0deg, rgba(0, 102, 158, 0.5), rgba(0, 102, 158, 0.5)), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(279.35deg, rgba(0, 77, 128, 0) 45.6%, rgba(0, 77, 128, 0.705399) 66.3%, rgba(0, 77, 128, 0.95) 78.16%);">
       </div>
+
+      <!-- Background Circles Scaled -->
       <div class="pointer-events-none absolute inset-0 z-[2] overflow-hidden">
-        <span class="absolute left-[42%] top-[-420px] h-[1200px] w-[1200px] rounded-full border border-white/15"></span>
-        <span class="absolute left-[37%] top-[-370px] h-[1100px] w-[1100px] rounded-full border border-white/10"></span>
-        <span
-          class="absolute left-[35%] top-[-310px] h-[980px] w-[980px] rounded-full bg-[radial-gradient(circle_at_top,rgba(255,255,255,.12),transparent_55%)]"></span>
+        <span class="absolute left-[42%] rounded-full border border-white/15 
+          top-[-420px] h-[1200px] w-[1200px] 
+          lg:top-[-224px] lg:h-[640px] lg:w-[640px] 
+          xl:top-[-280px] xl:h-[800px] xl:w-[800px] 
+          min-[1440px]:top-[-315px] min-[1440px]:h-[900px] min-[1440px]:w-[900px] 
+          min-[1920px]:top-[-420px] min-[1920px]:h-[1200px] min-[1920px]:w-[1200px]"></span>
+
+        <span class="absolute left-[37%] rounded-full border border-white/10 
+          top-[-370px] h-[1100px] w-[1100px] 
+          lg:top-[-197px] lg:h-[586px] lg:w-[586px] 
+          xl:top-[-246px] xl:h-[733px] xl:w-[733px] 
+          min-[1440px]:top-[-277px] min-[1440px]:h-[825px] min-[1440px]:w-[825px] 
+          min-[1920px]:top-[-370px] min-[1920px]:h-[1100px] min-[1920px]:w-[1100px]"></span>
+
+        <span class="absolute left-[35%] rounded-full bg-[radial-gradient(circle_at_top,rgba(255,255,255,.12),transparent_55%)] 
+          top-[-310px] h-[980px] w-[980px] 
+          lg:top-[-165px] lg:h-[522px] lg:w-[522px] 
+          xl:top-[-206px] xl:h-[653px] xl:w-[653px] 
+          min-[1440px]:top-[-232px] min-[1440px]:h-[735px] min-[1440px]:w-[735px] 
+          min-[1920px]:top-[-310px] min-[1920px]:h-[980px] min-[1920px]:w-[980px]"></span>
       </div>
 
-      <div
-        class="relative z-[3] mx-auto flex w-full max-w-[1400px] flex-1 flex-col px-4 pt-[120px] lg:px-6 lg:pt-[120px]">
+      <!-- Content Container Scaled -->
+      <div class="relative z-[3] mx-auto flex w-full flex-1 flex-col 
+        px-4 pt-[120px] max-w-[1400px] 
+        lg:px-6 lg:pt-[64px] lg:max-w-[746px] 
+        xl:pt-[80px] xl:max-w-[933px] 
+        min-[1440px]:pt-[90px] min-[1440px]:max-w-[1050px] 
+        min-[1920px]:pt-[120px] min-[1920px]:max-w-[1400px]">
+
         <div class="max-w-[1009px] text-white">
           <h1
-            class="w-full font-['Satoshi'] text-[40px] font-bold leading-[48px] tracking-[-0.3px] lg:w-[1009px] lg:text-[72px] lg:leading-[88px] lg:tracking-[-0.8px]">
+            class="w-full font-['Satoshi'] font-bold tracking-[-0.3px] 
+            text-[40px] leading-[48px] 
+            lg:w-[538px] lg:text-[38px] lg:leading-[46px] 
+            xl:w-[673px] xl:text-[48px] xl:leading-[58px] 
+            min-[1440px]:w-[757px] min-[1440px]:text-[54px] min-[1440px]:leading-[66px] 
+            min-[1920px]:w-[1009px] min-[1920px]:text-[72px] min-[1920px]:leading-[88px] min-[1920px]:tracking-[-0.8px]">
             Your Trusted Commercial Printing Partner
           </h1>
-          <p
-            class="mt-6 w-full text-[16px] leading-[22px] tracking-[-0.18px] lg:w-[802.598px] lg:text-[20px] lg:leading-[26.4px]">
+          <p class="mt-6 w-full tracking-[-0.18px] 
+            text-[16px] leading-[22px] 
+            lg:w-[428px] lg:text-[14px] lg:leading-[20px] 
+            xl:w-[534px] xl:text-[15px] xl:leading-[22px] 
+            min-[1440px]:w-[601px] min-[1440px]:text-[16px] min-[1440px]:leading-[24px] 
+            min-[1920px]:w-[802px] min-[1920px]:text-[20px] min-[1920px]:leading-[26.4px]">
             High-quality digital, offset, packaging, and promotional printing — delivered fast and done right.
           </p>
+
           <a href="#contact"
             class="relative z-20 mt-6 inline-flex cursor-pointer items-center justify-center gap-[10px] rounded-[999px] bg-[#00669E] py-[4px] pl-[16px] pr-[4px] text-[16px] font-medium leading-[22.72px] text-white"
             style="background-color:#00669E;">
             Request a Quote
-            <span
-              class="relative block h-[42px] w-[42px] overflow-hidden rounded-[1234.059px] bg-[rgba(255,255,255,0.24)]"
-              style="background-color:rgba(255,255,255,0.24);">
+            <span class="relative block h-[42px] w-[42px] overflow-hidden rounded-full bg-[rgba(255,255,255,0.24)]">
               <img src="public/assets/hero/button-arrow.svg" alt="" aria-hidden="true"
-                class="absolute -left-2 top-[14.82px] h-[33.529px] w-[35.177px] max-w-none" />
+                class="absolute -left-2 top-[14.82px] h-[33.52px] w-[35.17px] max-w-none" />
             </span>
           </a>
         </div>
       </div>
 
-      <div
-        class="pointer-events-none absolute bottom-0 left-0 z-[4] flex w-full items-end gap-[33px] px-4 lg:left-1/2 lg:w-[1919px] lg:-translate-x-1/2 lg:px-0">
-        <div class="h-[180px] flex-1 overflow-hidden rounded-[24px] lg:h-[388px] lg:w-[321px] lg:flex-none">
-          <img src="public/assets/hero/hero-card-1-mobile.webp" alt="Book cover print sample"
+      <!-- Bottom Grid Wrapper Scaled -->
+      <div class="pointer-events-none absolute bottom-0 z-[4] flex items-end 
+        left-0 w-full px-4 gap-[33px] 
+        lg:left-1/2 lg:-translate-x-1/2 lg:px-0 lg:w-[1024px] lg:gap-[17px] 
+        xl:w-[1280px] xl:gap-[22px] 
+        min-[1440px]:w-[1440px] min-[1440px]:gap-[25px] 
+        min-[1920px]:w-[1919px] min-[1920px]:gap-[33px]">
+
+        <div class="overflow-hidden rounded-[24px] 
+          h-[180px] flex-1 
+          lg:flex-none lg:h-[206px] lg:w-[171px] 
+          xl:h-[258px] xl:w-[214px] 
+          min-[1440px]:h-[291px] min-[1440px]:w-[240px] 
+          min-[1920px]:h-[388px] min-[1920px]:w-[321px]">
+          <img src="public/assets/hero/hero-card-1-mobile.webp" alt="Book cover"
             class="h-full w-full object-cover lg:hidden" />
-          <img src="public/assets/hero/hero-card-1.webp" alt="Book cover print sample"
+          <img src="public/assets/hero/hero-card-1.webp" alt="Book cover"
             class="hidden h-full w-full object-cover lg:block" />
         </div>
-        <div class="h-[240px] flex-1 overflow-hidden rounded-[24px] lg:h-[255px] lg:flex-[1_0_0]">
-          <img src="public/assets/hero/hero-bottle-mobile.webp" alt="Premium bottle packaging sample"
+
+        <div class="overflow-hidden rounded-[24px] 
+          h-[240px] flex-1 
+          lg:flex-[1_0_0] lg:h-[136px] 
+          xl:h-[170px] 
+          min-[1440px]:h-[191px] 
+          min-[1920px]:h-[255px]">
+          <img src="public/assets/hero/hero-bottle-mobile.webp" alt="Packaging"
             class="h-full w-full object-cover lg:hidden" />
-          <img src="public/assets/hero/hero-card-2.webp" alt="Promotional package sample"
+          <img src="public/assets/hero/hero-card-2.webp" alt="Packaging"
             class="hidden h-full w-full object-cover lg:block" />
         </div>
-        <div class="hidden h-[347px] flex-[1_0_0] overflow-hidden rounded-[24px] lg:block">
-          <img src="public/assets/hero/hero-card-3.webp" alt="Gift card print sample"
-            class="h-full w-full object-cover" />
+
+        <div class="hidden overflow-hidden rounded-[24px] flex-[1_0_0] lg:block 
+          lg:h-[185px] xl:h-[231px] min-[1440px]:h-[260px] min-[1920px]:h-[347px]">
+          <img src="public/assets/hero/hero-card-3.webp" alt="Gift card" class="h-full w-full object-cover" />
         </div>
-        <div class="hidden h-[255px] flex-[1_0_0] overflow-hidden rounded-[24px] lg:block">
-          <img src="public/assets/hero/hero-card-4.webp" alt="Box packaging sample"
-            class="h-full w-full object-cover" />
+
+        <div class="hidden overflow-hidden rounded-[24px] flex-[1_0_0] lg:block 
+          lg:h-[136px] xl:h-[170px] min-[1440px]:h-[191px] min-[1920px]:h-[255px]">
+          <img src="public/assets/hero/hero-card-4.webp" alt="Box packaging" class="h-full w-full object-cover" />
         </div>
-        <div class="hidden h-[690px] flex-[1_0_0] overflow-hidden rounded-[24px] lg:block">
-          <img src="public/assets/hero/hero-bottle.webp" alt="Bottle mockup print sample"
-            class="h-full w-full object-cover" />
+
+        <div class="hidden overflow-hidden rounded-[24px] flex-[1_0_0] lg:block 
+          lg:h-[368px] xl:h-[460px] min-[1440px]:h-[517px] min-[1920px]:h-[690px]">
+          <img src="public/assets/hero/hero-bottle.webp" alt="Bottle mockup" class="h-full w-full object-cover" />
         </div>
       </div>
 
