@@ -1,8 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.figma.com)",
-      "Read(//c/Users/Admin/.claude/**)",
+      "Read(/c/Users/Admin/.claude/**)",
       "Bash(curl -s http://127.0.0.1:3845/mcp)",
       "Bash(curl -s -X POST http://127.0.0.1:3845/mcp -H 'Content-Type: application/json' -d '{\"jsonrpc\":\"2.0\",\"method\":\"tools/list\",\"params\":{},\"id\":1}')",
       "Bash(curl:*)",

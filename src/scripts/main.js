@@ -219,6 +219,41 @@
     });
   }
 
+  /* ---------- Home works-slide swiper -------------------------------
+     Figma: Westman Printing Working File, node 533:5139.
+     A 24px-gap continuous marquee of 620x464 cards showcasing recent
+     print work. Auto-scrolls linearly with reduced autoplay speed for a
+     gentle reveal; autoplay pauses on hover so users can read each card.
+     ------------------------------------------------------------------ */
+  function initWorksSlideSwiper() {
+    if (typeof window.Swiper !== "function") return;
+
+    const container = document.querySelector(".works-slide-swiper");
+    if (!container) return;
+
+    if (container.swiper) {
+      container.swiper.destroy(true, true);
+    }
+
+    new window.Swiper(container, {
+      slidesPerView: "auto",
+      spaceBetween: 24,
+      loop: true,
+      speed: 4000,
+      allowTouchMove: true,
+      grabCursor: true,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+    });
+
+    // Keep the marquee timing linear so cards slide at a constant pace.
+    const wrapper = container.querySelector(".swiper-wrapper");
+    if (wrapper) wrapper.style.transitionTimingFunction = "linear";
+  }
+
   /* ---------- Boot -------------------------------------------------- */
   document.addEventListener("DOMContentLoaded", async () => {
     await loadPartials();
@@ -226,5 +261,6 @@
     setYear();
     initBlogPagination();
     initAboutServicesSwiper();
+    initWorksSlideSwiper();
   });
 })();
