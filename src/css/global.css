@@ -1069,6 +1069,10 @@ body {
   margin-top: 4rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -2121,6 +2125,10 @@ body {
   border-radius: 18px;
 }
 
+.rounded-\[28px\] {
+  border-radius: 28px;
+}
+
 .rounded-b-\[32px\] {
   border-bottom-right-radius: 32px;
   border-bottom-left-radius: 32px;
@@ -2222,6 +2230,11 @@ body {
 .border-\[\#F1F5F9\] {
   --tw-border-opacity: 1;
   border-color: rgb(241 245 249 / var(--tw-border-opacity, 1));
+}
+
+.border-\[\#E5E5EB\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 229 235 / var(--tw-border-opacity, 1));
 }
 
 .bg-\[\#002469\] {
@@ -2879,6 +2892,21 @@ body {
   font-size: 10px;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -3059,6 +3087,14 @@ body {
   letter-spacing: -0.35px;
 }
 
+.tracking-\[0\.28em\] {
+  letter-spacing: 0.28em;
+}
+
+.tracking-\[0\.3em\] {
+  letter-spacing: 0.3em;
+}
+
 .text-\[\#00669E\] {
   --tw-text-opacity: 1;
   color: rgb(0 102 158 / var(--tw-text-opacity, 1));
@@ -3162,6 +3198,11 @@ body {
   color: rgb(255 255 255 / 0.9);
 }
 
+.text-\[\#475569\] {
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity, 1));
+}
+
 .accent-\[\#004D80\] {
   accent-color: #004D80;
 }
@@ -3185,6 +3226,12 @@ body {
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_24px_80px_rgba\(0\2c 0\2c 0\2c 0\.08\)\] {
+  --tw-shadow: 0 24px 80px rgba(0,0,0,0.08);
+  --tw-shadow-colored: 0 24px 80px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -3781,6 +3828,16 @@ body {
     font-size: 40px;
   }
 
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .sm\:leading-\[26px\] {
     line-height: 26px;
   }
@@ -3897,6 +3954,10 @@ body {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:items-end {
+    align-items: flex-end;
   }
 
   .md\:items-center {
