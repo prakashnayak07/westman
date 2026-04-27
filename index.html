@@ -85,6 +85,17 @@
       background:
         radial-gradient(circle at center, rgba(255, 225, 223, 0.95) 0%, rgba(255, 255, 255, 0.92) 58%, rgba(255, 255, 255, 1) 100%);
     }
+
+    /* ===== Hero CTA arrow slide (bottom-left → top-right) ===== */
+    .hero-cta .hero-cta-arrow {
+      transition: transform .4s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
+    }
+
+    .hero-cta:hover .hero-cta-arrow,
+    .hero-cta:focus-visible .hero-cta-arrow {
+      transform: translate(22.4px, -21.4px);
+    }
   </style>
 </head>
 
@@ -141,12 +152,12 @@
           </p>
 
           <a href="#contact"
-            class="relative z-20 mt-6 inline-flex cursor-pointer items-center justify-center gap-[10px] rounded-[999px] bg-[#00669E] py-[4px] pl-[16px] pr-[4px] text-[16px] font-medium leading-[22.72px] text-white"
+            class="hero-cta relative z-20 mt-6 inline-flex cursor-pointer items-center justify-center gap-[10px] rounded-[999px] bg-[#00669E] py-[4px] pl-[16px] pr-[4px] text-[16px] font-medium leading-[22.72px] text-white"
             style="background-color:#00669E;">
             Request a Quote
             <span class="relative block h-[42px] w-[42px] overflow-hidden rounded-full bg-[rgba(255,255,255,0.24)]">
               <img src="public/assets/hero/button-arrow.svg" alt="" aria-hidden="true"
-                class="absolute -left-2 top-[14.82px] h-[33.52px] w-[35.17px] max-w-none" />
+                class="hero-cta-arrow absolute -left-2 top-[14.82px] h-[33.52px] w-[35.17px] max-w-none" />
             </span>
           </a>
         </div>
@@ -336,7 +347,7 @@
           <article
             class="group flex h-[420px] flex-col overflow-hidden rounded-[24px] border border-[#f1f5f9] bg-[#e2e8f0] transition hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.10)]">
             <div class="relative flex-1 overflow-hidden">
-              <img src="public/assets/home/service-digital.webp" alt="High-quality digital printing service sample"
+              <img src="public/assets/home/service-packaging.webp" alt="High-quality digital printing service sample"
                 class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]" />
             </div>
             <div class="bg-white px-4 pb-4 pt-3">
@@ -349,7 +360,7 @@
           <article
             class="group flex h-[420px] flex-col overflow-hidden rounded-[24px] border border-[#f1f5f9] bg-[#e2e8f0] transition hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.10)]">
             <div class="relative flex-1 overflow-hidden">
-              <img src="public/assets/home/service-packaging.webp" alt="Packaging solution sample"
+              <img src="public/assets/home/service-promo.webp" alt="Packaging solution sample"
                 class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]" />
             </div>
             <div class="bg-white px-4 pb-4 pt-3">
@@ -361,7 +372,7 @@
           <article
             class="group flex h-[420px] flex-col overflow-hidden rounded-[24px] border border-[#f1f5f9] bg-[#e2e8f0] transition hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.10)]">
             <div class="relative flex-1 overflow-hidden">
-              <img src="public/assets/home/service-offset.webp" alt="Offset printing machinery"
+              <img src="public/assets/home/offset.webp" alt="Offset printing machinery"
                 class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]" />
             </div>
             <div class="bg-white px-4 pb-4 pt-3">
@@ -373,7 +384,7 @@
           <article
             class="group flex h-[420px] flex-col overflow-hidden rounded-[24px] border border-[#f1f5f9] bg-[#e2e8f0] transition hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.10)]">
             <div class="relative flex-1 overflow-hidden">
-              <img src="public/assets/home/service-promo.webp" alt="Promotional item bottle print sample"
+              <img src="public/assets/home/bottle.png" alt="Promotional item bottle print sample"
                 class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]" />
             </div>
             <div class="bg-white px-4 pb-4 pt-3">
@@ -386,12 +397,12 @@
           <article
             class="group flex h-[420px] flex-col overflow-hidden rounded-[24px] border border-[#f1f5f9] bg-[#e2e8f0] transition hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.10)]">
             <div class="relative flex-1 overflow-hidden">
-              <img src="public/assets/home/service-mail.webp" alt="Mail fulfillment printed materials sample"
+              <img src="public/assets/home/mail.png" alt="Mail fulfillment printed materials sample"
                 class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]" />
             </div>
             <div class="bg-white px-4 pb-4 pt-3">
               <h3 class="font-['Satoshi'] text-[20px] font-bold leading-[24px] text-[#00669E]">Mail Fulfillment</h3>
-              <p class="mt-1.5 text-[14px] leading-[20px] text-[#374151]">• Min. 1,000 units &nbsp;•&nbsp; Delivery: 3–5
+              <p class="mt-1.5 text-[14px] leading-[20px] text-[#374151]">• Min. 200 packs &nbsp;•&nbsp; Delivery: 3–7
                 days</p>
             </div>
           </article>
@@ -402,13 +413,11 @@
               class="relative z-10 max-w-[280px] font-['Satoshi'] text-[24px] font-bold leading-[32px] text-black sm:text-[28px] sm:leading-[36px]">
               Tell us about your print requirements</h3>
             <a href="#connect"
-              class="relative z-10 inline-flex w-fit items-center gap-[10px] rounded-full bg-[#00669E] py-1 pl-4 pr-1 font-['Satoshi'] text-[16px] font-medium leading-[22.72px] text-white transition hover:opacity-90">
-              Get a Quote
-              <span class="grid h-[42px] w-[42px] place-items-center rounded-full bg-white/25">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
+              class="hero-cta relative z-10 inline-flex w-fit items-center gap-[10px] rounded-full bg-[#00669E] py-1 pl-4 pr-1 font-['Satoshi'] text-[16px] font-medium leading-[22.72px] text-white transition hover:opacity-90">
+              Make an Enquiry
+              <span class="relative block h-[42px] w-[42px] overflow-hidden rounded-full bg-[rgba(255,255,255,0.24)]">
+                <img src="public/assets/hero/button-arrow.svg" alt="" aria-hidden="true"
+                  class="hero-cta-arrow absolute -left-2 top-[14.82px] h-[33.52px] w-[35.17px] max-w-none" />
               </span>
             </a>
           </article>
@@ -445,7 +454,7 @@
 
           <!-- BUTTON -->
           <a href="contact.html"
-            class="pill-btn group bg-white text-[#00669e] hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+            class="pill-btn group mt-6 bg-white text-[#00669e] hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
             <span class="pl-1 text-sm font-medium sm:text-[15px]">Contact Us</span>
             <span class="pill-btn__icon bg-[#64a1d1] text-white transition group-hover:bg-[#00669e]">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"
