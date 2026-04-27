@@ -2,3 +2,14 @@
    Westman Printing — Custom Styles
    Reset, design tokens, typography, base elements
    ========================================================= */
+
+/* ===== CTA arrow slide (bottom-left → top-right) ===== */
+.hero-cta .hero-cta-arrow {
+  transition: transform .4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.hero-cta:hover .hero-cta-arrow,
+.hero-cta:focus-visible .hero-cta-arrow {
+  transform: translate(63.7%, -63.8%);
+}
