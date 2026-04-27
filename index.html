@@ -86,7 +86,7 @@
         radial-gradient(circle at center, rgba(255, 225, 223, 0.95) 0%, rgba(255, 255, 255, 0.92) 58%, rgba(255, 255, 255, 1) 100%);
     }
 
-    /* ===== Hero CTA arrow slide (bottom-left → top-right) ===== */
+    /* ===== CTA arrow slide (bottom-left → top-right) ===== */
     .hero-cta .hero-cta-arrow {
       transition: transform .4s cubic-bezier(0.4, 0, 0.2, 1);
       will-change: transform;
@@ -94,7 +94,7 @@
 
     .hero-cta:hover .hero-cta-arrow,
     .hero-cta:focus-visible .hero-cta-arrow {
-      transform: translate(22.4px, -21.4px);
+      transform: translate(63.7%, -63.8%);
     }
   </style>
 </head>
@@ -454,14 +454,12 @@
 
           <!-- BUTTON -->
           <a href="contact.html"
-            class="pill-btn group mt-6 bg-white text-[#00669e] hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+            class="hero-cta pill-btn group mt-6 bg-white text-[#00669e] hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
             <span class="pl-1 text-sm font-medium sm:text-[15px]">Contact Us</span>
-            <span class="pill-btn__icon bg-[#64a1d1] text-white transition group-hover:bg-[#00669e]">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="8 7 17 7 17 16"></polyline>
-              </svg>
+            <span
+              class="pill-btn__icon relative overflow-hidden bg-[#64a1d1] text-white transition group-hover:bg-[#00669e]">
+              <img src="public/assets/hero/button-arrow.svg" alt="" aria-hidden="true"
+                class="hero-cta-arrow absolute -left-[6.9px] top-[12.7px] h-[28.7px] w-[30.15px] max-w-none" />
             </span>
           </a>
 
@@ -469,7 +467,7 @@
 
         <!-- RIGHT FLOATING IMAGE -->
         <div class="relative w-full mt-16 lg:mt-0 lg:absolute right-[-120px] top-1/2 -translate-y-1/2
-          w-[500px] md:w-[650px] xl:w-[800px] pointer-events-none">
+          w-[500px] md:w-[650px] xl:w-[645px] pointer-events-none">
 
           <img src="public/assets/home/floating-box.png" class="w-full h-auto object-contain" alt="Packaging" />
         </div>

@@ -810,6 +810,14 @@ body {
   top: 16px;
 }
 
+.-left-\[6\.9px\] {
+  left: -6.9px;
+}
+
+.top-\[12\.7px\] {
+  top: 12.7px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -1123,6 +1131,10 @@ body {
   height: 1px;
 }
 
+.h-\[28\.7px\] {
+  height: 28.7px;
+}
+
 .min-h-\[105px\] {
   min-height: 105px;
 }
@@ -1267,6 +1279,10 @@ body {
 
 .\!w-\[2vw\] {
   width: 2vw !important;
+}
+
+.w-\[30\.15px\] {
+  width: 30.15px;
 }
 
 .min-w-0 {
@@ -3713,6 +3729,10 @@ body {
 
   .xl\:\!w-\[420px\] {
     width: 420px !important;
+  }
+
+  .xl\:w-\[645px\] {
+    width: 645px;
   }
 
   .xl\:max-w-\[932px\] {
