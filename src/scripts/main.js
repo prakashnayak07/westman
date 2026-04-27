@@ -205,15 +205,15 @@
       breakpoints: {
         640: {
           slidesPerView: 1.45,
-          spaceBetween: 20,
+          spaceBetween: 24,
         },
         1024: {
           slidesPerView: "auto",
-          spaceBetween: 24,
+          spaceBetween: 32,
         },
         1280: {
           slidesPerView: "auto",
-          spaceBetween: 24,
+          spaceBetween: 32,
         },
       },
     });
@@ -254,6 +254,32 @@
     if (wrapper) wrapper.style.transitionTimingFunction = "linear";
   }
 
+  /* ---------- Blog/Insights right-bleed swiper ----------------------
+     Used by index.html blog cards and about.html insights cards.
+     Each `.blog-swiper` can specify its own nav buttons via
+     `data-prev` / `data-next` selectors; defaults to #blogPrev/#blogNext.
+     ------------------------------------------------------------------ */
+  function initBlogSwipers() {
+    if (typeof window.Swiper !== "function") return;
+    document.querySelectorAll(".blog-swiper").forEach((container) => {
+      if (container.swiper) return;
+      const prevSel = container.dataset.prev || "#blogPrev";
+      const nextSel = container.dataset.next || "#blogNext";
+      const prevEl = document.querySelector(prevSel);
+      const nextEl = document.querySelector(nextSel);
+      new window.Swiper(container, {
+        slidesPerView: 1.15,
+        spaceBetween: 16,
+        navigation: prevEl && nextEl ? { prevEl, nextEl } : undefined,
+        breakpoints: {
+          640: { slidesPerView: 2.15, spaceBetween: 20 },
+          1024: { slidesPerView: 3.15, spaceBetween: 24 },
+          1280: { slidesPerView: 3.3, spaceBetween: 28 },
+        },
+      });
+    });
+  }
+
   /* ---------- Boot -------------------------------------------------- */
   document.addEventListener("DOMContentLoaded", async () => {
     await loadPartials();
@@ -262,5 +288,6 @@
     initBlogPagination();
     initAboutServicesSwiper();
     initWorksSlideSwiper();
+    initBlogSwipers();
   });
 })();
