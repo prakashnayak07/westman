@@ -835,14 +835,12 @@
     <!-- ===== Blog Start ===== -->
     <section id="blog" class="bg-white py-[60px] lg:py-[120px]">
       <div class="mx-auto w-full max-w-[1440px] px-5">
-        <div
-          class="mb-10 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end lg:mb-[42px]">
+        <div class="mb-10 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end lg:mb-[42px]">
           <div class="max-w-[706px]">
             <h2
               class="font-['Satoshi'] text-[28px] font-bold leading-[36px] tracking-[-0.2px] text-[#111827] sm:text-[36px] sm:leading-[46px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
               Insights &amp; Inspiration</h2>
-            <p
-              class="mt-3 text-[15px] leading-[22px] tracking-[-0.18px] text-[#374151] sm:text-[16px]">
+            <p class="mt-3 text-[15px] leading-[22px] tracking-[-0.18px] text-[#374151] sm:text-[16px]">
               Practical tips, creative ideas, and sustainability insights from Australia's favourite packaging partner.
             </p>
           </div>
@@ -863,8 +861,10 @@
             </button>
           </div>
         </div>
+      </div>
 
-        <div class="blog-swiper swiper w-full overflow-hidden">
+      <div class="pl-5 lg:pl-[max(20px,calc((100vw-1440px)/2+20px))]">
+        <div class="blog-swiper swiper w-full !overflow-visible">
           <div class="swiper-wrapper">
             <article
               class="swiper-slide group !h-auto overflow-hidden rounded-[8px] border border-[#e5e7eb] bg-white transition hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
@@ -874,12 +874,10 @@
               </div>
               <div class="flex flex-col gap-2 px-[10px] pb-5 pt-6">
                 <p class="text-[14px] leading-[20px] tracking-[-0.16px] text-[#6b7280]">19 Oct 2025</p>
-                <h3
-                  class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">
+                <h3 class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">
                   How to Design a Cover Customers Remember
                 </h3>
-                <p
-                  class="line-clamp-2 text-[14px] leading-[20px] tracking-[-0.16px] text-[#374151]">
+                <p class="line-clamp-2 text-[14px] leading-[20px] tracking-[-0.16px] text-[#374151]">
                   Learn how to use color, hierarchy, and print finishes to create brand recall with every sip.
                 </p>
                 <a href="#"
@@ -900,12 +898,10 @@
               </div>
               <div class="flex flex-col gap-2 px-[10px] pb-5 pt-6">
                 <p class="text-[14px] leading-[20px] tracking-[-0.16px] text-[#6b7280]">22 Nov 2025</p>
-                <h3
-                  class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">
+                <h3 class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">
                   Creating a Sustainable Packaging Strategy
                 </h3>
-                <p
-                  class="line-clamp-2 text-[14px] leading-[20px] tracking-[-0.16px] text-[#374151]">
+                <p class="line-clamp-2 text-[14px] leading-[20px] tracking-[-0.16px] text-[#374151]">
                   Explore innovative materials and designs that minimize environmental impact while enhancing brand
                   identity.
                 </p>
@@ -927,12 +923,10 @@
               </div>
               <div class="flex flex-col gap-2 px-[10px] pb-5 pt-6">
                 <p class="text-[14px] leading-[20px] tracking-[-0.16px] text-[#6b7280]">15 Dec 2025</p>
-                <h3
-                  class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">
+                <h3 class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">
                   The Psychology of Color in Branding
                 </h3>
-                <p
-                  class="line-clamp-2 text-[14px] leading-[20px] tracking-[-0.16px] text-[#374151]">
+                <p class="line-clamp-2 text-[14px] leading-[20px] tracking-[-0.16px] text-[#374151]">
                   Understand how color influences customer emotions and decisions in product design and branding.
                 </p>
                 <a href="#"
@@ -953,12 +947,10 @@
               </div>
               <div class="flex flex-col gap-2 px-[10px] pb-5 pt-6">
                 <p class="text-[14px] leading-[20px] tracking-[-0.16px] text-[#6b7280]">10 Jan 2026</p>
-                <h3
-                  class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">
+                <h3 class="text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827]">
                   Maximizing User Experience in Product Design
                 </h3>
-                <p
-                  class="line-clamp-2 text-[14px] leading-[20px] tracking-[-0.16px] text-[#374151]">
+                <p class="line-clamp-2 text-[14px] leading-[20px] tracking-[-0.16px] text-[#374151]">
                   Identify key elements that enhance usability and satisfaction, and learn best practices for
                   user-centered design.
                 </p>
@@ -1138,7 +1130,7 @@
             spaceBetween: 24
           },
           1280: {
-            slidesPerView: 3.5,
+            slidesPerView: 3.3,
             spaceBetween: 28
           }
         }

@@ -1261,6 +1261,14 @@ body {
   width: max-content;
 }
 
+.\!w-\[92vw\] {
+  width: 92vw !important;
+}
+
+.\!w-\[2vw\] {
+  width: 2vw !important;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -1628,6 +1636,10 @@ body {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.\!overflow-visible {
+  overflow: visible !important;
 }
 
 .overflow-y-auto {
@@ -2145,6 +2157,10 @@ body {
 
 .pt-\[6px\] {
   padding-top: 6px;
+}
+
+.pl-5 {
+  padding-left: 1.25rem;
 }
 
 .text-left {
@@ -2805,6 +2821,10 @@ body {
     width: 86px;
   }
 
+  .sm\:\!w-\[340px\] {
+    width: 340px !important;
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -3267,6 +3287,10 @@ body {
     width: 630px;
   }
 
+  .lg\:\!w-\[380px\] {
+    width: 380px !important;
+  }
+
   .lg\:max-w-\[520px\] {
     max-width: 520px;
   }
@@ -3533,6 +3557,10 @@ body {
     padding-top: 64px;
   }
 
+  .lg\:pl-\[max\(20px\2c calc\(\(100vw-1440px\)\/2\+20px\)\)\] {
+    padding-left: max(20px, calc((100vw - 1440px) / 2 + 20px));
+  }
+
   .lg\:text-\[14px\] {
     font-size: 14px;
   }
@@ -3681,6 +3709,10 @@ body {
 
   .xl\:w-\[9px\] {
     width: 9px;
+  }
+
+  .xl\:\!w-\[420px\] {
+    width: 420px !important;
   }
 
   .xl\:max-w-\[932px\] {
