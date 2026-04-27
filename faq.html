@@ -163,17 +163,6 @@
 
   <div data-include="src/layouts/Footer.html"></div>
 
-  <script>
-    document.querySelectorAll('.faq-item').forEach((item) => {
-      item.addEventListener('toggle', () => {
-        if (item.open) {
-          document.querySelectorAll('.faq-item').forEach((otherItem) => {
-            if (otherItem !== item) otherItem.open = false;
-          });
-        }
-      });
-    });
-  </script>
   <script src="src/scripts/main.js"></script>
 </body>
 

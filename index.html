@@ -85,7 +85,6 @@
       background:
         radial-gradient(circle at center, rgba(255, 225, 223, 0.95) 0%, rgba(255, 255, 255, 0.92) 58%, rgba(255, 255, 255, 1) 100%);
     }
-
   </style>
 </head>
 
@@ -793,8 +792,7 @@
               </button>
             </form>
           </div>
-          <div
-            class="min-h-[320px] flex-1 self-stretch overflow-hidden rounded-[24px] bg-[#e2e8f0] lg:min-h-0">
+          <div class="min-h-[320px] flex-1 self-stretch overflow-hidden rounded-[24px] bg-[#e2e8f0] lg:min-h-0">
             <img src="public/assets/home/connect-side.png" alt="Connect with our team"
               class="h-full w-full object-cover" />
           </div>
@@ -942,7 +940,7 @@
     <!-- ===== Blog End ===== -->
 
     <!-- ===== FAQ Start ===== -->
-    <section id="faq" class="bg-[#f1f5f9] py-[60px] lg:py-[120px]">
+    <section id="faq" class=" py-[60px] lg:py-[120px]">
       <div class="mx-auto w-full max-w-7xl px-5">
         <div class="mb-12">
           <h2
@@ -1145,14 +1143,6 @@
       }, 2500);
     }
 
-    /* ===== FAQ accordion (single-open) ===== */
-    document.querySelectorAll('.faq-item').forEach(item => {
-      item.addEventListener('toggle', () => {
-        if (item.open) {
-          document.querySelectorAll('.faq-item').forEach(o => { if (o !== item) o.open = false; });
-        }
-      });
-    });
   </script>
   <script src="src/scripts/main.js"></script>
 </body>

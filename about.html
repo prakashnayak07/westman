@@ -827,13 +827,6 @@
       });
     })();
 
-    document.querySelectorAll('.faq-item').forEach(item => {
-      item.addEventListener('toggle', () => {
-        if (item.open) {
-          document.querySelectorAll('.faq-item').forEach(o => { if (o !== item) o.open = false; });
-        }
-      });
-    });
   </script>
   <script src="src/scripts/main.js"></script>
 </body>
