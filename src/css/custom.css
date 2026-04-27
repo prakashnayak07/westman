@@ -13,3 +13,38 @@
 .hero-cta:focus-visible .hero-cta-arrow {
   transform: translate(63.7%, -63.8%);
 }
+
+/* ===== Rolling-text hover (used by footer Quick Links) =====
+   Stack two identical text spans inside a clipping wrapper.
+   On hover the original slides up and the duplicate (sitting just
+   below the visible area) slides into place. */
+.nav-roll {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: bottom;
+  line-height: 1.4;
+}
+
+.nav-roll > span {
+  display: block;
+  transition: transform .35s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.nav-roll > span:nth-child(2) {
+  position: absolute;
+  inset: 0;
+  transform: translateY(100%);
+  color: #00669e;
+}
+
+.nav-roll-link:hover .nav-roll > span:nth-child(1),
+.nav-roll-link:focus-visible .nav-roll > span:nth-child(1) {
+  transform: translateY(-100%);
+}
+
+.nav-roll-link:hover .nav-roll > span:nth-child(2),
+.nav-roll-link:focus-visible .nav-roll > span:nth-child(2) {
+  transform: translateY(0);
+}
