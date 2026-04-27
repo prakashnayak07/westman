@@ -523,95 +523,79 @@
 
     <!-- ===== Process Start ===== -->
     <section id="process" class="bg-white py-[60px] lg:py-[120px]">
-      <div class="mx-auto w-full max-w-[1400px] px-5 lg:px-10">
-        <div class="mx-auto max-w-[720px] text-center">
+      <div class="mx-auto flex w-full max-w-[1440px] flex-col items-center gap-10 px-5 lg:gap-12">
+        <div class="mx-auto flex max-w-[720px] flex-col items-center gap-3 text-center">
           <h2
             class="font-['Satoshi'] text-[28px] font-bold leading-[36px] tracking-[-0.2px] text-[#111827] sm:text-[36px] sm:leading-[46px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
             Our Simple Printing Process</h2>
-          <p class="mx-auto mt-3 text-[15px] leading-[22px] tracking-[-0.18px] text-[#374151] sm:text-[16px]">
+          <p class="text-[15px] leading-[22px] tracking-[-0.18px] text-[#374151] sm:text-[16px]">
             You don't need to be a print expert. Our structured process simplifies decisions, avoids errors, and
             delivers professional results — every time.
           </p>
         </div>
 
-        <div class="mt-12 flex flex-col items-stretch gap-8 lg:mt-12 lg:flex-row lg:items-start lg:gap-10">
+        <div
+          class="flex w-full max-w-[1400px] flex-col items-stretch gap-6 lg:flex-row lg:items-start lg:justify-between lg:gap-10">
           <div
-            class="relative aspect-[828/645] w-full overflow-hidden rounded-[24px] bg-[#e2e8f0] lg:flex-[828_0_0] lg:max-w-[828px]">
+            class="relative aspect-[828/645] w-full overflow-hidden rounded-[24px] bg-[#e2e8f0] lg:aspect-auto lg:h-[645px] lg:w-[828px] lg:flex-shrink-0">
             <img src="public/assets/home/process/process-main.png" alt="Printing process package sample"
               class="absolute inset-0 h-full w-full object-cover" />
           </div>
 
-          <div class="flex flex-col gap-2 lg:flex-[520_0_0] lg:max-w-[520px]">
-            <article class="flex flex-col gap-2 rounded-[16px] border border-[#e5e7eb] bg-white p-6">
-              <span class="grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[5px] bg-[#fb923c]">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="white" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                  <polyline points="14 2 14 8 20 8" />
-                  <line x1="16" y1="13" x2="8" y2="13" />
-                  <line x1="16" y1="17" x2="8" y2="17" />
-                  <polyline points="10 9 9 9 8 9" />
-                </svg>
+          <div class="flex w-full flex-col gap-2 lg:max-w-[520px]">
+            <article class="flex flex-col gap-2 rounded-[16px] border border-[#e5e7eb] bg-white p-5 sm:p-6">
+              <span class="grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[5px] bg-[#fb923c] p-[5px]">
+                <img src="public/assets/home/process/icons/required.svg" alt="" aria-hidden="true" class="h-6 w-6" />
               </span>
               <div class="flex flex-col gap-1">
                 <h3
-                  class="font-['Satoshi'] text-[20px] font-medium leading-[28px] tracking-[-0.15px] text-[#111827] sm:text-[22px] sm:leading-[30px] lg:text-[24px] lg:leading-[30px]">
+                  class="font-['Satoshi'] text-[20px] font-medium leading-[28px] tracking-[-0.15px] text-[#111827] sm:text-[22px] sm:leading-[30px] lg:text-[24px]">
                   Share Your Requirements</h3>
-                <p class="text-[15px] leading-[22px] tracking-[-0.18px] text-[#6b7280] sm:text-[16px]">Tell us what you
-                  need, or let our team guide you.</p>
+                <p class="text-[15px] leading-[22px] tracking-[-0.18px] text-[#6b7280] sm:text-[16px]">
+                  Tell us what you need, or let our team guide you.
+                </p>
               </div>
             </article>
 
-            <article class="flex flex-col gap-2 rounded-[16px] border border-[#e5e7eb] bg-white p-6">
-              <span class="grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[5px] bg-[#22c55e]">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="white" stroke-width="2.2"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
+            <article class="flex flex-col gap-2 rounded-[16px] border border-[#e5e7eb] bg-white p-5 sm:p-6">
+              <span class="grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[5px] bg-[#22c55e] p-[5px]">
+                <img src="public/assets/home/process/icons/check.svg" alt="" aria-hidden="true" class="h-6 w-6" />
               </span>
               <div class="flex flex-col gap-1">
                 <h3
-                  class="font-['Satoshi'] text-[20px] font-medium leading-[28px] tracking-[-0.15px] text-[#111827] sm:text-[22px] sm:leading-[30px] lg:text-[24px] lg:leading-[30px]">
+                  class="font-['Satoshi'] text-[20px] font-medium leading-[28px] tracking-[-0.15px] text-[#111827] sm:text-[22px] sm:leading-[30px] lg:text-[24px]">
                   Review &amp; Proof</h3>
-                <p class="text-[15px] leading-[22px] tracking-[-0.18px] text-[#6b7280] sm:text-[16px]">We confirm
-                  specifications &amp; provide proofs before production.</p>
+                <p class="text-[15px] leading-[22px] tracking-[-0.18px] text-[#6b7280] sm:text-[16px]">
+                  We confirm specifications &amp; provide proofs before production.
+                </p>
               </div>
             </article>
 
-            <article class="flex flex-col gap-2 rounded-[16px] border border-[#e5e7eb] bg-white p-6">
-              <span class="grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[5px] bg-[#00669e]">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="white" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="6 9 6 2 18 2 18 9" />
-                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
-                  <rect x="6" y="14" width="12" height="8" />
-                </svg>
+            <article class="flex flex-col gap-2 rounded-[16px] border border-[#e5e7eb] bg-white p-5 sm:p-6">
+              <span class="grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[5px] bg-[#00669e] p-[5px]">
+                <img src="public/assets/home/process/icons/print.svg" alt="" aria-hidden="true" class="h-6 w-6" />
               </span>
               <div class="flex flex-col gap-1">
                 <h3
-                  class="font-['Satoshi'] text-[20px] font-medium leading-[28px] tracking-[-0.15px] text-[#111827] sm:text-[22px] sm:leading-[30px] lg:text-[24px] lg:leading-[30px]">
+                  class="font-['Satoshi'] text-[20px] font-medium leading-[28px] tracking-[-0.15px] text-[#111827] sm:text-[22px] sm:leading-[30px] lg:text-[24px]">
                   Print &amp; Quality Check</h3>
-                <p class="text-[15px] leading-[22px] tracking-[-0.18px] text-[#6b7280] sm:text-[16px]">Your job is
-                  produced using certified quality control processes.</p>
+                <p class="text-[15px] leading-[22px] tracking-[-0.18px] text-[#6b7280] sm:text-[16px]">
+                  Your job is produced using certified quality control processes.
+                </p>
               </div>
             </article>
 
-            <article class="flex flex-col gap-2 rounded-[16px] border border-[#e5e7eb] bg-white p-6">
-              <span class="grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[5px] bg-[#b01c2e]">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="white" stroke-width="1.8"
-                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M1 3h13v13H1z" />
-                  <path d="M14 8h4l3 3v5h-7V8z" />
-                  <circle cx="5.5" cy="18.5" r="2.5" />
-                  <circle cx="18.5" cy="18.5" r="2.5" />
-                </svg>
+            <article class="flex flex-col gap-2 rounded-[16px] border border-[#e5e7eb] bg-white p-5 sm:p-6">
+              <span class="grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[5px] bg-[#b01c2e] p-[5px]">
+                <img src="public/assets/home/process/icons/shipping.svg" alt="" aria-hidden="true" class="h-6 w-6" />
               </span>
               <div class="flex flex-col gap-1">
                 <h3
-                  class="font-['Satoshi'] text-[20px] font-medium leading-[28px] tracking-[-0.15px] text-[#111827] sm:text-[22px] sm:leading-[30px] lg:text-[24px] lg:leading-[30px]">
+                  class="font-['Satoshi'] text-[20px] font-medium leading-[28px] tracking-[-0.15px] text-[#111827] sm:text-[22px] sm:leading-[30px] lg:text-[24px]">
                   Finish &amp; Deliver</h3>
-                <p class="text-[15px] leading-[22px] tracking-[-0.18px] text-[#6b7280] sm:text-[16px]">We finish, pack,
-                  and deliver your order on time.</p>
+                <p class="text-[15px] leading-[22px] tracking-[-0.18px] text-[#6b7280] sm:text-[16px]">
+                  We finish, pack, and deliver your order on time.
+                </p>
               </div>
             </article>
           </div>
