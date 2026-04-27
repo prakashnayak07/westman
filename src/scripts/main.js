@@ -238,20 +238,9 @@
     new window.Swiper(container, {
       slidesPerView: "auto",
       spaceBetween: 24,
-      loop: true,
-      speed: 4000,
       allowTouchMove: true,
       grabCursor: true,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
     });
-
-    // Keep the marquee timing linear so cards slide at a constant pace.
-    const wrapper = container.querySelector(".swiper-wrapper");
-    if (wrapper) wrapper.style.transitionTimingFunction = "linear";
   }
 
   /* ---------- Blog/Insights right-bleed swiper ----------------------
