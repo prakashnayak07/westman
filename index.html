@@ -417,48 +417,64 @@
 
 
     <!-- ===== Works Start ===== -->
-    <section class="relative w-full overflow-hidden bg-[linear-gradient(95deg,#00669E_22%,#004D80_50%,#091A39_100%)]">
+    <section class="relative w-full overflow-hidden bg-[linear-gradient(94deg,#00669E_22%,#004D80_50%,#091A39_100%)]">
 
       <!-- Container -->
-      <div class="max-w-[1400px] mx-auto px-6 lg:px-16 py-20 lg:py-24 flex flex-col lg:flex-row items-center">
+      <div
+        class="relative mx-auto flex max-w-[1920px] flex-col items-stretch gap-10 px-4 py-[52px] sm:px-8 lg:max-h-[620px]  lg:flex-row lg:items-center lg:px-[52px]  xl:px-[80px]">
 
         <!-- LEFT CONTENT -->
-        <div class="z-10 max-w-[600px]">
+        <div class="z-10 flex w-full flex-col gap-6 lg:max-w-[670px] lg:flex-1">
 
-          <h1 class="text-white font-bold tracking-[-0.6px]
-            text-[32px] leading-[40px]
-            md:text-[42px] md:leading-[52px]
-            xl:text-[56px] xl:leading-[68px]">
+          <h2
+            class="font-['Satoshi'] font-bold text-white tracking-[-0.15px] text-[24px] leading-[30px] sm:text-[32px] sm:leading-[40px] sm:tracking-[-0.3px] md:text-[42px] md:leading-[52px] md:tracking-[-0.4px] xl:text-[56px] xl:leading-[68px] xl:tracking-[-0.6px]">
             More than a printer.<br />
             A production partner.
-          </h1>
+          </h2>
 
-          <p class="mt-4 text-white/90 font-medium
-            text-sm leading-[20px]
-            md:text-base md:leading-[23px]
-            max-w-[520px]">
+          <p
+            class="font-medium text-white text-[14px] leading-[16px] sm:text-[15px] sm:leading-[22px] md:text-[16px] md:leading-[22.72px]">
             We work with businesses that value consistency, scale, and accountability — delivering print solutions that
             support long-term growth.
           </p>
 
           <!-- BUTTON -->
-          <a href="contact.html"
-            class="hero-cta pill-btn group mt-6 bg-white text-[#00669e] hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-            <span class="pl-1 text-sm font-medium sm:text-[15px]">Contact Us</span>
-            <span
-              class="pill-btn__icon relative overflow-hidden bg-[#64a1d1] text-white transition group-hover:bg-[#00669e]">
-              <img src="public/assets/hero/button-arrow.svg" alt="" aria-hidden="true"
-                class="hero-cta-arrow absolute -left-[6.9px] top-[12.7px] h-[28.7px] w-[30.15px] max-w-none" />
-            </span>
-          </a>
+          <span class="w-fit">
+            <a href="contact.html"
+              class="hero-cta pill-btn group bg-white text-[#00669e] hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+              <span class="pl-1 text-sm font-medium sm:text-[15px]">Contact Us</span>
+              <span
+                class="pill-btn__icon relative overflow-hidden bg-[#64a1d1] text-white transition group-hover:bg-[#00669e]">
+                <img src="public/assets/hero/button-arrow.svg" alt="" aria-hidden="true"
+                  class="hero-cta-arrow absolute -left-[6.9px] top-[12.7px] h-[28.7px] w-[30.15px] max-w-none" />
+              </span>
+            </a>
+          </span>
 
         </div>
 
-        <!-- RIGHT FLOATING IMAGE -->
-        <div class="relative w-full mt-16 lg:mt-0 lg:absolute right-[-120px] top-1/2 -translate-y-1/2
-          w-[500px] md:w-[650px] xl:w-[645px] pointer-events-none">
-
-          <img src="public/assets/home/floating-box.png" class="w-full h-auto object-contain" alt="Packaging" />
+        <!-- FLOATING PACKAGING STACK
+             Mobile (<sm):  ~square aspect, images take the full image area.
+             Tablet (sm/md): wider aspect, images shrink slightly so they breathe.
+             Desktop (lg+): fixed h-[650px] container, max-w-[845px] (Figma image-area width),
+                            anchored to the right and bleeds off the right edge of the section. -->
+        <div
+          class="pointer-events-none relative aspect-[386/400]  mt-28 w-full sm:mx-auto sm:aspect-[640/440] sm:max-w-[640px] md:aspect-[768/520] md:max-w-[768px] lg:mx-0 lg:aspect-auto lg:h-[650px] lg:max-w-none lg:flex-1">
+          <!-- Paper bag (top) -->
+          <img src="public/assets/home/works/image-47.png" alt=""
+            class="absolute left-[53%] top-0 h-auto w-[27%] sm:left-[55%] sm:w-[24%] lg:left-[49%] lg:w-[24%]" />
+          <!-- Orange stack (left-middle) -->
+          <img src="public/assets/home/works/image-45.png" alt=""
+            class="absolute left-[10%] top-[11%] h-auto w-[43%] sm:left-[12%] sm:w-[38%] lg:left-[10%] lg:w-[39%]" />
+          <!-- Small box (right) -->
+          <img src="public/assets/home/works/image-46.png" alt=""
+            class="absolute left-[75%] top-[11%] h-auto w-[36%] sm:left-[75%] sm:w-[31%] lg:left-[78%] lg:w-[33%]" />
+          <!-- Main box (center) -->
+          <img src="public/assets/home/works/image-43.png" alt="Westman Printing packaging samples"
+            class="absolute left-[40%] top-[23%] h-auto w-[56%] sm:left-[42%] sm:w-[48%] lg:left-[38%] lg:w-[50%]" />
+          <!-- Cup / can (bottom-left) -->
+          <img src="public/assets/home/works/image-44.png" alt=""
+            class="absolute left-[4%] top-[57%] h-auto w-[38%] sm:left-[6%] sm:w-[33%] lg:left-[5%] lg:w-[34%]" />
         </div>
 
       </div>
