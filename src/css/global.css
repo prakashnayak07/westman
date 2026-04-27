@@ -2391,6 +2391,10 @@ body {
   line-height: 48px;
 }
 
+.leading-\[17\.04px\] {
+  line-height: 17.04px;
+}
+
 .tracking-\[-0\.01em\] {
   letter-spacing: -0.01em;
 }
@@ -2871,6 +2875,10 @@ body {
     width: 340px !important;
   }
 
+  .sm\:max-w-\[768px\] {
+    max-width: 768px;
+  }
+
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2926,6 +2934,11 @@ body {
   .sm\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .sm\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .sm\:pb-6 {
@@ -3056,6 +3069,18 @@ body {
     width: 650px;
   }
 
+  .md\:max-w-7xl {
+    max-width: 80rem;
+  }
+
+  .md\:max-w-\[1024px\] {
+    max-width: 1024px;
+  }
+
+  .md\:max-w-\[746px\] {
+    max-width: 746px;
+  }
+
   .md\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
@@ -3092,6 +3117,10 @@ body {
     gap: 2rem;
   }
 
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -3115,6 +3144,21 @@ body {
   .md\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .md\:py-14 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .md\:pr-16 {
@@ -3379,6 +3423,14 @@ body {
 
   .lg\:max-w-\[828px\] {
     max-width: 828px;
+  }
+
+  .lg\:max-w-7xl {
+    max-width: 80rem;
+  }
+
+  .lg\:max-w-\[1280px\] {
+    max-width: 1280px;
   }
 
   .lg\:flex-1 {
@@ -3797,6 +3849,14 @@ body {
     max-width: 933px;
   }
 
+  .xl\:max-w-\[1440px\] {
+    max-width: 1440px;
+  }
+
+  .xl\:max-w-\[1400px\] {
+    max-width: 1400px;
+  }
+
   .xl\:translate-x-\[-8px\] {
     --tw-translate-x: -8px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -3858,6 +3918,11 @@ body {
   .xl\:py-\[5px\] {
     padding-top: 5px;
     padding-bottom: 5px;
+  }
+
+  .xl\:py-\[42px\] {
+    padding-top: 42px;
+    padding-bottom: 42px;
   }
 
   .xl\:pb-\[378px\] {
@@ -4122,6 +4187,10 @@ body {
 }
 
 @media (min-width: 1536px) {
+  .\32xl\:max-w-\[1440px\] {
+    max-width: 1440px;
+  }
+
   .\32xl\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
