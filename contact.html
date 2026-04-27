@@ -15,37 +15,6 @@
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" />
   <link rel="stylesheet" href="src/css/global.css" />
   <link rel="stylesheet" href="src/css/custom.css" />
-  <style>
-    .contact-send-btn .contact-send-arrow-wrap {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact-send-btn .contact-send-arrow {
-      position: absolute;
-      inset: 0;
-      margin: auto;
-      height: 20px;
-      width: 20px;
-      transition: transform 320ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .contact-send-btn .contact-send-arrow--current {
-      transform: translate(-3px, 3px);
-    }
-
-    .contact-send-btn .contact-send-arrow--next {
-      transform: translate(-12px, 12px);
-    }
-
-    .contact-send-btn:hover .contact-send-arrow--current {
-      transform: translate(12px, -12px);
-    }
-
-    .contact-send-btn:hover .contact-send-arrow--next {
-      transform: translate(-3px, 3px);
-    }
-  </style>
 </head>
 
 <body class="font-[Inter]">
@@ -95,7 +64,7 @@
             </p>
           </div>
 
-          <form class="mt-8 flex flex-col gap-6" action="#" method="post">
+          <form id="contactForm" data-contact-form class="mt-8 flex flex-col gap-6" action="#" method="post">
             <label class="flex flex-col gap-[11px]">
               <span class="text-[14px] font-medium leading-[20px] tracking-[-0.16px] text-[#374151]">Full Name</span>
               <input type="text" name="fullName" placeholder="Enter your full name"
@@ -146,12 +115,12 @@
             </fieldset>
 
             <button type="submit"
-              class="contact-send-btn inline-flex w-fit items-center gap-[10px] rounded-[999px] bg-[#00669E] py-1 pl-4 pr-1 text-white transition hover:bg-[#005385]">
-              <span class="text-[16px] font-medium leading-[22.72px]">Send Now</span>
-              <span
-                class="contact-send-arrow-wrap grid h-[42px] w-[42px] place-items-center rounded-full bg-[rgba(255,255,255,0.24)]">
-                <img src="public/arrow-up-right.svg" alt="" class="contact-send-arrow contact-send-arrow--current" />
-                <img src="public/arrow-up-right.svg" alt="" class="contact-send-arrow contact-send-arrow--next" />
+              class="hero-cta inline-flex w-fit items-center justify-center gap-[10px] rounded-[999px] bg-[#00669E] py-[4px] pl-[16px] pr-[4px] text-[16px] font-medium leading-[22.72px] text-white"
+              style="background-color:#00669E;">
+              Send Now
+              <span class="relative block h-[42px] w-[42px] overflow-hidden rounded-full bg-[rgba(255,255,255,0.24)]">
+                <img src="public/assets/hero/button-arrow.svg" alt="" aria-hidden="true"
+                  class="hero-cta-arrow absolute -left-2 top-[14.82px] h-[33.52px] w-[35.17px] max-w-none" />
               </span>
             </button>
           </form>

@@ -758,7 +758,7 @@
               </p>
             </div>
 
-            <form id="contactForm" class="flex flex-col gap-6" onsubmit="handleContactForm(event)">
+            <form id="contactForm" data-contact-form class="flex flex-col gap-6">
               <div class="flex flex-col gap-6">
                 <label class="flex flex-col gap-[11px]">
                   <span class="text-[14px] font-medium leading-4 text-[#374151]">Email</span>
@@ -1105,20 +1105,6 @@
         }
       });
     })();
-
-    /* ===== Contact form (visual feedback) ===== */
-    function handleContactForm(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('[type=submit]');
-      const original = btn.innerHTML;
-      btn.innerHTML = 'Sent! <span class="grid h-[42px] w-[42px] place-items-center rounded-full bg-white/25"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>';
-      btn.style.background = '#10b981';
-      setTimeout(() => {
-        btn.innerHTML = original;
-        btn.style.background = '';
-        e.target.reset();
-      }, 2500);
-    }
 
   </script>
   <script src="src/scripts/main.js"></script>

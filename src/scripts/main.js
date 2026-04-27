@@ -280,6 +280,32 @@
     });
   }
 
+  /* ---------- Contact forms (visual feedback) -----------------------
+     Attaches to any form with `data-contact-form`. On submit, the
+     button briefly shows "Sent!" with a checkmark, then resets.
+     ------------------------------------------------------------------ */
+  function initContactForms() {
+    document.querySelectorAll("form[data-contact-form]").forEach((form) => {
+      if (form.dataset.contactBound === "true") return;
+      form.dataset.contactBound = "true";
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const btn = form.querySelector('[type="submit"]');
+        if (!btn) return;
+        const original = btn.innerHTML;
+        const originalBg = btn.style.background;
+        btn.innerHTML =
+          'Sent! <span class="grid h-[42px] w-[42px] place-items-center rounded-full bg-white/25"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>';
+        btn.style.background = "#10b981";
+        setTimeout(() => {
+          btn.innerHTML = original;
+          btn.style.background = originalBg;
+          form.reset();
+        }, 2500);
+      });
+    });
+  }
+
   /* ---------- Boot -------------------------------------------------- */
   document.addEventListener("DOMContentLoaded", async () => {
     await loadPartials();
@@ -289,5 +315,6 @@
     initAboutServicesSwiper();
     initWorksSlideSwiper();
     initBlogSwipers();
+    initContactForms();
   });
 })();
