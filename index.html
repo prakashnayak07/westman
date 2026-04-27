@@ -756,68 +756,58 @@
 
     <!-- ===== Connect Start ===== -->
     <section id="connect" class="bg-white py-[60px] lg:py-[120px]">
-      <div class="mx-auto w-full max-w-7xl px-5">
-        <div class="flex flex-col items-stretch gap-10 lg:flex-row lg:gap-[60px]">
-          <div class="flex flex-1 flex-col gap-8">
-            <div>
+      <div class="mx-auto w-full max-w-[1440px] px-5">
+        <div class="flex flex-col items-stretch gap-10 lg:flex-row lg:items-stretch lg:gap-[42px]">
+          <div class="flex flex-1 flex-col gap-8 lg:gap-[42px]">
+            <div class="flex flex-col gap-3">
               <h2
-                class="font-['Satoshi'] text-[28px] font-bold leading-[36px] tracking-[-0.2px] sm:text-[36px] sm:leading-[46px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+                class="font-['Satoshi'] text-[28px] font-bold leading-[36px] tracking-[-0.2px] text-[#111827] sm:text-[36px] sm:leading-[46px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
                 Connect With Our Team</h2>
-              <p class="mt-2 max-w-[710px] text-[15px] leading-[22px] text-[#374151] sm:text-[16px]">
+              <p class="text-[15px] leading-[22px] tracking-[-0.18px] text-[#374151] sm:text-[16px]">
                 Big idea or small batch, we print with precision and purpose. Share your concept, upload your artwork,
                 and we'll help you get it production-ready — stress-free.
               </p>
             </div>
 
-            <form id="contactForm" class="flex flex-col gap-5" onsubmit="handleContactForm(event)">
-              <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
-                <label class="flex flex-col gap-2">
-                  <span class="text-[14px] font-medium text-[#374151]">Email</span>
+            <form id="contactForm" class="flex flex-col gap-6" onsubmit="handleContactForm(event)">
+              <div class="flex flex-col gap-6">
+                <label class="flex flex-col gap-[11px]">
+                  <span class="text-[14px] font-medium leading-4 text-[#374151]">Email</span>
                   <input type="email" required placeholder="Enter your email address"
-                    class="border-0 border-b border-[#e2e8f0] bg-transparent px-2 py-2 text-[14px] text-[#111827] placeholder:text-[#9ca3af] outline-none transition focus:border-[#00669e] focus:ring-0" />
+                    class="h-[36px] w-full border-0 border-b border-[#e2e8f0] bg-transparent px-2 text-[14px] leading-4 text-[#111827] placeholder:text-[#9ca3af] outline-none transition focus:border-[#00669e] focus:ring-0" />
                 </label>
-                <label class="flex flex-col gap-2">
-                  <span class="text-[14px] font-medium text-[#374151]">Phone</span>
-                  <input type="tel" placeholder="Enter your phone number"
-                    class="border-0 border-b border-[#e2e8f0] bg-transparent px-2 py-2 text-[14px] text-[#111827] placeholder:text-[#9ca3af] outline-none transition focus:border-[#00669e] focus:ring-0" />
+                <label class="flex flex-col gap-[11px]">
+                  <span class="text-[14px] font-medium leading-4 text-[#374151]">Contact Number</span>
+                  <input type="tel" placeholder="Contact Number"
+                    class="h-[36px] w-full border-0 border-b border-[#e2e8f0] bg-transparent px-2 text-[14px] leading-4 text-[#111827] placeholder:text-[#9ca3af] outline-none transition focus:border-[#00669e] focus:ring-0" />
+                </label>
+                <label class="flex flex-col gap-[11px]">
+                  <span class="text-[14px] font-medium leading-4 text-[#374151]">Company name</span>
+                  <input type="text" placeholder="Enter your company name"
+                    class="h-[36px] w-full border-0 border-b border-[#f3f4f6] bg-transparent px-2 text-[14px] leading-4 text-[#111827] placeholder:text-[#9ca3af] outline-none transition focus:border-[#00669e] focus:ring-0" />
+                </label>
+                <label class="flex flex-col gap-[11px]">
+                  <span class="text-[14px] font-medium leading-4 text-[#374151]">Message</span>
+                  <textarea rows="3" placeholder="Enter Message here..."
+                    class="min-h-[78px] w-full resize-y border-0 border-b border-[#f3f4f6] bg-transparent px-2 py-2 text-[14px] leading-4 text-[#111827] placeholder:text-[#9ca3af] outline-none transition focus:border-[#00669e] focus:ring-0"></textarea>
                 </label>
               </div>
-              <label class="flex flex-col gap-2">
-                <span class="text-[14px] font-medium text-[#374151]">Service Required</span>
-                <select
-                  class="border-0 border-b border-[#e2e8f0] bg-transparent px-2 py-2 text-[14px] text-[#111827] outline-none transition focus:border-[#00669e] focus:ring-0">
-                  <option value="">Select a service</option>
-                  <option>High-Quality Digital Printing</option>
-                  <option>Packaging Solution</option>
-                  <option>Offset Printing</option>
-                  <option>Promotional Items Printing</option>
-                  <option>Mail Fulfillment</option>
-                  <option>Other</option>
-                </select>
-              </label>
-              <label class="flex flex-col gap-2">
-                <span class="text-[14px] font-medium text-[#374151]">Tell us about your requirements</span>
-                <textarea rows="4" placeholder="Describe your print requirements, quantity, deadline..."
-                  class="resize-y border-0 border-b border-[#e2e8f0] bg-transparent px-2 py-2 text-[14px] text-[#111827] placeholder:text-[#9ca3af] outline-none transition focus:border-[#00669e] focus:ring-0"></textarea>
-              </label>
               <button type="submit"
-                class="inline-flex w-fit items-center gap-[10px] rounded-full bg-[#00669E] py-1 pl-4 pr-1 font-['Satoshi'] text-[16px] font-medium leading-[22.72px] text-white transition hover:opacity-90">
-                Send Enquiry
-                <span class="grid h-[42px] w-[42px] place-items-center rounded-full bg-white/25">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
+                class="hero-cta inline-flex w-fit items-center justify-center gap-[10px] rounded-[999px] bg-[#00669E] py-[4px] pl-[16px] pr-[4px] text-[16px] font-medium leading-[22.72px] text-white"
+                style="background-color:#00669E;">
+                Send Now
+                <span class="relative block h-[42px] w-[42px] overflow-hidden rounded-full bg-[rgba(255,255,255,0.24)]">
+                  <img src="public/assets/hero/button-arrow.svg" alt="" aria-hidden="true"
+                    class="hero-cta-arrow absolute -left-2 top-[14.82px] h-[33.52px] w-[35.17px] max-w-none" />
                 </span>
               </button>
             </form>
           </div>
           <div
-            class="min-h-[320px] flex-1 overflow-hidden rounded-[24px] bg-[#e2e8f0] lg:min-h-[560px] lg:max-w-[560px]">
-            <img src="public/assets/home/contact-side.webp" alt="Connect with our team"
+            class="min-h-[320px] flex-1 self-stretch overflow-hidden rounded-[24px] bg-[#e2e8f0] lg:min-h-0">
+            <img src="public/assets/home/connect-side.png" alt="Connect with our team"
               class="h-full w-full object-cover" />
           </div>
-
         </div>
       </div>
     </section>
