@@ -214,6 +214,7 @@
         1280: {
           slidesPerView: "auto",
           spaceBetween: 32,
+          slidesPerView: 1.5,
         },
       },
     });

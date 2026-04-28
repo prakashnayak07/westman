@@ -88,6 +88,17 @@
     .about-faq[open] .about-faq-icon {
       transform: rotate(180deg);
     }
+
+    .section-lift {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .section-lift.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 
@@ -123,7 +134,7 @@
     <!-- /* ===== About Hero Section End ===== */ -->
 
     <!-- /* ===== Why Choose Us Section Start ===== */ -->
-    <section class="w-full bg-white py-16 lg:pb-[200px] lg:pt-[120px]">
+    <section class="w-full bg-white py-16 lg:pb-[60px] lg:pt-[120px]">
       <div
         class="flex w-full flex-col items-stretch gap-10 lg:flex-row lg:items-center lg:gap-12 min-[1660px]:gap-[48px]">
         <div
@@ -194,7 +205,7 @@
     <!-- /* ===== Why Choose Us Section End ===== */ -->
 
     <!-- /* ===== Services Section Start ===== */ -->
-    <section class="bg-white pb-[72px] pt-10 lg:pb-[40px] lg:pt-[64px]">
+    <section class="bg-white pb-[72px] pt-10 lg:pb-[40px] lg:pt-[64px] section-lift">
       <div class="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12">
         <div class="flex items-end justify-between gap-6">
           <div class="flex max-w-[948px] flex-col gap-3">
@@ -875,6 +886,21 @@
             spaceBetween: 32
           }
         }
+      });
+    })();
+
+    (function () {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.section-lift').forEach(function (el) {
+        observer.observe(el);
       });
     })();
 
