@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="description" content="Page not found — Westman Printing." />
+    <title>404 — Westman Printing</title>
+
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" />
+    <link rel="stylesheet" href="src/css/global.css" />
+    <link rel="stylesheet" href="src/css/custom.css" />
+</head>
+
+<body class="font-[Inter] bg-white text-[#111827]">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div data-include="src/layouts/Navbar.html"></div>
+
+    <main id="main" class="w-full overflow-x-hidden">
+        <section class="flex min-h-[calc(100vh-10rem)] items-center bg-[#f8fafc] py-20">
+            <div class="mx-auto w-full max-w-[980px] px-5 text-center">
+                <p class="text-[13px] font-semibold uppercase tracking-[0.24em] text-[#00669E]">404 error</p>
+                <h1
+                    class="mt-6 font-['Satoshi'] text-[72px] font-bold leading-[0.95] tracking-[-0.05em] text-[#111827] sm:text-[96px]">
+                    Page not found</h1>
+                <p class="mx-auto mt-6 max-w-[720px] text-[16px] leading-[28px] text-[#374151] sm:text-[18px]">
+                    The page you are looking for might have been moved, removed, or never existed. Let’s get you back to
+                    a working page.
+                </p>
+
+                <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
+                    <a href="index.html"
+                        class="hero-cta pill-btn group inline-flex items-center justify-center gap-[10px] rounded-full bg-[#00669E] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#005587]">
+                        <span>Back to Home</span>
+                        <span
+                            class="pill-btn__icon relative overflow-hidden bg-[#64a1d1] text-white transition group-hover:bg-[#00669e]">
+                            <img src="public/assets/hero/button-arrow.svg" alt="" aria-hidden="true"
+                                class="hero-cta-arrow absolute -left-[6.9px] top-[12.7px] h-[28.7px] w-[30.15px] max-w-none" />
+                        </span>
+                    </a>
+                    <a href="contact.html"
+                        class="inline-flex items-center justify-center rounded-full border border-[#e5e7eb] px-6 py-3 text-sm font-medium text-[#111827] transition hover:border-[#00669e] hover:text-[#00669e]">
+                        Contact Support
+                    </a>
+                </div>
+
+                <div class="mt-16 grid gap-4 sm:grid-cols-3">
+                    <a href="/"
+                        class="block rounded-[18px] border border-[#e5e7eb] bg-white px-5 py-6 text-left transition hover:border-[#00669e]">
+                        <p class="text-sm font-semibold text-[#00669E]">Home</p>
+                        <p class="mt-2 text-sm text-[#374151]">Return to the homepage.</p>
+                    </a>
+                    <a href="about.html"
+                        class="block rounded-[18px] border border-[#e5e7eb] bg-white px-5 py-6 text-left transition hover:border-[#00669e]">
+                        <p class="text-sm font-semibold text-[#00669E]">About Us</p>
+                        <p class="mt-2 text-sm text-[#374151]">Learn more about Westman Printing.</p>
+                    </a>
+                    <a href="services.html"
+                        class="block rounded-[18px] border border-[#e5e7eb] bg-white px-5 py-6 text-left transition hover:border-[#00669e]">
+                        <p class="text-sm font-semibold text-[#00669E]">Services</p>
+                        <p class="mt-2 text-sm text-[#374151]">Explore our printing services.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div data-include="src/layouts/Footer.html"></div>
+
+    <script src="src/scripts/main.js"></script>
+</body>
+
+</html>

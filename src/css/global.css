@@ -977,6 +977,10 @@ body {
   margin-top: 1px;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1202,6 +1206,10 @@ body {
 
 .min-h-\[94px\] {
   min-height: 94px;
+}
+
+.min-h-\[calc\(100vh-10rem\)\] {
+  min-height: calc(100vh - 10rem);
 }
 
 .\!w-\[82vw\] {
@@ -1448,6 +1456,10 @@ body {
 
 .max-w-none {
   max-width: none;
+}
+
+.max-w-\[980px\] {
+  max-width: 980px;
 }
 
 .flex-1 {
@@ -1741,6 +1753,10 @@ body {
   border-radius: 0px;
 }
 
+.rounded-\[18px\] {
+  border-radius: 18px;
+}
+
 .rounded-b-\[32px\] {
   border-bottom-right-radius: 32px;
   border-bottom-left-radius: 32px;
@@ -1942,6 +1958,11 @@ body {
   background-color: rgb(255 255 255 / 0.3);
 }
 
+.bg-\[\#f8fafc\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[linear-gradient\(171\.668deg\2c \#00669E_13\.971\%\2c \#00375C_162\.88\%\)\] {
   background-image: linear-gradient(171.668deg,#00669E 13.971%,#00375C 162.88%);
 }
@@ -2125,6 +2146,16 @@ body {
 .py-\[60px\] {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .pb-10 {
@@ -2330,6 +2361,14 @@ body {
   line-height: 1.25rem;
 }
 
+.text-\[13px\] {
+  font-size: 13px;
+}
+
+.text-\[72px\] {
+  font-size: 72px;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -2344,6 +2383,14 @@ body {
 
 .font-normal {
   font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .leading-4 {
@@ -2438,6 +2485,10 @@ body {
   line-height: 48px;
 }
 
+.leading-\[0\.95\] {
+  line-height: 0.95;
+}
+
 .tracking-\[-0\.01em\] {
   letter-spacing: -0.01em;
 }
@@ -2468,6 +2519,14 @@ body {
 
 .tracking-\[-0\.4px\] {
   letter-spacing: -0.4px;
+}
+
+.tracking-\[-0\.05em\] {
+  letter-spacing: -0.05em;
+}
+
+.tracking-\[0\.24em\] {
+  letter-spacing: 0.24em;
 }
 
 .text-\[\#00669E\] {
@@ -2654,6 +2713,11 @@ body {
 .hover\:bg-slate-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[\#005587\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 85 135 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-\[\#00669e\]:hover {
@@ -2951,6 +3015,10 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -2977,6 +3045,10 @@ body {
 
   .sm\:gap-\[14px\] {
     gap: 14px;
+  }
+
+  .sm\:gap-5 {
+    gap: 1.25rem;
   }
 
   .sm\:p-6 {
@@ -3069,6 +3141,10 @@ body {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-\[96px\] {
+    font-size: 96px;
   }
 
   .sm\:leading-\[22px\] {
