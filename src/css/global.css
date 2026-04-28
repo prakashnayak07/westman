@@ -1188,6 +1188,10 @@ body {
   height: 280px;
 }
 
+.h-\[210px\] {
+  height: 210px;
+}
+
 .min-h-\[320px\] {
   min-height: 320px;
 }
@@ -2264,6 +2268,10 @@ body {
 
 .pt-5 {
   padding-top: 1.25rem;
+}
+
+.pb-\[210px\] {
+  padding-bottom: 210px;
 }
 
 .text-left {
