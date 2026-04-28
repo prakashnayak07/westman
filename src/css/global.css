@@ -973,6 +973,10 @@ body {
   margin-top: 1px;
 }
 
+.mt-0 {
+  margin-top: 0px;
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1014,6 +1018,14 @@ body {
 
 .aspect-\[828\/645\] {
   aspect-ratio: 828/645;
+}
+
+.aspect-\[356\/400\] {
+  aspect-ratio: 356/400;
+}
+
+.aspect-\[356\/300\] {
+  aspect-ratio: 356/300;
 }
 
 .\!h-auto {
@@ -3203,6 +3215,10 @@ body {
 
   .md\:aspect-auto {
     aspect-ratio: auto;
+  }
+
+  .md\:aspect-\[640\/520\] {
+    aspect-ratio: 640/520;
   }
 
   .md\:h-6 {
