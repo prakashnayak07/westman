@@ -23,7 +23,13 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
-      border-radius: 16px;
+      border-radius: 0;
+    }
+
+    @media (min-width: 1024px) {
+      .services-image-stack>img {
+        border-radius: 16px;
+      }
     }
 
     .services-faq-summary::-webkit-details-marker {
@@ -69,17 +75,19 @@
 
     <!-- /* ===== Services Detail Start ===== */ -->
     <section class="bg-white py-[60px] lg:py-[80px]">
-      <div class="mx-auto flex w-full max-w-[1400px] flex-col gap-[60px] px-5 sm:px-8 lg:gap-[80px] lg:px-12">
-        <article class="rounded-[24px] border border-[#E5E7EB] bg-white p-[10px]">
-          <div class="flex flex-col gap-8 lg:grid lg:grid-cols-[528px_minmax(0,1fr)] lg:items-center lg:gap-[44px]">
-            <div class="relative h-[320px] overflow-hidden rounded-[16px] sm:h-[420px] lg:h-[550px]">
+      <div class="mx-auto flex w-full max-w-[1400px] flex-col gap-[60px] px-0 sm:px-8 lg:gap-[80px] lg:px-12">
+        <article
+          class="overflow-hidden rounded-0 md:rounded-[24px] border-0 md:border border-[#E5E7EB] bg-white p-0 lg:p-[10px]">
+          <div class="flex flex-col gap-0 lg:grid lg:grid-cols-[528px_minmax(0,1fr)] lg:items-center lg:gap-[44px]">
+            <div class="order-2 lg:order-1 relative h-[420px] overflow-hidden lg:rounded-[16px] lg:h-[550px]">
               <div class="services-image-stack absolute inset-0">
                 <img src="public/assets/services/service-packaging-1.webp" alt="Packaging solution service sample" />
                 <img src="public/assets/services/service-packaging-2.webp" alt="" aria-hidden="true" />
                 <img src="public/assets/services/service-packaging-3.webp" alt="" aria-hidden="true" />
               </div>
             </div>
-            <div class="flex flex-col justify-center gap-5 lg:gap-6">
+            <div
+              class="order-1 lg:order-2 flex flex-col justify-center gap-5 px-4 pt-5 pb-6 lg:gap-6 lg:px-0 lg:pt-0 lg:pb-0">
               <p class="text-[16px] font-bold leading-[24px] text-[#111827]">• Min 500 units • Delivery: 2-3 weeks</p>
               <div class="flex flex-col gap-3 lg:gap-4">
                 <h2
@@ -119,10 +127,10 @@
           </div>
         </article>
 
-        <article class="rounded-[24px] border border-[#E5E7EB] bg-white p-[10px] lg:pl-[24px] lg:pr-[10px]">
-          <div
-            class="flex flex-col-reverse gap-8 lg:grid lg:grid-cols-[minmax(0,1fr)_528px] lg:items-center lg:gap-[44px]">
-            <div class="flex flex-col justify-center gap-5 lg:gap-6">
+        <article
+          class="overflow-hidden rounded-0 md:rounded-[24px] border-0 md:border border-[#E5E7EB] bg-white p-0 lg:p-[10px] lg:pl-[24px] lg:pr-[10px]">
+          <div class="flex flex-col gap-0 lg:grid lg:grid-cols-[minmax(0,1fr)_528px] lg:items-center lg:gap-[44px]">
+            <div class="flex flex-col justify-center gap-5 px-4 pt-5 pb-6 lg:gap-6 lg:px-0 lg:pt-0 lg:pb-0">
               <p class="text-[16px] font-bold leading-[24px] text-[#111827]">• Min. 500 units • Delivery: 2-3 weeks</p>
               <div class="flex flex-col gap-3 lg:gap-4">
                 <h2
@@ -157,27 +165,29 @@
                 </li>
               </ul>
             </div>
-            <div class="relative h-[320px] overflow-hidden rounded-[16px] sm:h-[420px] lg:h-[550px]">
+            <div class="relative h-[420px] overflow-hidden lg:rounded-[16px] lg:h-[550px]">
               <div class="services-image-stack absolute inset-0">
                 <img src="public/assets/services/service-digital-1.webp"
                   alt="High-quality digital printing service sample" />
                 <img src="public/assets/services/service-digital-2.webp" alt="" aria-hidden="true" />
-                <img src="public/assets/services/service-digital-3.webp" alt="" aria-hidden="true" />
+                <img src="public/assets/services/service-digital-3.png" alt="" aria-hidden="true" />
               </div>
             </div>
           </div>
         </article>
 
-        <article class="rounded-[24px] border border-[#E5E7EB] bg-white p-[10px]">
-          <div class="flex flex-col gap-8 lg:grid lg:grid-cols-[528px_minmax(0,1fr)] lg:items-center lg:gap-[44px]">
-            <div class="relative h-[320px] overflow-hidden rounded-[16px] sm:h-[420px] lg:h-[550px]">
+        <article
+          class="overflow-hidden rounded-0 md:rounded-[24px] border-0 md:border border-[#E5E7EB] bg-white p-0 lg:p-[10px]">
+          <div class="flex flex-col gap-0 lg:grid lg:grid-cols-[528px_minmax(0,1fr)] lg:items-center lg:gap-[44px]">
+            <div class="order-2 lg:order-1 relative h-[420px] overflow-hidden lg:rounded-[16px] lg:h-[550px]">
               <div class="services-image-stack absolute inset-0">
                 <img src="public/assets/services/service-promo-1.webp"
                   alt="Promotional items printing service sample" />
                 <img src="public/assets/services/service-promo-2.webp" alt="" aria-hidden="true" />
               </div>
             </div>
-            <div class="flex flex-col justify-center gap-5 lg:gap-6">
+            <div
+              class="order-1 lg:order-2 flex flex-col justify-center gap-5 px-4 pt-5 pb-6 lg:gap-6 lg:px-0 lg:pt-0 lg:pb-0">
               <p class="text-[16px] font-bold leading-[24px] text-[#111827]">• Min 100 units • Delivery: 1-2 weeks</p>
               <div class="flex flex-col gap-3 lg:gap-4">
                 <h2
@@ -217,10 +227,10 @@
           </div>
         </article>
 
-        <article class="rounded-[24px] border border-[#E5E7EB] bg-white p-[10px] lg:pl-[24px] lg:pr-[10px]">
-          <div
-            class="flex flex-col-reverse gap-8 lg:grid lg:grid-cols-[minmax(0,1fr)_528px] lg:items-center lg:gap-[44px]">
-            <div class="flex flex-col justify-center gap-5 lg:gap-6">
+        <article
+          class="overflow-hidden rounded-0 md:rounded-[24px] border-0 md:border border-[#E5E7EB] bg-white p-0 lg:p-[10px] lg:pl-[24px] lg:pr-[10px]">
+          <div class="flex flex-col gap-0 lg:grid lg:grid-cols-[minmax(0,1fr)_528px] lg:items-center lg:gap-[44px]">
+            <div class="flex flex-col justify-center gap-5 px-4 pt-5 pb-6 lg:gap-6 lg:px-0 lg:pt-0 lg:pb-0">
               <p class="text-[16px] font-bold leading-[24px] text-[#111827]">• Min 50 units • Delivery: 2-3 Weeks</p>
               <div class="flex flex-col gap-3 lg:gap-4">
                 <h2
@@ -254,7 +264,7 @@
                 </li>
               </ul>
             </div>
-            <div class="relative h-[320px] overflow-hidden rounded-[16px] sm:h-[420px] lg:h-[550px]">
+            <div class="relative h-[420px] overflow-hidden lg:rounded-[16px] lg:h-[550px]">
               <div class="services-image-stack absolute inset-0">
                 <img src="public/assets/services/service-offset-1.webp" alt="Offset printing facility" />
                 <img src="public/assets/services/service-offset-2.webp" alt="" aria-hidden="true" />
@@ -265,11 +275,10 @@
           </div>
         </article>
 
-
-
-        <article class="rounded-[24px] border border-[#E5E7EB] bg-white p-[10px]">
-          <div class="flex flex-col gap-8 lg:grid lg:grid-cols-[528px_minmax(0,1fr)] lg:items-center lg:gap-[44px]">
-            <div class="relative h-[320px] overflow-hidden rounded-[16px] sm:h-[420px] lg:h-[550px]">
+        <article
+          class="overflow-hidden rounded-0 md:rounded-[24px] border-0 md:border border-[#E5E7EB] bg-white p-0 lg:p-[10px]">
+          <div class="flex flex-col gap-0 lg:grid lg:grid-cols-[528px_minmax(0,1fr)] lg:items-center lg:gap-[44px]">
+            <div class="order-2 lg:order-1 relative h-[420px] overflow-hidden lg:rounded-[16px] lg:h-[550px]">
               <div class="services-image-stack absolute inset-0">
                 <img src="public/assets/services/service-mail-1.webp" alt="Mail fulfillment service sample" />
                 <img src="public/assets/services/service-mail-2.webp" alt="" aria-hidden="true" />
@@ -277,7 +286,8 @@
                 <img src="public/assets/services/service-mail-4.webp" alt="" aria-hidden="true" />
               </div>
             </div>
-            <div class="flex flex-col justify-center gap-5 lg:gap-6">
+            <div
+              class="order-1 lg:order-2 flex flex-col justify-center gap-5 px-4 pt-5 pb-6 lg:gap-6 lg:px-0 lg:pt-0 lg:pb-0">
               <p class="text-[16px] font-bold leading-[24px] text-[#111827]">• Min 500 units • Delivery: 2-3 weeks</p>
               <div class="flex flex-col gap-3 lg:gap-4">
                 <h2
@@ -321,10 +331,10 @@
 
     <!-- /* ===== Connect Section Start ===== */ -->
     <section id="connect" class="bg-white py-[60px] lg:py-[120px]">
-      <div class="mx-auto w-full max-w-[1440px] px-5">
+      <div class="mx-auto w-full max-w-[1440px] ">
         <div class="flex flex-col items-stretch gap-10 lg:flex-row lg:items-stretch lg:gap-[42px]">
           <div class="flex flex-1 flex-col gap-8 lg:gap-[42px]">
-            <div class="flex flex-col gap-3">
+            <div class="flex flex-col gap-3 px-5">
               <h2
                 class="font-['Satoshi'] text-[28px] font-bold leading-[36px] tracking-[-0.2px] text-[#111827] sm:text-[36px] sm:leading-[46px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
                 Connect With Our Team</h2>
@@ -334,7 +344,7 @@
               </p>
             </div>
 
-            <form id="contactForm" data-contact-form class="flex flex-col gap-6">
+            <form id="contactForm" data-contact-form class="px-5 flex flex-col gap-6">
               <div class="flex flex-col gap-6">
                 <label class="flex flex-col gap-[11px]">
                   <span class="text-[14px] font-medium leading-4 text-[#374151]">Email</span>
@@ -368,7 +378,8 @@
               </button>
             </form>
           </div>
-          <div class="min-h-[320px] flex-1 self-stretch overflow-hidden rounded-[24px] bg-[#e2e8f0] lg:min-h-0">
+          <div
+            class="min-h-[320px] flex-1 self-stretch overflow-hidden rounded-0 md:rounded-[24px] bg-[#e2e8f0] lg:min-h-0">
             <img src="public/assets/home/connect-side.png" alt="Connect with our team"
               class="h-full w-full object-cover" />
           </div>

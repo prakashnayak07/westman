@@ -1624,6 +1624,10 @@ body {
   gap: 6px;
 }
 
+.gap-0 {
+  gap: 0px;
+}
+
 .gap-x-6 {
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
@@ -2014,6 +2018,10 @@ body {
   padding: 6px;
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -2221,6 +2229,10 @@ body {
 
 .pt-\[6px\] {
   padding-top: 6px;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .text-left {
@@ -3206,6 +3218,10 @@ body {
     border-bottom-right-radius: 24px;
   }
 
+  .md\:border {
+    border-width: 1px;
+  }
+
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -3675,9 +3691,17 @@ body {
     border-radius: 24px;
   }
 
+  .lg\:rounded-\[16px\] {
+    border-radius: 16px;
+  }
+
   .lg\:rounded-b-\[42px\] {
     border-bottom-right-radius: 42px;
     border-bottom-left-radius: 42px;
+  }
+
+  .lg\:p-\[10px\] {
+    padding: 10px;
   }
 
   .lg\:px-0 {
@@ -3805,6 +3829,14 @@ body {
 
   .lg\:pt-\[64px\] {
     padding-top: 64px;
+  }
+
+  .lg\:pb-0 {
+    padding-bottom: 0px;
+  }
+
+  .lg\:pt-0 {
+    padding-top: 0px;
   }
 
   .lg\:text-\[14px\] {
