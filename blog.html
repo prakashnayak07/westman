@@ -50,26 +50,24 @@
     <!-- /* ===== Blog Hero Section End ===== */ -->
 
     <!-- /* ===== Blog Content Section Start ===== */ -->
-    <section class="w-full bg-[#F6F7F9] px-5 py-[48px] sm:px-8 md:px-10 lg:px-12 lg:py-[96px] xl:px-12 2xl:px-12">
-      <div class="mx-auto flex w-full max-w-7xl flex-col gap-8 lg:gap-[90px]">
+    <section class="w-full bg-[#F6F7F9] px-4 py-[48px] sm:px-8 md:px-10 lg:px-12 lg:py-[96px] xl:px-12 2xl:px-12">
+      <div class="mx-auto flex w-full max-w-7xl flex-col gap-[42px] lg:gap-[90px]">
         <section class="w-full">
           <div class="grid grid-cols-1 gap-6 lg:grid-cols-[1.62fr_1fr]">
             <!-- Featured (left, large) card -->
             <a href="blog-details.html"
-              class="group flex flex-col overflow-hidden rounded-[16px] border border-[#E5E7EB] bg-white transition hover:border-[#cbd5e1] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] lg:h-[602px]">
-              <figure class="relative h-[240px] overflow-hidden sm:h-[340px] lg:flex-1 lg:h-auto">
-                <img src="public/assets/blog/featured-main.png" alt="Benefits of digital printing for small businesses"
-                  class="absolute inset-0 h-full w-full object-cover" />
-              </figure>
-              <div class="flex items-start gap-2 bg-white p-5 sm:p-6">
-                <div class="flex min-w-0 flex-1 flex-col gap-4 sm:gap-6">
-                  <div class="flex flex-col gap-3 sm:gap-4">
+              class="group relative flex h-[320px] flex-col justify-end overflow-hidden rounded-[16px] border border-[#E5E7EB] transition hover:border-[#cbd5e1] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] lg:h-[602px]">
+              <img src="public/assets/blog/featured-main.png" alt="Benefits of digital printing for small businesses"
+                class="absolute inset-0 h-full w-full object-cover" />
+              <div class="relative flex items-start gap-2 bg-white p-5 lg:p-6">
+                <div class="flex min-w-0 flex-1 flex-col gap-4 lg:gap-6">
+                  <div class="flex flex-col gap-3 lg:gap-4">
                     <h2
-                      class="font-heading text-[20px] font-bold leading-[30px] tracking-[-0.2px] text-[#00669E] sm:text-[28px] sm:leading-[36px] lg:text-[32px] lg:leading-[38px]">
+                      class="font-heading text-[20px] font-bold leading-[24px] text-[#00669E] lg:text-[32px] lg:leading-[38px] lg:tracking-[-0.2px]">
                       Benefits of Digital Printing for Small Businesses
                     </h2>
                     <p
-                      class="line-clamp-2 text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#111827] sm:text-[16px] sm:leading-[22px] sm:tracking-[-0.18px]">
+                      class="line-clamp-2 text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#111827] lg:text-[16px] lg:leading-[22px] lg:tracking-[-0.18px]">
                       Learn how to select the right printing method for your business needs. Whether it's digital,
                       offset, or custom options, this guide will help you understand the benefits and choose the best
                       fit for your project.
@@ -81,12 +79,12 @@
                       2026</span>
                   </div>
                 </div>
-                <img src="public/assets/blog/icon-arrow-featured.svg" alt="" class="h-7 w-7 shrink-0 sm:h-8 sm:w-8" />
+                <img src="public/assets/blog/icon-arrow-featured.svg" alt="" class="h-5 w-5 shrink-0 lg:h-8 lg:w-8" />
               </div>
             </a>
 
             <!-- Right column: tall card on top, two equal cards below -->
-            <div class="flex flex-col gap-6 lg:gap-8">
+            <div class="hidden flex-col gap-6 lg:flex lg:gap-8">
               <a href="blog-details.html"
                 class="group relative block h-[220px] overflow-hidden rounded-[16px] sm:h-[260px] lg:h-[285px]">
                 <img src="public/assets/blog/top-story-right.png"
@@ -136,7 +134,7 @@
         <section class="w-full">
           <div class="mb-6 flex items-end justify-between gap-3 lg:mb-8">
             <h2
-              class="font-heading text-[28px] font-bold leading-[36px] tracking-[-0.2px] text-[#383B43] sm:text-[36px] sm:leading-[46px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
+              class="font-heading text-[24px] font-bold leading-[30px] tracking-[-0.15px] text-[#383B43] lg:text-[48px] lg:leading-[58px] lg:tracking-[-0.4px]">
               Similar Blogs</h2>
             <div class="hidden shrink-0 items-center gap-3 lg:flex">
               <button type="button" id="blogSliderPrev" aria-label="Previous page"
@@ -156,221 +154,257 @@
             </div>
           </div>
 
-          <div id="blogCardsGrid" class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 xl:gap-[42px]">
+          <div id="blogCardsGrid" class="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-6 xl:grid-cols-3 xl:gap-[42px]">
             <a href="blog-details.html" data-blog-card
-              class="flex flex-col gap-3 rounded-[24px] border border-[#F3F4F6] bg-white p-4 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
-              <div class="h-[198px] overflow-hidden rounded-[16px]">
+              class="flex flex-col gap-3 rounded-[16px] border border-[#F3F4F6] bg-white p-3 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] md:rounded-[24px] md:p-4">
+              <div class="h-[140px] overflow-hidden rounded-[16px] md:h-[198px]">
                 <img src="public/assets/blog/similar-1.png"
                   alt="Why Offset Printing Is Still the Best Option for High-Volume Projects"
                   class="h-full w-full object-cover" />
               </div>
-              <div class="flex flex-col gap-1">
+              <div class="flex flex-col gap-2 md:gap-1">
                 <div class="flex items-center gap-1">
                   <img src="public/assets/blog/icon-calendar.svg" alt="" class="h-4 w-4" />
                   <span class="text-[12px] font-normal leading-[16px] tracking-[-0.12px] text-[#6B7280]">21 Jan
                     2026</span>
                 </div>
-                <h3 class="line-clamp-2 font-heading text-[20px] font-bold leading-[24px] text-[#111827]">
+                <h3 class="line-clamp-2 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] md:font-heading md:text-[20px] md:leading-[24px] md:tracking-[0]">
                   Why Offset Printing Is Still the Best Option for High-Volume Projects
                 </h3>
+                <p class="text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151] md:hidden">
+                  Discover how well-designed packaging enhances the unboxing experience and strengthens brand perception.
+                </p>
               </div>
             </a>
             <a href="blog-details.html" data-blog-card
-              class="flex flex-col gap-3 rounded-[24px] border border-[#F3F4F6] bg-white p-4 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
-              <div class="h-[198px] overflow-hidden rounded-[16px]">
+              class="flex flex-col gap-3 rounded-[16px] border border-[#F3F4F6] bg-white p-3 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] md:rounded-[24px] md:p-4">
+              <div class="h-[140px] overflow-hidden rounded-[16px] md:h-[198px]">
                 <img src="public/assets/blog/similar-2.png" alt="5 Tips for Designing Eye-Catching Custom Packaging"
                   class="h-full w-full object-cover" />
               </div>
-              <div class="flex flex-col gap-1">
+              <div class="flex flex-col gap-2 md:gap-1">
                 <div class="flex items-center gap-1">
                   <img src="public/assets/blog/icon-calendar.svg" alt="" class="h-4 w-4" />
                   <span class="text-[12px] font-normal leading-[16px] tracking-[-0.12px] text-[#6B7280]">15 Feb
                     2026</span>
                 </div>
-                <h3 class="line-clamp-2 font-heading text-[20px] font-bold leading-[24px] text-[#111827]">
+                <h3 class="line-clamp-2 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] md:font-heading md:text-[20px] md:leading-[24px] md:tracking-[0]">
                   5 Tips for Designing Eye-Catching Custom Packaging
                 </h3>
+                <p class="text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151] md:hidden">
+                  Explore the benefits of eco-friendly materials and how they attract conscious consumers.
+                </p>
               </div>
             </a>
             <a href="blog-details.html" data-blog-card
-              class="flex flex-col gap-3 rounded-[24px] border border-[#F3F4F6] bg-white p-4 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
-              <div class="h-[198px] overflow-hidden rounded-[16px]">
+              class="flex flex-col gap-3 rounded-[16px] border border-[#F3F4F6] bg-white p-3 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] md:rounded-[24px] md:p-4">
+              <div class="h-[140px] overflow-hidden rounded-[16px] md:h-[198px]">
                 <img src="public/assets/blog/similar-3.png" alt="The Psychology Behind Color Choices in Packaging"
                   class="h-full w-full object-cover" />
               </div>
-              <div class="flex flex-col gap-1">
+              <div class="flex flex-col gap-2 md:gap-1">
                 <div class="flex items-center gap-1">
                   <img src="public/assets/blog/icon-calendar.svg" alt="" class="h-4 w-4" />
                   <span class="text-[12px] font-normal leading-[16px] tracking-[-0.12px] text-[#6B7280]">10 Mar
                     2026</span>
                 </div>
-                <h3 class="line-clamp-2 font-heading text-[20px] font-bold leading-[24px] text-[#111827]">
+                <h3 class="line-clamp-2 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] md:font-heading md:text-[20px] md:leading-[24px] md:tracking-[0]">
                   The Psychology Behind Color Choices in Packaging
                 </h3>
+                <p class="text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151] md:hidden">
+                  Learn how color influences customer emotions and purchasing decisions.
+                </p>
               </div>
             </a>
             <a href="blog-details.html" data-blog-card
-              class="flex flex-col gap-3 rounded-[24px] border border-[#F3F4F6] bg-white p-4 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
-              <div class="h-[198px] overflow-hidden rounded-[16px]">
+              class="flex flex-col gap-3 rounded-[16px] border border-[#F3F4F6] bg-white p-3 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] md:rounded-[24px] md:p-4">
+              <div class="h-[140px] overflow-hidden rounded-[16px] md:h-[198px]">
                 <img src="public/assets/blog/similar-4.png"
                   alt="How Promotional Products Can Boost Your Brand Awareness" class="h-full w-full object-cover" />
               </div>
-              <div class="flex flex-col gap-1">
+              <div class="flex flex-col gap-2 md:gap-1">
                 <div class="flex items-center gap-1">
                   <img src="public/assets/blog/icon-calendar.svg" alt="" class="h-4 w-4" />
                   <span class="text-[12px] font-normal leading-[16px] tracking-[-0.12px] text-[#6B7280]">21 Jan
                     2026</span>
                 </div>
-                <h3 class="line-clamp-2 font-heading text-[20px] font-bold leading-[24px] text-[#111827]">
+                <h3 class="line-clamp-2 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] md:font-heading md:text-[20px] md:leading-[24px] md:tracking-[0]">
                   How Promotional Products Can Boost Your Brand Awareness
                 </h3>
+                <p class="text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151] md:hidden">
+                  Find out how the right promotional items can significantly increase brand recognition and customer loyalty.
+                </p>
               </div>
             </a>
             <a href="blog-details.html" data-blog-card
-              class="flex flex-col gap-3 rounded-[24px] border border-[#F3F4F6] bg-white p-4 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
-              <div class="h-[198px] overflow-hidden rounded-[16px]">
+              class="flex flex-col gap-3 rounded-[16px] border border-[#F3F4F6] bg-white p-3 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] md:rounded-[24px] md:p-4">
+              <div class="h-[140px] overflow-hidden rounded-[16px] md:h-[198px]">
                 <img src="public/assets/blog/similar-5.png"
                   alt="Eco-Friendly Packaging Solutions: How to Go Green in Your Business"
                   class="h-full w-full object-cover" />
               </div>
-              <div class="flex flex-col gap-1">
+              <div class="flex flex-col gap-2 md:gap-1">
                 <div class="flex items-center gap-1">
                   <img src="public/assets/blog/icon-calendar.svg" alt="" class="h-4 w-4" />
                   <span class="text-[12px] font-normal leading-[16px] tracking-[-0.12px] text-[#6B7280]">05 Feb
                     2026</span>
                 </div>
-                <h3 class="line-clamp-2 font-heading text-[20px] font-bold leading-[24px] text-[#111827]">
+                <h3 class="line-clamp-2 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] md:font-heading md:text-[20px] md:leading-[24px] md:tracking-[0]">
                   Eco-Friendly Packaging Solutions: How to Go Green in Your Business
                 </h3>
+                <p class="text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151] md:hidden">
+                  Sustainable packaging options that reduce your environmental footprint while maintaining quality.
+                </p>
               </div>
             </a>
             <a href="blog-details.html" data-blog-card
-              class="flex flex-col gap-3 rounded-[24px] border border-[#F3F4F6] bg-white p-4 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
-              <div class="h-[198px] overflow-hidden rounded-[16px]">
+              class="flex flex-col gap-3 rounded-[16px] border border-[#F3F4F6] bg-white p-3 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] md:rounded-[24px] md:p-4">
+              <div class="h-[140px] overflow-hidden rounded-[16px] md:h-[198px]">
                 <img src="public/assets/blog/similar-6.png"
                   alt="Top 10 Promotional Items That Will Make Your Brand Stand Out"
                   class="h-full w-full object-cover" />
               </div>
-              <div class="flex flex-col gap-1">
+              <div class="flex flex-col gap-2 md:gap-1">
                 <div class="flex items-center gap-1">
                   <img src="public/assets/blog/icon-calendar.svg" alt="" class="h-4 w-4" />
                   <span class="text-[12px] font-normal leading-[16px] tracking-[-0.12px] text-[#6B7280]">15 Mar
                     2026</span>
                 </div>
-                <h3 class="line-clamp-2 font-heading text-[20px] font-bold leading-[24px] text-[#111827]">
+                <h3 class="line-clamp-2 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] md:font-heading md:text-[20px] md:leading-[24px] md:tracking-[0]">
                   Top 10 Promotional Items That Will Make Your Brand Stand Out
                 </h3>
+                <p class="text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151] md:hidden">
+                  Explore the most effective promotional products that leave a lasting impression on your customers.
+                </p>
               </div>
             </a>
             <a href="blog-details.html" data-blog-card
-              class="flex flex-col gap-3 rounded-[24px] border border-[#F3F4F6] bg-white p-4 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
-              <div class="h-[198px] overflow-hidden rounded-[16px]">
+              class="flex flex-col gap-3 rounded-[16px] border border-[#F3F4F6] bg-white p-3 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] md:rounded-[24px] md:p-4">
+              <div class="h-[140px] overflow-hidden rounded-[16px] md:h-[198px]">
                 <img src="public/assets/blog/similar-7.png"
                   alt="How Mail Fulfillment Services Can Improve Your Marketing Campaigns"
                   class="h-full w-full object-cover" />
               </div>
-              <div class="flex flex-col gap-1">
+              <div class="flex flex-col gap-2 md:gap-1">
                 <div class="flex items-center gap-1">
                   <img src="public/assets/blog/icon-calendar.svg" alt="" class="h-4 w-4" />
                   <span class="text-[12px] font-normal leading-[16px] tracking-[-0.12px] text-[#6B7280]">21 Jan
                     2026</span>
                 </div>
-                <h3 class="line-clamp-2 font-heading text-[20px] font-bold leading-[24px] text-[#111827]">
+                <h3 class="line-clamp-2 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] md:font-heading md:text-[20px] md:leading-[24px] md:tracking-[0]">
                   How Mail Fulfillment Services Can Improve Your Marketing Campaigns
                 </h3>
+                <p class="text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151] md:hidden">
+                  Streamline your direct mail operations with professional fulfillment services for better campaign results.
+                </p>
               </div>
             </a>
             <a href="blog-details.html" data-blog-card
-              class="flex flex-col gap-3 rounded-[24px] border border-[#F3F4F6] bg-white p-4 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
-              <div class="h-[198px] overflow-hidden rounded-[16px]">
+              class="flex flex-col gap-3 rounded-[16px] border border-[#F3F4F6] bg-white p-3 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] md:rounded-[24px] md:p-4">
+              <div class="h-[140px] overflow-hidden rounded-[16px] md:h-[198px]">
                 <img src="public/assets/blog/similar-8.png"
                   alt="What Makes a Successful Direct Mail Campaign? Key Strategies to Know"
                   class="h-full w-full object-cover" />
               </div>
-              <div class="flex flex-col gap-1">
+              <div class="flex flex-col gap-2 md:gap-1">
                 <div class="flex items-center gap-1">
                   <img src="public/assets/blog/icon-calendar.svg" alt="" class="h-4 w-4" />
                   <span class="text-[12px] font-normal leading-[16px] tracking-[-0.12px] text-[#6B7280]">15 Feb
                     2026</span>
                 </div>
-                <h3 class="line-clamp-2 font-heading text-[20px] font-bold leading-[24px] text-[#111827]">
+                <h3 class="line-clamp-2 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] md:font-heading md:text-[20px] md:leading-[24px] md:tracking-[0]">
                   What Makes a Successful Direct Mail Campaign? Key Strategies to Know
                 </h3>
+                <p class="text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151] md:hidden">
+                  Key strategies and best practices to maximise the impact of your direct mail marketing efforts.
+                </p>
               </div>
             </a>
             <a href="blog-details.html" data-blog-card
-              class="flex flex-col gap-3 rounded-[24px] border border-[#F3F4F6] bg-white p-4 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
-              <div class="h-[198px] overflow-hidden rounded-[16px]">
+              class="flex flex-col gap-3 rounded-[16px] border border-[#F3F4F6] bg-white p-3 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] md:rounded-[24px] md:p-4">
+              <div class="h-[140px] overflow-hidden rounded-[16px] md:h-[198px]">
                 <img src="public/assets/blog/similar-9.png"
                   alt="Understanding the Cost Differences Between Digital and Offset Printing"
                   class="h-full w-full object-cover" />
               </div>
-              <div class="flex flex-col gap-1">
+              <div class="flex flex-col gap-2 md:gap-1">
                 <div class="flex items-center gap-1">
                   <img src="public/assets/blog/icon-calendar.svg" alt="" class="h-4 w-4" />
                   <span class="text-[12px] font-normal leading-[16px] tracking-[-0.12px] text-[#6B7280]">10 Mar
                     2026</span>
                 </div>
-                <h3 class="line-clamp-2 font-heading text-[20px] font-bold leading-[24px] text-[#111827]">
+                <h3 class="line-clamp-2 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] md:font-heading md:text-[20px] md:leading-[24px] md:tracking-[0]">
                   Understanding the Cost Differences Between Digital and Offset Printing
                 </h3>
+                <p class="text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151] md:hidden">
+                  A comprehensive guide to help you choose the most cost-effective printing method for your project.
+                </p>
               </div>
             </a>
             <a href="blog-details.html" data-blog-card
-              class="flex flex-col gap-3 rounded-[24px] border border-[#F3F4F6] bg-white p-4 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
-              <div class="h-[198px] overflow-hidden rounded-[16px]">
+              class="flex flex-col gap-3 rounded-[16px] border border-[#F3F4F6] bg-white p-3 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] md:rounded-[24px] md:p-4">
+              <div class="h-[140px] overflow-hidden rounded-[16px] md:h-[198px]">
                 <img src="https://placehold.co/856x396/png" alt="How to choose the right paper stock for your project"
                   class="h-full w-full object-cover" />
               </div>
-              <div class="flex flex-col gap-1">
+              <div class="flex flex-col gap-2 md:gap-1">
                 <div class="flex items-center gap-1">
                   <img src="public/assets/blog/icon-calendar.svg" alt="" class="h-4 w-4" />
                   <span class="text-[12px] font-normal leading-[16px] tracking-[-0.12px] text-[#6B7280]">02 Apr
                     2026</span>
                 </div>
-                <h3 class="line-clamp-2 font-heading text-[20px] font-bold leading-[24px] text-[#111827]">
+                <h3 class="line-clamp-2 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] md:font-heading md:text-[20px] md:leading-[24px] md:tracking-[0]">
                   How to Choose the Right Paper Stock for Your Project
                 </h3>
+                <p class="text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151] md:hidden">
+                  Navigate the world of paper weights, finishes, and textures to find the perfect stock for your needs.
+                </p>
               </div>
             </a>
             <a href="blog-details.html" data-blog-card
-              class="flex flex-col gap-3 rounded-[24px] border border-[#F3F4F6] bg-white p-4 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
-              <div class="h-[198px] overflow-hidden rounded-[16px]">
+              class="flex flex-col gap-3 rounded-[16px] border border-[#F3F4F6] bg-white p-3 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] md:rounded-[24px] md:p-4">
+              <div class="h-[140px] overflow-hidden rounded-[16px] md:h-[198px]">
                 <img src="https://placehold.co/856x396/png" alt="Common print-ready mistakes and how to avoid them"
                   class="h-full w-full object-cover" />
               </div>
-              <div class="flex flex-col gap-1">
+              <div class="flex flex-col gap-2 md:gap-1">
                 <div class="flex items-center gap-1">
                   <img src="public/assets/blog/icon-calendar.svg" alt="" class="h-4 w-4" />
                   <span class="text-[12px] font-normal leading-[16px] tracking-[-0.12px] text-[#6B7280]">08 Apr
                     2026</span>
                 </div>
-                <h3 class="line-clamp-2 font-heading text-[20px] font-bold leading-[24px] text-[#111827]">
+                <h3 class="line-clamp-2 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] md:font-heading md:text-[20px] md:leading-[24px] md:tracking-[0]">
                   Common Print-Ready Mistakes (and How to Avoid Them)
                 </h3>
+                <p class="text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151] md:hidden">
+                  Avoid costly errors in your print projects by learning the most common file preparation mistakes.
+                </p>
               </div>
             </a>
             <a href="blog-details.html" data-blog-card
-              class="flex flex-col gap-3 rounded-[24px] border border-[#F3F4F6] bg-white p-4 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
-              <div class="h-[198px] overflow-hidden rounded-[16px]">
+              class="flex flex-col gap-3 rounded-[16px] border border-[#F3F4F6] bg-white p-3 transition hover:-translate-y-1 hover:border-[#E5E7EB] hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] md:rounded-[24px] md:p-4">
+              <div class="h-[140px] overflow-hidden rounded-[16px] md:h-[198px]">
                 <img src="https://placehold.co/856x396/png" alt="How to design for better shelf impact in retail"
                   class="h-full w-full object-cover" />
               </div>
-              <div class="flex flex-col gap-1">
+              <div class="flex flex-col gap-2 md:gap-1">
                 <div class="flex items-center gap-1">
                   <img src="public/assets/blog/icon-calendar.svg" alt="" class="h-4 w-4" />
                   <span class="text-[12px] font-normal leading-[16px] tracking-[-0.12px] text-[#6B7280]">14 Apr
                     2026</span>
                 </div>
-                <h3 class="line-clamp-2 font-heading text-[20px] font-bold leading-[24px] text-[#111827]">
+                <h3 class="line-clamp-2 text-[16px] font-bold leading-[22px] tracking-[-0.18px] text-[#111827] md:font-heading md:text-[20px] md:leading-[24px] md:tracking-[0]">
                   Designing Packaging for Better Shelf Impact
                 </h3>
+                <p class="text-[14px] font-normal leading-[20px] tracking-[-0.16px] text-[#374151] md:hidden">
+                  Design techniques that make your packaging stand out and capture attention at retail locations.
+                </p>
               </div>
             </a>
           </div>
 
           <nav aria-label="Blog pagination"
-            class="mt-8 flex items-center justify-center gap-4 px-2 py-3 sm:gap-6 lg:mt-10">
+            class="mt-8 flex items-center justify-center gap-2 px-2 py-3 sm:gap-6 lg:mt-10">
             <button id="blogPrevPage" type="button"
               class="inline-flex cursor-pointer items-center gap-1 rounded-[8px] px-2 py-1 text-[14px] leading-[20px] tracking-[-0.16px] text-[#6B7280] transition hover:text-[#111827] disabled:cursor-not-allowed disabled:opacity-40 sm:text-[16px] sm:leading-[22px] sm:tracking-[-0.18px]">
               <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
@@ -379,7 +413,7 @@
               </svg>
               <span>Previous</span>
             </button>
-            <div class="flex items-center gap-3 sm:gap-4">
+            <div class="flex items-center gap-4">
               <button data-page="1" type="button"
                 class="blog-page-btn grid h-6 w-6 cursor-pointer place-items-center rounded-[12px] bg-[#00669E] text-[14px] leading-[20px] tracking-[-0.16px] text-white sm:text-[16px] sm:leading-[22px]">1</button>
               <button data-page="2" type="button"
