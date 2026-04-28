@@ -103,17 +103,29 @@
     });
 
     const normalizePath = (value) => {
-      if (!value) return "/";
-      let cleaned = value.toLowerCase().replace(/\/+$/, "");
-      if (cleaned.endsWith("/index.html")) cleaned = cleaned.slice(0, -"/index.html".length) || "/";
-      if (cleaned.endsWith(".html") && !cleaned.includes("/")) cleaned = "/";
-      return cleaned === "" ? "/" : cleaned;
+      if (!value) return "index";
+      const path = decodeURIComponent(value)
+        .split("#")[0]
+        .split("?")[0]
+        .replace(/\\/g, "/")
+        .replace(/\/+$/, "");
+      const filename = (path.split("/").pop() || "index.html").toLowerCase();
+      if (!filename || filename === "index.html") return "index";
+      return filename.endsWith(".html") ? filename.slice(0, -".html".length) : filename;
+    };
+
+    const getHrefPath = (href) => {
+      try {
+        return new URL(href, window.location.href).pathname;
+      } catch (error) {
+        return href;
+      }
     };
 
     const currentPath = normalizePath(window.location.pathname);
     root.querySelectorAll("[data-desktop-link]").forEach((a) => {
-      const href = a.getAttribute("href") || "/";
-      const hrefPath = normalizePath(new URL(href, window.location.origin).pathname);
+      const href = a.getAttribute("href") || "index.html";
+      const hrefPath = normalizePath(getHrefPath(href));
       const isActive = hrefPath === currentPath;
       if (isActive) {
         a.setAttribute("aria-current", "page");
