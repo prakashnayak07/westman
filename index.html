@@ -96,52 +96,52 @@
   <main id="main" class="w-full overflow-x-hidden">
     <!-- ===== Hero Start ===== -->
     <section class="relative flex flex-col overflow-hidden 
-      min-h-[682px] pb-[216px] 
-      lg:min-h-[486px] lg:pb-[302px] 
-      xl:min-h-[608px] xl:pb-[378px] 
-      min-[1440px]:min-h-[684px] min-[1440px]:pb-[425px] 
-      min-[1920px]:min-h-[912px] min-[1920px]:pb-[567px]">
+        h-[780px] 
+        lg:h-auto lg:min-h-[486px] lg:pb-[302px] 
+        xl:min-h-[608px] xl:pb-[378px] 
+        min-[1440px]:min-h-[684px] min-[1440px]:pb-[425px] 
+        min-[1920px]:min-h-[912px] min-[1920px]:pb-[567px]">
 
-      <video class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover" autoplay muted loop playsinline
-        preload="auto" aria-hidden="true">
+      <!-- Video background strictly 682px on mobile to allow images to overlap bottom visually -->
+      <video class="pointer-events-none absolute left-0 top-0 z-0 h-[682px] w-full object-cover lg:inset-0 lg:h-full"
+        autoplay muted loop playsinline preload="auto" aria-hidden="true">
         <source src="public/assets/hero/hero-bg.mp4" type="video/mp4" />
       </video>
 
-      <div class="pointer-events-none absolute inset-0 z-[1]"
+      <div class="pointer-events-none absolute left-0 top-0 z-[1] h-[682px] w-full lg:inset-0 lg:h-full"
         style="background: linear-gradient(0deg, rgba(0, 102, 158, 0.5), rgba(0, 102, 158, 0.5)), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(279.35deg, rgba(0, 77, 128, 0) 45.6%, rgba(0, 77, 128, 0.705399) 66.3%, rgba(0, 77, 128, 0.95) 78.16%);">
       </div>
 
+      <!-- Content Container Scaled (Centered exactly within the 682px background area on mobile) -->
+      <div class="relative z-[3] mx-auto flex w-full flex-col justify-center
+          h-[682px] px-4 pt-4 max-w-[1400px]
+          lg:h-auto lg:flex-1 lg:justify-start lg:px-6 lg:pt-[64px] lg:max-w-[746px]
+          xl:pt-[80px] xl:max-w-[933px]
+          min-[1440px]:pt-[90px] min-[1440px]:max-w-[1050px]
+          min-[1920px]:pt-[120px] min-[1920px]:max-w-[1400px]">
 
-
-      <!-- Content Container Scaled -->
-      <div class="relative z-[3] mx-auto flex w-full flex-1 flex-col 
-        px-4 pt-[120px] max-w-[1400px] 
-        lg:px-6 lg:pt-[64px] lg:max-w-[746px] 
-        xl:pt-[80px] xl:max-w-[933px] 
-        min-[1440px]:pt-[90px] min-[1440px]:max-w-[1050px] 
-        min-[1920px]:pt-[120px] min-[1920px]:max-w-[1400px]">
-
-        <div class="max-w-[1009px] text-white pt-10">
+        <div class="max-w-[1009px] text-white pt-0 lg:pt-10">
           <h1
             class="w-full font-['Satoshi'] font-bold tracking-[-0.3px] 
-            text-[40px] leading-[48px] 
-            lg:w-[538px] lg:text-[38px] lg:leading-[46px] 
-            xl:w-[673px] xl:text-[48px] xl:leading-[58px] 
-            min-[1440px]:w-[757px] min-[1440px]:text-[54px] min-[1440px]:leading-[66px] 
-            min-[1920px]:w-[1009px] min-[1920px]:text-[72px] min-[1920px]:leading-[88px] min-[1920px]:tracking-[-0.8px]">
+              text-[40px] leading-[48px] 
+              lg:w-[538px] lg:text-[38px] lg:leading-[46px] 
+              xl:w-[673px] xl:text-[48px] xl:leading-[58px] 
+              min-[1440px]:w-[757px] min-[1440px]:text-[54px] min-[1440px]:leading-[66px] 
+              min-[1920px]:w-[1009px] min-[1920px]:text-[72px] min-[1920px]:leading-[88px] min-[1920px]:tracking-[-0.8px]">
             Your Trusted Commercial Printing Partner
           </h1>
           <p class="mt-6 w-full tracking-[-0.18px] 
-            text-[16px] leading-[22px] 
-            lg:w-[428px] lg:text-[14px] lg:leading-[20px] 
-            xl:w-[534px] xl:text-[15px] xl:leading-[22px] 
-            min-[1440px]:w-[601px] min-[1440px]:text-[16px] min-[1440px]:leading-[24px] 
-            min-[1920px]:w-[802px] min-[1920px]:text-[20px] min-[1920px]:leading-[26.4px]">
+              text-[16px] leading-[22px] 
+              lg:w-[428px] lg:text-[14px] lg:leading-[20px] 
+              xl:w-[534px] xl:text-[15px] xl:leading-[22px] 
+              min-[1440px]:w-[601px] min-[1440px]:text-[16px] min-[1440px]:leading-[24px] 
+              min-[1920px]:w-[802px] min-[1920px]:text-[20px] min-[1920px]:leading-[26.4px]">
             High-quality digital, offset, packaging, and promotional printing — delivered fast and done right.
           </p>
 
+          <!-- Adjusted mobile mt-6 to exactly match the 24px Figma gap -->
           <a href="#contact"
-            class="hero-cta relative z-20 mt-6 inline-flex cursor-pointer items-center justify-center gap-[10px] rounded-[999px] bg-[#00669E] py-[4px] pl-[16px] pr-[4px] text-[16px] font-medium leading-[22.72px] text-white"
+            class="hero-cta relative z-20 mt-6 inline-flex cursor-pointer items-center justify-center gap-[10px] rounded-[999px] bg-[#00669E] h-[50px] w-[199px] lg:h-auto lg:w-auto py-[4px] pl-[16px] pr-[4px] text-[16px] font-medium leading-[22.72px] text-white"
             style="background-color:#00669E;">
             Request a Quote
             <span class="relative block h-[42px] w-[42px] overflow-hidden rounded-full bg-[rgba(255,255,255,0.24)]">
@@ -154,18 +154,18 @@
 
       <!-- Bottom Grid Wrapper Scaled -->
       <div class="pointer-events-none absolute bottom-0 z-[4] flex items-end 
-        left-0 w-full px-4 gap-[33px] 
-        lg:left-1/2 lg:-translate-x-1/2 lg:px-0 lg:w-[1024px] lg:gap-[17px] 
-        xl:w-[1280px] xl:gap-[22px] 
-        min-[1440px]:w-[1440px] min-[1440px]:gap-[25px] 
-        min-[1920px]:w-[1919px] min-[1920px]:gap-[33px]">
+          left-0 w-full px-4 gap-[33px] h-[314px]
+          lg:h-auto lg:left-1/2 lg:-translate-x-1/2 lg:px-0 lg:w-[1024px] lg:gap-[17px] 
+          xl:w-[1280px] xl:gap-[22px] 
+          min-[1440px]:w-[1440px] min-[1440px]:gap-[25px] 
+          min-[1920px]:w-[1919px] min-[1920px]:gap-[33px]">
 
         <div class="overflow-hidden rounded-[24px] 
-          h-[180px] flex-1 
-          lg:flex-none lg:h-[206px] lg:w-[171px] 
-          xl:h-[258px] xl:w-[214px] 
-          min-[1440px]:h-[291px] min-[1440px]:w-[240px] 
-          min-[1920px]:h-[388px] min-[1920px]:w-[321px]">
+            h-[180px] flex-1 
+            lg:flex-none lg:h-[206px] lg:w-[171px] 
+            xl:h-[258px] xl:w-[214px] 
+            min-[1440px]:h-[291px] min-[1440px]:w-[240px] 
+            min-[1920px]:h-[388px] min-[1920px]:w-[321px]">
           <img src="public/assets/hero/hero-card-1-mobile.webp" alt="Book cover"
             class="h-full w-full object-cover lg:hidden" />
           <img src="public/assets/hero/hero-card-1.webp" alt="Book cover"
@@ -173,11 +173,11 @@
         </div>
 
         <div class="overflow-hidden rounded-[24px] 
-          h-[240px] flex-1 
-          lg:flex-[1_0_0] lg:h-[136px] 
-          xl:h-[170px] 
-          min-[1440px]:h-[191px] 
-          min-[1920px]:h-[255px]">
+            h-[240px] flex-1 
+            lg:flex-[1_0_0] lg:h-[136px] 
+            xl:h-[170px] 
+            min-[1440px]:h-[191px] 
+            min-[1920px]:h-[255px]">
           <img src="public/assets/hero/hero-bottle-mobile.webp" alt="Packaging"
             class="h-full w-full object-cover lg:hidden" />
           <img src="public/assets/hero/hero-card-2.webp" alt="Packaging"
@@ -185,17 +185,17 @@
         </div>
 
         <div class="hidden overflow-hidden rounded-[24px] flex-[1_0_0] lg:block 
-          lg:h-[185px] xl:h-[231px] min-[1440px]:h-[260px] min-[1920px]:h-[347px]">
+            lg:h-[185px] xl:h-[231px] min-[1440px]:h-[260px] min-[1920px]:h-[347px]">
           <img src="public/assets/hero/hero-card-3.webp" alt="Gift card" class="h-full w-full object-cover" />
         </div>
 
         <div class="hidden overflow-hidden rounded-[24px] flex-[1_0_0] lg:block 
-          lg:h-[136px] xl:h-[170px] min-[1440px]:h-[191px] min-[1920px]:h-[255px]">
+            lg:h-[136px] xl:h-[170px] min-[1440px]:h-[191px] min-[1920px]:h-[255px]">
           <img src="public/assets/hero/hero-card-4.webp" alt="Box packaging" class="h-full w-full object-cover" />
         </div>
 
         <div class="hidden overflow-hidden rounded-[24px] flex-[1_0_0] lg:block 
-          lg:h-[368px] xl:h-[460px] min-[1440px]:h-[517px] min-[1920px]:h-[690px]">
+            lg:h-[368px] xl:h-[460px] min-[1440px]:h-[517px] min-[1920px]:h-[690px]">
           <img src="public/assets/hero/hero-bottle.webp" alt="Bottle mockup" class="h-full w-full object-cover" />
         </div>
       </div>
