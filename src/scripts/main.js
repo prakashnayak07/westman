@@ -254,12 +254,12 @@
       if (container.swiper) return;
       const prevSel = container.dataset.prev || "#blogPrev";
       const nextSel = container.dataset.next || "#blogNext";
-      const prevEl = document.querySelector(prevSel);
-      const nextEl = document.querySelector(nextSel);
+      const prevEls = Array.from(document.querySelectorAll(prevSel));
+      const nextEls = Array.from(document.querySelectorAll(nextSel));
       new window.Swiper(container, {
         slidesPerView: 1.15,
         spaceBetween: 16,
-        navigation: prevEl && nextEl ? { prevEl, nextEl } : undefined,
+        navigation: prevEls.length && nextEls.length ? { prevEl: prevEls, nextEl: nextEls } : undefined,
         breakpoints: {
           640: { slidesPerView: 2.15, spaceBetween: 20 },
           1024: { slidesPerView: 3.15, spaceBetween: 24 },
