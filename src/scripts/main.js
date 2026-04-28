@@ -188,9 +188,6 @@
     const container = document.querySelector(".about-services-swiper");
     if (!container) return;
 
-    const prevEl = document.querySelector(".about-services-prev");
-    const nextEl = document.querySelector(".about-services-next");
-
     if (container.swiper) {
       container.swiper.destroy(true, true);
     }
@@ -201,7 +198,10 @@
       watchOverflow: true,
       observer: true,
       observeParents: true,
-      navigation: prevEl && nextEl ? { nextEl, prevEl } : undefined,
+      navigation: {
+        nextEl: ".about-services-next",
+        prevEl: ".about-services-prev",
+      },
       breakpoints: {
         640: {
           slidesPerView: 1.45,
