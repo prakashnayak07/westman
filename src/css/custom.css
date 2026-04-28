@@ -48,3 +48,12 @@
 .nav-roll-link:focus-visible .nav-roll > span:nth-child(2) {
   transform: translateY(0);
 }
+
+/* ===== Hide scrollbar (used by mobile swiper rows) ===== */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

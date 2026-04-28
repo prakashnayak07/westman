@@ -42,16 +42,57 @@
     const mobileMenu = root.querySelector("[data-mobile-menu]");
     if (!openButton || !closeButton || !mobileMenu) return;
 
+    let isMenuOpen = false;
+    let closeTransitionHandler = null;
+    let closeFallbackTimer = null;
+
     const openMenu = () => {
+      if (isMenuOpen) return;
+      isMenuOpen = true;
+      if (closeTransitionHandler) {
+        mobileMenu.removeEventListener("transitionend", closeTransitionHandler);
+        closeTransitionHandler = null;
+      }
+      if (closeFallbackTimer) {
+        window.clearTimeout(closeFallbackTimer);
+        closeFallbackTimer = null;
+      }
       mobileMenu.classList.remove("hidden");
       document.body.classList.add("overflow-hidden");
       openButton.setAttribute("aria-expanded", "true");
+      requestAnimationFrame(() => {
+        mobileMenu.style.transform = "translateX(0)";
+        mobileMenu.style.opacity = "1";
+      });
     };
 
     const closeMenu = () => {
-      mobileMenu.classList.add("hidden");
+      if (!isMenuOpen) return;
+      isMenuOpen = false;
+      mobileMenu.style.transform = "translateX(100%)";
+      mobileMenu.style.opacity = "0";
       document.body.classList.remove("overflow-hidden");
       openButton.setAttribute("aria-expanded", "false");
+
+      closeTransitionHandler = (event) => {
+        if (event.target !== mobileMenu || event.propertyName !== "transform") return;
+        mobileMenu.classList.add("hidden");
+        mobileMenu.removeEventListener("transitionend", closeTransitionHandler);
+        closeTransitionHandler = null;
+        if (closeFallbackTimer) {
+          window.clearTimeout(closeFallbackTimer);
+          closeFallbackTimer = null;
+        }
+      };
+      mobileMenu.addEventListener("transitionend", closeTransitionHandler);
+      closeFallbackTimer = window.setTimeout(() => {
+        if (!isMenuOpen) mobileMenu.classList.add("hidden");
+        if (closeTransitionHandler) {
+          mobileMenu.removeEventListener("transitionend", closeTransitionHandler);
+          closeTransitionHandler = null;
+        }
+        closeFallbackTimer = null;
+      }, 350);
     };
 
     openButton.addEventListener("click", openMenu);
